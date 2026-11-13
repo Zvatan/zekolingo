@@ -85,6 +85,10 @@ export function topicMeta(id) {
   }
   return null;
 }
-export const loadTopic = id => import(`./grammar/${id}.js`).then(m => m.default);
+// Konu = alıştırmalar (grammar/) + genişletilmiş anlatım, animasyon ve ek alıştırmalar (lessons/, varsa)
+export const loadTopic = id => Promise.all([
+  import(`./grammar/${id}.js`).then(m => m.default),
+  import(`./lessons/${id}.js`).then(m => m.default, () => ({})),
+]).then(([t, l]) => ({ ...t, ...l, ex: [...t.ex, ...(l.exExtra || [])] }));
 export const loadVocab = lv => import(`./vocab/${lv.toLowerCase()}.js`).then(m => m.default);
 export const loadReading = lv => import(`./reading/${lv.toLowerCase()}.js`).then(m => m.default);

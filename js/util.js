@@ -36,31 +36,42 @@ export const exampleHTML = (en, tr) =>
  *  ## / ### başlık · - madde · |a|b| tablo · > EN | TR örnek · ! ipucu · x yanlış => doğru
  */
 export function md(src) {
-  const out = []; let para = [], list = null, table = null;
+  const out = [];
+  let cur = null, buf = []; // cur: o an toplanan blok türü (p, ul, table, ex, mist)
   const flush = () => {
-    if (para.length) { out.push(`<p>${inline(para.join(' '))}</p>`); para = []; }
-    if (list) { out.push(`<ul>${list.map(li => `<li>${inline(li)}</li>`).join('')}</ul>`); list = null; }
-    if (table) {
-      const [head, ...rows] = table;
-      const tr = (r, tag) => `<tr>${r.map(c => `<${tag}>${inline(c)}</${tag}>`).join('')}</tr>`;
-      out.push(`<div class="tbl"><table><thead>${tr(head, 'th')}</thead><tbody>${rows.map(r => tr(r, 'td')).join('')}</tbody></table></div>`);
-      table = null;
+    if (!buf.length) { cur = null; return; }
+    if (cur === 'p') out.push(`<p>${inline(buf.join(' '))}</p>`);
+    else if (cur === 'ul') out.push(`<ul>${buf.map(li => `<li>${inline(li)}</li>`).join('')}</ul>`);
+    else if (cur === 'table') {
+      let [head, ...rows] = buf;
+      // Yan yana iki yarım tablo (| Fiil | Geçmiş | | Fiil | Geçmiş |) telefonda alt alta tek tablo olur
+      const k = head.indexOf('');
+      if (k > 0 && head.slice(0, k).join('|') === head.slice(k + 1).join('|')) {
+        rows = [...rows.map(r => r.slice(0, k)), ...rows.map(r => r.slice(k + 1)).filter(r => r.some(Boolean))];
+        head = head.slice(0, k);
+      }
+      // Hücre sonundaki "(Türkçe karşılık)" alt satırda küçük gösterilir: me (beni, bana)
+      const cell = (c, tag) => (tag === 'td' ? inline(c).replace(/\s*\(([^()]*)\)$/, ' <span class="tp">($1)</span>') : inline(c));
+      const tr = (r, tag) => `<tr>${r.map(c => `<${tag}>${cell(c, tag)}</${tag}>`).join('')}</tr>`;
+      out.push(`<div class="tbl${head.length >= 5 ? ' wide' : ''}"><table><thead>${tr(head, 'th')}</thead><tbody>${rows.map(r => tr(r, 'td')).join('')}</tbody></table></div>`);
     }
+    else if (cur === 'ex') out.push(`<div class="ex-group">${buf.map(([en, tr]) => exampleHTML(en, tr)).join('')}</div>`);
+    else if (cur === 'mist') out.push(`<div class="mist-group"><div class="mg-h">⚠️ Sık yapılan hata${buf.length > 1 ? 'lar' : ''}</div>${buf.map(([bad, good]) =>
+      `<div class="mist"><span class="no">✗ ${inline(bad)}</span><span class="yes">✓ ${inline(good)}</span></div>`).join('')}</div>`);
+    buf = []; cur = null;
   };
+  const add = (kind, item) => { if (cur !== kind) flush(); cur = kind; buf.push(item); };
   for (const raw of String(src).trim().split('\n')) {
     const line = raw.trim();
-    if (!line) { flush(); continue; }
+    if (!line) { if (cur !== 'ex' && cur !== 'mist') flush(); continue; } // örnek ve hata grupları boş satırla bölünmez
     if (line.startsWith('### ')) { flush(); out.push(`<h3>${inline(line.slice(4))}</h3>`); }
     else if (line.startsWith('## ')) { flush(); out.push(`<h2>${inline(line.slice(3))}</h2>`); }
-    else if (line.startsWith('- ')) { if (para.length || table) flush(); (list ||= []).push(line.slice(2)); }
-    else if (line.startsWith('|')) { if (para.length || list) flush(); (table ||= []).push(line.replace(/^\||\|$/g, '').split('|').map(c => c.trim())); }
-    else if (line.startsWith('> ')) { flush(); const [en, tr] = line.slice(2).split(' | '); out.push(exampleHTML(en, tr)); }
-    else if (line.startsWith('! ')) { flush(); out.push(`<div class="tip">${inline(line.slice(2))}</div>`); }
-    else if (line.startsWith('x ')) {
-      flush(); const [bad, good] = line.slice(2).split(' => ');
-      out.push(`<div class="mist"><span class="no">✗ ${inline(bad)}</span><span class="yes">✓ ${inline(good)}</span></div>`);
-    }
-    else { if (list || table) flush(); para.push(line); }
+    else if (line.startsWith('- ')) add('ul', line.slice(2));
+    else if (line.startsWith('|')) add('table', line.replace(/^\||\|$/g, '').split('|').map(c => c.trim()));
+    else if (line.startsWith('> ')) add('ex', line.slice(2).split(' | '));
+    else if (line.startsWith('x ')) add('mist', line.slice(2).split(' => '));
+    else if (line.startsWith('! ')) { flush(); out.push(`<div class="tip"><span class="tip-i">💡</span><div>${inline(line.slice(2))}</div></div>`); }
+    else add('p', line);
   }
   flush();
   return out.join('');

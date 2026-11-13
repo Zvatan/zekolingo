@@ -3,6 +3,7 @@ import * as store from '../store.js';
 import { LEVELS, level, topicMeta, loadTopic, PASS, EXAM_SIZE } from '../../data/catalog.js';
 import { runSession, showResults } from '../session.js';
 import { playLesson } from '../anim.js';
+import { lessonHTML, bindLesson } from '../lesson.js';
 
 /* Kur seçici (her sekmede ortak). has(L): o kurda içerik var mı? */
 export const levelChips = (cur, has) =>
@@ -55,7 +56,7 @@ export async function topicScreen(root, id) {
   const route = location.hash;
   root.innerHTML = `<a class="back" href="#/learn">${ICON.back} ${meta.level} konuları</a>
     <header class="hd"><h1>${esc(meta.title)}</h1><p class="sub">${esc(meta.sub)}</p></header>
-    <div class="card lesson" id="lesson"><p class="muted">Yükleniyor…</p></div>`;
+    <div class="lesson2" id="lesson"><p class="muted">Yükleniyor…</p></div>`;
   let topic;
   try { topic = await loadTopic(id); } catch (e) {
     console.warn(e);
@@ -64,7 +65,8 @@ export async function topicScreen(root, id) {
   }
   if (location.hash !== route) return;
   const r = store.state().topics[id];
-  $('#lesson', root).innerHTML = md(topic.lesson);
+  $('#lesson', root).innerHTML = lessonHTML(topic.lesson);
+  bindLesson($('#lesson', root));
   if (topic.anim?.length) {
     $('#lesson', root).insertAdjacentHTML('beforebegin', `<button class="card hero anim-start" data-anim>
       <span class="play">▶</span><span class="grow"><span class="t">Anlatımı başlat</span><br>

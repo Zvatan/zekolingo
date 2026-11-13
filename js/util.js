@@ -70,7 +70,7 @@ export function md(src) {
 export function norm(s) {
   return String(s ?? '').toLowerCase()
     .replace(/[’‘`´]/g, "'").replace(/[.,!?;:"“”()]/g, ' ')
-    .replace(/\b(am|ai)n't\b/g, '$1nt') // "amn't" diye bir kısaltma yok, doğru sayılmasın
+    .replace(/\b(am|ai|will|shall|may)n't\b/g, '$1nt') // "amn't", "willn't" gibi kısaltmalar yok, doğru sayılmasın
     .replace(/\bcan't\b/g, 'can not').replace(/\bcannot\b/g, 'can not').replace(/\bwon't\b/g, 'will not')
     .replace(/n't\b/g, ' not').replace(/'m\b/g, ' am').replace(/'re\b/g, ' are')
     .replace(/'ve\b/g, ' have').replace(/'ll\b/g, ' will')

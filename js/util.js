@@ -16,6 +16,10 @@ export const ICON = {
   chev: svg('<path d="M9 6l6 6-6 6"/>'),
   back: svg('<path d="M15 6l-6 6 6 6"/>'),
   doc: svg('<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>'),
+  play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>',
+  bulb: svg('<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2V16h5v-.2c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3z"/>'),
+  alert: svg('<circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16v.5"/>'),
+  cap: svg('<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/>'),
 };
 
 export function esc(s) {
@@ -56,7 +60,7 @@ export function md(src) {
       out.push(`<div class="tbl${head.length >= 5 ? ' wide' : ''}"><table><thead>${tr(head, 'th')}</thead><tbody>${rows.map(r => tr(r, 'td')).join('')}</tbody></table></div>`);
     }
     else if (cur === 'ex') out.push(`<div class="ex-group">${buf.map(([en, tr]) => exampleHTML(en, tr)).join('')}</div>`);
-    else if (cur === 'mist') out.push(`<div class="mist-group"><div class="mg-h">⚠️ Sık yapılan hata${buf.length > 1 ? 'lar' : ''}</div>${buf.map(([bad, good]) =>
+    else if (cur === 'mist') out.push(`<div class="mist-group"><div class="mg-h">${ICON.alert}Sık yapılan hata${buf.length > 1 ? 'lar' : ''}</div>${buf.map(([bad, good]) =>
       `<div class="mist"><span class="no">✗ ${inline(bad)}</span><span class="yes">✓ ${inline(good)}</span></div>`).join('')}</div>`);
     buf = []; cur = null;
   };
@@ -70,7 +74,7 @@ export function md(src) {
     else if (line.startsWith('|')) add('table', line.replace(/^\||\|$/g, '').split('|').map(c => c.trim()));
     else if (line.startsWith('> ')) add('ex', line.slice(2).split(' | '));
     else if (line.startsWith('x ')) add('mist', line.slice(2).split(' => '));
-    else if (line.startsWith('! ')) { flush(); out.push(`<div class="tip"><span class="tip-i">💡</span><div>${inline(line.slice(2))}</div></div>`); }
+    else if (line.startsWith('! ')) { flush(); out.push(`<div class="tip"><span class="tip-i">${ICON.bulb}</span><div>${inline(line.slice(2))}</div></div>`); }
     else add('p', line);
   }
   flush();

@@ -22,7 +22,7 @@ export function meScreen(root) {
       return `<div class="card"><div class="row"><div class="grow"><div class="t">${L.id} · ${L.name}</div>
         <div class="s">${done}/${L.topics.length} konu · ${ex ? `sınav en iyi %${ex.best}` : 'sınava girilmedi'}</div>
         <div class="pbar"><i style="width:${pct(done, L.topics.length)}%"></i></div></div>
-        ${ex?.best >= PASS ? '<span class="pill ok">Geçti 🎓</span>' : ''}</div></div>`;
+        ${ex?.best >= PASS ? '<span class="pill ok">Geçti</span>' : ''}</div></div>`;
     }).join('')}</div>
 
     <div class="sec">Ayarlar</div>

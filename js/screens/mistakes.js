@@ -31,7 +31,7 @@ export async function mistakesScreen(root) {
   if (location.hash !== route) return;
   const body = $('#mbody', root);
   if (!list.length) {
-    body.innerHTML = `<div class="card empty"><div class="big">🎉</div><p><b>Defterin boş!</b><br>Alıştırmalarda yanlış yaptığın sorular burada toplanır.</p></div>`;
+    body.innerHTML = `<div class="card empty"><div class="big">${ICON.ok}</div><p><b>Defterin boş!</b><br>Alıştırmalarda yanlış yaptığın sorular burada toplanır.</p></div>`;
     return;
   }
   const groups = {};

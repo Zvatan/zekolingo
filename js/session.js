@@ -59,7 +59,7 @@ const TYPES = {
   fill: {
     render(el, ex, ready, enter) {
       el.innerHTML = `<p class="inst">${inline(ex.i || 'Boşluğu doldur')}</p><div class="q">${fmtQ(ex.q)}</div>
-        ${ex.h ? `<p class="hint">💡 ${inline(ex.h)}</p>` : ''}
+        ${ex.h ? `<p class="hint">${ICON.bulb}<span>${inline(ex.h)}</span></p>` : ''}
         <input class="inp" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="Cevabını yaz">`;
       const inp = $('.inp', el);
       inp.oninput = () => ready(inp.value.trim().length > 0);
@@ -230,7 +230,7 @@ const resItem = r => `<div class="card res-item"><div class="q2">${questionHTML(
 export function showResults(root, results, { title, onRetry, onBack, note = '' }) {
   const ok = results.filter(r => r.ok).length, n = results.length, p = pct(ok, n);
   const cls = p >= 80 ? 'hi' : p >= 50 ? 'mid' : 'lo';
-  const msg = p === 100 ? 'Kusursuz! 🎉' : p >= 80 ? 'Harika iş! 👏' : p >= 50 ? 'İyi gidiyorsun. Yanlışlarına göz at.' : 'Konuyu bir kez daha okuyup yeniden dene. 💪';
+  const msg = p === 100 ? 'Kusursuz!' : p >= 80 ? 'Harika iş!' : p >= 50 ? 'İyi gidiyorsun. Yanlışlarına göz at.' : 'Konuyu bir kez daha okuyup yeniden dene.';
   const wrong = results.filter(r => !r.ok);
   root.innerHTML = `<header class="hd"><h1>${esc(title)}</h1></header>
     <div class="score ${cls}">%${p}</div>

@@ -37,14 +37,15 @@ export function learnScreen(root) {
   const passed = ex?.best >= PASS;
   root.innerHTML = `<header class="hd"><h1>Öğren</h1><p class="sub">Konuyu oku, alıştırmayı çöz, hatalarından öğren.</p></header>
     ${levelChips(L.id, hasTopics)}
-    <div class="card hero"><div class="t">${L.id} · ${L.name}</div>
-      <div class="s">${done}/${L.topics.length} konu tamamlandı${passed ? ' · 🎓 kur sınavı geçildi' : ''}</div>
-      <div class="pbar" style="background:rgba(255,255,255,.25)"><i style="width:${pct(done, L.topics.length)}%;background:#fff"></i></div></div>
+    <div class="card lvl"><div class="row"><div class="grow"><div class="t">${L.id} · ${L.name}</div>
+      <div class="s">${done}/${L.topics.length} konu tamamlandı${passed ? ' · kur sınavı geçildi' : ''}</div></div>
+      <span class="lvl-p">%${pct(done, L.topics.length)}</span></div>
+      <div class="pbar"><i style="width:${pct(done, L.topics.length)}%"></i></div></div>
     ${mc ? `<a class="card banner row" href="#/mistakes" style="margin-top:10px">${ICON.mistakes}<span class="grow">Hata defterinde ${mc} soru var</span><span>Tekrar et</span></a>` : ''}
     <div class="sec">Konular</div>
     <div class="list">${L.topics.map(topicRow).join('')}</div>
     <div class="sec">Kur sınavı</div>
-    <a class="card row" href="#/exam/${L.id}"><div class="num${passed ? ' done' : ''}">${passed ? ICON.check : '🎓'}</div>
+    <a class="card row" href="#/exam/${L.id}"><div class="num${passed ? ' done' : ''}">${passed ? ICON.check : ICON.cap}</div>
       <div class="grow"><div class="t">${L.id} Kur Sınavı</div>
       <div class="s">${EXAM_SIZE} karışık soru · geçme notu %${PASS}${ex ? ` · en iyi %${ex.best}` : ''}</div></div>${ICON.chev}</a>`;
   bindChips(root, hasTopics, () => learnScreen(root));
@@ -68,9 +69,9 @@ export async function topicScreen(root, id) {
   $('#lesson', root).innerHTML = lessonHTML(topic.lesson);
   bindLesson($('#lesson', root));
   if (topic.anim?.length) {
-    $('#lesson', root).insertAdjacentHTML('beforebegin', `<button class="card hero anim-start" data-anim>
-      <span class="play">▶</span><span class="grow"><span class="t">Anlatımı başlat</span><br>
-      <span class="s">${topic.anim.length} adımda, kelimeler yerine otururken izle</span></span></button>`);
+    $('#lesson', root).insertAdjacentHTML('beforebegin', `<button class="card anim-start" data-anim>
+      <span class="play">${ICON.play}</span><span class="grow"><span class="t">Anlatımı başlat</span>
+      <span class="s">${topic.anim.length} adımlık animasyonlu anlatım</span></span>${ICON.chev}</button>`);
     $('[data-anim]', root).onclick = () => playLesson(root, topic.anim, {
       title: meta.title,
       onClose: () => topicScreen(root, id),
@@ -127,7 +128,7 @@ export function examScreen(root, lv) {
     res.filter(r => !r.ok).forEach(r => (weak[r.topic] = (weak[r.topic] || 0) + 1));
     const list = Object.entries(weak).sort((a, b) => b[1] - a[1]);
     const note = `<div class="card" style="margin-top:12px">${p >= PASS
-      ? `<b>🎓 Tebrikler! ${L.id} kurunu geçtin.</b>`
+      ? `<b>Tebrikler! ${L.id} kurunu geçtin.</b>`
       : `<b>Geçme notu %${PASS}.</b> Zayıf konularını çalışıp tekrar dene.`}
       ${list.length ? `<div class="small" style="margin-top:8px">Tekrar etmen gereken konular:</div>
       <ul class="small" style="margin:4px 0 0;padding-left:20px">${list.map(([id, n]) =>

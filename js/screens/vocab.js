@@ -58,7 +58,7 @@ function study(root, lv, fresh, rev, pool, themeWords = pool) {
   document.body.classList.add('session');
   const finish = () => {
     document.body.classList.remove('session');
-    root.innerHTML = `<header class="hd"><h1>Bitti! 🎉</h1></header>
+    root.innerHTML = `<header class="hd"><h1>Oturum tamamlandı</h1></header>
       <div class="card" style="text-align:center"><div class="stats"><div><b>${fresh.length}</b><span>Yeni kelime</span></div>
       <div><b>${rev.length}</b><span>Tekrar</span></div><div><b>%${pct(right, quizzes)}</b><span>İlk denemede doğru</span></div></div></div>
       <div class="btns"><button class="btn" data-ok>Tamam</button></div>`;

@@ -1,20 +1,4 @@
 export default {
-  anim: [
-    { title: 'Türkçede ikisi de "-dı"', tr: [['Anahtarlarımı', 'n'], [' kaybettim', 'v']],
-      note: 'İngilizcede iki farklı şekilde söylenebilir. Asıl soru şu: **zaman belli mi?**' },
-    { title: 'Zaman belli → Past Simple', blocks: [['I', 's'], ['lost#V', 'v', 'hi'], ['my keys', 'n'], ['yesterday#T', 't', 'hi']],
-      note: 'Dün oldu, bitti. Bitmiş zaman → **Past Simple**' },
-    { title: 'Zaman yok, sonuç şimdi → Present Perfect', blocks: [['I', 's'], ["'ve lost#V", 'v', 'hi'], ['my keys', 'n']],
-      note: 'Ne zaman olduğu önemli değil. Önemli olan şu: **şu an anahtarım yok**.' },
-    { title: 'İpucu kelimeler', rows: [[['yesterday', 't'], ['ago', 't'], ['in 2019', 't'], ['last week', 't']], [['ever', 'v'], ['never', 'v'], ['just', 'v'], ['yet', 'v'], ['so far', 'v']]],
-      note: 'Üst satırdakiler (belirli zaman) → **Past Simple**. Alt satırdakiler → **Present Perfect**.' },
-    { title: 'Konuşmanın akışı', rows: [[['Have', 'q'], ['you', 's'], ['ever been', 'v', 'hi'], ['to Japan?', 'n']], [['Yes,', 'x'], ['I', 's'], ['went', 'v', 'hi'], ['in 2018', 't']]],
-      note: 'Konu Present Perfect ile açılır, ayrıntı (ne zaman?) Past Simple ile verilir.' },
-    { title: 'Hâlâ süren: for / since', tr: [['On yıldır', 't'], [' burada yaşıyorum', 'v']], blocks: [['I', 's'], ['am living#L', 'v', 'no'], ['here', 'n'], ['for ten years', 't']],
-      note: 'Türkçede "yaşıyorum" (şimdiki zaman) deriz ama...' },
-    { blocks: [['I', 's'], ["'ve lived#L", 'v', 'ok'], ['here', 'n'], ['for ten years', 't']],
-      note: '...geçmişte başlayıp hâlâ süren durum → **Present Perfect** + for / since.' },
-  ],
   ex: [
     { t: 'mc', q: 'I ___ my homework. Can I go out now?', o: ['have finished', 'finished'], a: 0,
       w: { 1: `Sonucu şimdiyle bağlantılı (şimdi dışarı çıkabilir miyim?) ve zaman belirtilmemiş → Present Perfect.` },

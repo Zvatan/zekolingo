@@ -1,20 +1,4 @@
 export default {
-  anim: [
-    { title: 'Geçmişte iki olay', rows: [[['1', 'x'], ['The train left', 'v', '', 'önce']], [['2', 'x'], ['I arrived', 'v', '', 'sonra']]],
-      note: 'Önce tren kalktı, sonra ben vardım. Bunu tek cümlede nasıl söylerim?' },
-    { tr: [['Vardığımda', 'q'], [' tren', 'n'], [' kalkmıştı', 'v']], blocks: [['When', 'x'], ['I arrived', 'q', '', 'sonra'], ['the train', 'n'], ['had left', 'v', 'hi', 'önce']],
-      note: 'Daha **eski** olan olay → **had + 3. hal** (Past Perfect). "-mıştı"' },
-    { title: 'Anlam farkı', rows: [[['When I arrived,', 'q'], ['she', 's'], ['left', 'v', 'hi', 'ben gelince çıktı']], [['When I arrived,', 'q'], ['she', 's'], ['had left', 'v', 'hi', 'ben gelmeden gitmişti']]],
-      note: 'Tek kelime anlamı tamamen değiştirir.' },
-    { title: 'Bütün öznelerde aynı', blocks: [['I · She · They', 's'], ['had', 'x', 'hi'], ['finished', 'v']],
-      note: '**had** hiç değişmez. Arkasından **3. hal** gelir.' },
-    { title: 'Sık hata', blocks: [['When I arrived,', 'q'], ['the meeting', 'n'], ['has#H', 'x', 'no'], ['finished', 'v']],
-      note: 'Cümle geçmişte, "has" şimdiye bağlar...' },
-    { blocks: [['When I arrived,', 'q'], ['the meeting', 'n'], ['had#H', 'x', 'ok'], ['finished', 'v']],
-      note: '...geçmişten önceki olay → **had** finished.' },
-    { title: 'Sırayla anlatırsan gerek yok', blocks: [['I got up,', 'v'], ['had a shower', 'v'], ['and left', 'v']],
-      note: 'Olaylar zaten sırayla anlatılıyorsa hepsi **Past Simple** olur.' },
-  ],
   ex: [
     { t: 'mc', q: 'When we got to the cinema, the film ___ .', o: ['had already started', 'has already started', 'already starts'], a: 0,
       w: { 1: `Geçmişteki bir olaydan (got to) önce → had started. "has" şimdiye bağlanır.`, 2: `Geçmişte olmuş bir şey anlatılıyor.` },

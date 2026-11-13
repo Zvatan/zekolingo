@@ -1,20 +1,4 @@
 export default {
-  anim: [
-    { title: 'Eskiden ...ırdım', tr: [['Eskiden', 't'], [' futbol', 'n'], [' oynardım', 'v']], blocks: [['I', 's'], ['used to', 'x', 'hi', 'eskiden'], ['play', 'v'], ['football', 'n']],
-      note: '**used to + yalın fiil**: eskiden vardı, **artık yok**.' },
-    { blocks: [['There', 's'], ['used to', 'x'], ['be', 'v', 'hi'], ['a cinema here', 'n']],
-      note: 'Durumlar için de kullanılır: "Eskiden burada bir sinema vardı."' },
-    { title: 'Olumsuz ve soruda d düşer', blocks: [['I', 's'], ["didn't", 'neg', 'hi'], ['use to#U', 'x', 'hi'], ['like', 'v'], ['vegetables', 'n']],
-      note: '**did** varsa **use to** yazılır, çünkü geçmiş bilgisi did\'in içinde.' },
-    { blocks: [['Did', 'q', 'hi'], ['you', 's'], ['use to#U', 'x'], ['smoke?', 'v']],
-      note: 'Soru: Did you **use to** ...?' },
-    { title: 'Şimdiki alışkanlık değil!', blocks: [['I', 's'], ['use to#U2', 'x', 'no'], ['get up', 'v'], ['at 7', 't']],
-      note: 'Bugünkü alışkanlık için used to kullanılmaz...' },
-    { blocks: [['I', 's'], ['usually#U2', 't', 'ok'], ['get up', 'v'], ['at 7', 't']],
-      note: '...**usually** + Present Simple kullanılır.' },
-    { title: 'would: tekrarlanan eylemler', rows: [[['We', 's'], ['would', 'x', 'hi'], ['swim', 'v', '', 'eylem ✓']], [['I', 's'], ['used to', 'x', 'hi'], ['have a dog', 'v', '', 'durum: sadece used to']]],
-      note: 'Hikâye anlatırken eylemlerde **would** de olur. Durumlarda olmaz.' },
-  ],
   ex: [
     { t: 'mc', q: "I ___ smoke, but I stopped five years ago.", o: ['used to', 'use to', 'was used to'], a: 0,
       w: { 1: `Olumlu cümlede "used to" yazılır.`, 2: `"be used to" = alışkın olmak. Eski alışkanlık → used to.` },

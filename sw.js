@@ -1,5 +1,5 @@
 // Bu dosya tools/build.mjs tarafından sw.js olarak üretilir. sw.js'yi elle düzenleme.
-const CACHE = 'zekolingo-a558dd5cdf';
+const CACHE = 'zekolingo-d404f09391';
 const FILES = [
  "./",
  "index.html",
@@ -15,6 +15,7 @@ const FILES = [
  "js/screens/vocab.js",
  "js/session.js",
  "js/store.js",
+ "js/timeline.js",
  "js/util.js",
  "data/catalog.js",
  "data/grammar/a1-articles.js",
@@ -98,6 +99,7 @@ const FILES = [
  "data/reading/a1.js",
  "data/reading/a2.js",
  "data/reading/b1.js",
+ "data/tenses.js",
  "data/vocab/a1.js",
  "data/vocab/a2.js",
  "data/vocab/b1.js",

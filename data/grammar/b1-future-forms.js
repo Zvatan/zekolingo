@@ -1,20 +1,4 @@
 export default {
-  anim: [
-    { title: 'Türkçede hepsi "-ecek"', tr: [['Ali ile', 'n'], [' buluşacağım', 'v']],
-      note: 'İngilizcede ne tür bir gelecek olduğuna göre **dört yol** var.' },
-    { title: '1) Anlık karar', blocks: [["I'll", 'x', 'hi'], ['help', 'v'], ['you', 'n']],
-      note: 'O an karar verdin → **will**' },
-    { title: '2) Niyet, önceden karar', blocks: [["I'm", 'x'], ['going to', 'x', 'hi'], ['learn', 'v'], ['Spanish', 'n']],
-      note: 'Kafanda karar verdin ama ayarlanmış bir şey yok → **going to**' },
-    { title: '3) Ayarlanmış plan', blocks: [["I'm", 'x'], ['meeting', 'v', 'hi'], ['Ali', 'n'], ['at 6 tomorrow', 't']],
-      note: 'Saat, yer, kişi belli, sözleşildi → **Present Continuous**' },
-    { title: '4) Tarife, program', blocks: [['The train', 's'], ['leaves', 'v', 'hi'], ['at 7:15', 't']],
-      note: 'Resmi saat çizelgesi → **Present Simple**' },
-    { title: 'Karşılaştır', rows: [[["I'm going to", 'x'], ['visit Paris', 'v'], ['one day', 't', '', 'niyet']], [["I'm", 'x'], ['flying', 'v', 'hi'], ['to Paris on Monday', 't', '', 'bilet alındı']]],
-      note: 'Bilet, randevu, rezervasyon varsa İngilizler çoğunlukla **Present Continuous** kullanır.' },
-    { title: 'Tahminler', rows: [[['I think', 'x'], ['it will', 'x', 'hi'], ['rain', 'v', '', 'fikir']], [['Look at the clouds!', 'x'], ["It's going to", 'x', 'hi'], ['rain', 'v', '', 'kanıt']]],
-      note: 'Fikre dayalı tahmin → **will**, gözle görülen kanıt → **going to**' },
-  ],
   ex: [
     { t: 'mc', q: "The phone's ringing. I ___ it.", o: ["'ll get", "'m getting", "'m going to get"], a: 0,
       w: { 1: `Konuşma anında verilen karar → will.`, 2: `Önceden düşünülmüş bir karar değil, anlık → will.` },

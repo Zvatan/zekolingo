@@ -1,22 +1,4 @@
 export default {
-  anim: [
-    { title: 'will + yalın fiil', tr: [['Sana', 'n'], [' yardım edeceğim', 'v']], blocks: [['I', 's'], ['will', 'x', 'hi', '-ecek'], ['help', 'v'], ['you', 'n']],
-      note: '**will** bütün öznelerde aynıdır.' },
-    { blocks: [['She#I', 's'], ['will', 'x'], ['help', 'v', 'hi'], ['you', 'n']],
-      note: 'she ile de "will" ve "help" değişmez. -s yok, to yok!' },
-    { title: 'Kısa halleri', rows: [[["I'll", 'x', 'hi', 'I will']], [["won't", 'neg', 'hi', 'will not']]],
-      note: '"willn\'t" diye bir şey yok: **won\'t**' },
-    { title: 'Anlık karar', tr: [['Telefon çalıyor.', 'x'], [' Ben bakarım!', 'v']], blocks: [["I'll", 'x', 'hi'], ['answer', 'v'], ['it', 'n']],
-      note: 'Konuşurken o an verilen karar → **will**' },
-    { title: 'will mi going to mu?', rows: [[["I'll", 'x'], ['answer it', 'v', '', 'şimdi karar verdim']], [["I'm going to", 't'], ['visit Rome', 'v', '', 'önceden planladım']]],
-      note: 'Anlık karar → **will**. Önceden plan → **going to**.' },
-    { title: 'Fikre dayalı tahmin', blocks: [['I think', 'x'], ['it', 's'], ['will', 'x', 'hi'], ['rain', 'v'], ['tomorrow', 't']],
-      note: '"Bence ..." diye tahmin ederken **will**.' },
-    { title: 'Sık hata', blocks: [['I', 's'], ['will', 'x'], ['to call#C', 'v', 'no'], ['you', 'n']],
-      note: 'will\'den sonra to yok...' },
-    { blocks: [['I', 's'], ['will', 'x'], ['call#C', 'v', 'ok'], ['you', 'n']],
-      note: '...I will **call** you.' },
-  ],
   ex: [
     { t: 'mc', q: '"I\'m thirsty." "I ___ get you some water."', o: ["'ll", "'m going to", 'am'], a: 0,
       w: { 1: `Su getirme kararı konuşma anında verildi → will.`, 2: `"am get" diye bir yapı yok.` },

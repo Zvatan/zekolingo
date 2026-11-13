@@ -150,6 +150,7 @@ export function sheet(html, cls = '', label = 'Devam', onClose) {
   requestAnimationFrame(() => requestAnimationFrame(() => s.classList.add('show')));
   s.querySelector('[data-close]').onclick = () => { s.remove(); onClose?.(); };
   if (!cls) s.onclick = e => { if (e.target === s) s.remove(); };
+  return s;
 }
 
 export function feedbackHTML(ex, r) {

@@ -1,7 +1,8 @@
 // Animasyonlu konu anlatımı: kelimeler renkli bloklar halinde adım adım yerine oturur.
 //
 // Adım biçimi (data/grammar/<konu>.js → anim: [...]):
-//   { title, tr, blocks | rows, note }
+//   { title, time, tr, blocks | rows, note }
+//   time:   zaman çizgisi (bkz. timeline.js): [['bar', .1, .4, 'was cooking', 'v'], ['dot', .3, 'rang', 'q', 'b']]
 //   tr:     Türkçe satır: [['Ben', 's'], [' öğrenci', 'n'], ['-yim', 'v']] (renkler bloklarla eşleşir)
 //   blocks: tek satır blok: [metin, rol, bayraklar, etiket]  → ['am', 'v', 'hi', 'to be']
 //   rows:   birden çok satır: [[blok, blok], [blok]]
@@ -9,6 +10,7 @@
 // yeni yerine kayar, metni değiştiyse parlar. Roller: s özne, v fiil, n isim/tamamlayıcı,
 // x diğer, neg olumsuz, q soru, t zaman. Bayraklar: hi (vurgula), no (yanlış), ok (doğru), gap (boşluk).
 import { $, esc, inline, ICON } from './util.js';
+import { timelineSVG } from './timeline.js';
 
 const REDUCED = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 const ms = n => (REDUCED ? 0 : n);
@@ -27,7 +29,8 @@ function stageHTML(step) {
     return `<span class="blk r-${role} ${flags}" data-k="${esc(key(id || text))}"><span class="bt">${esc(text)}</span>${label ? `<small>${esc(label)}</small>` : ''}</span>`;
   }).join('')}</div>`).join('');
   return `${step.title ? `<div class="an-title">${inline(step.title)}</div>` : ''}
-    ${tr ? `<div class="an-tr">${tr.map(([t, role = 'x']) => `<span class="trs r-${role}">${esc(t)}</span>`).join('')}</div>` : ''}
+    ${step.time ? timelineSVG(step.time) : ''}
+    ${tr ?`<div class="an-tr">${tr.map(([t, role = 'x']) => `<span class="trs r-${role}">${esc(t)}</span>`).join('')}</div>` : ''}
     <div class="an-rows">${rows}</div>
     ${step.note ? `<div class="an-note">${inline(step.note)}</div>` : ''}`;
 }

@@ -18,7 +18,7 @@ const TABS = [
 
 const ROUTES = [
   [/^#\/learn$/, () => learnScreen(app)],
-  [/^#\/topic\/([\w-]+)$/, id => topicScreen(app, id)],
+  [/^#\/topic\/([\w-]+)(\/anim)?$/, (id, anim) => topicScreen(app, id, !!anim)],
   [/^#\/exam\/(\w+)$/, lv => examScreen(app, lv)],
   [/^#\/vocab$/, () => vocabScreen(app)],
   [/^#\/read$/, () => readList(app)],

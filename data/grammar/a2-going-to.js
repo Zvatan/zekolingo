@@ -1,20 +1,4 @@
 export default {
-  anim: [
-    { title: 'Plan: -ecek', tr: [['Yeni bir araba', 'n'], [' alacağım', 'v']], blocks: [['I', 's'], ['buy#V', 'v'], ['a new car', 'n']],
-      note: 'Önceden karar verdiğim bir plan var. Nasıl söylerim?' },
-    { blocks: [['I', 's'], ['am', 'x', 'hi'], ['going to', 't', 'hi'], ['buy#V', 'v'], ['a new car', 'n']],
-      note: '**am / is / are + going to + yalın fiil**' },
-    { blocks: [['She#I', 's'], ['is#am', 'x', 'hi'], ['going to', 't'], ['buy#V', 'v'], ['a new car', 'n']],
-      note: 'be özneye göre değişir: she → **is**' },
-    { title: 'Üç parça şart', rows: [[['She', 's'], ['going to', 't'], ['buy', 'v'], ['___', 'x', 'no', 'is yok']], [['She', 's'], ['is', 'x'], ['going to', 't'], ['bought', 'v', 'no']]],
-      note: 'be eksik olamaz, fiil de **yalın** olmalı.' },
-    { title: 'Kanıta dayalı tahmin', tr: [['Bulutlara bak!', 'x'], [' Yağmur yağacak', 'v']], blocks: [['It', 's'], ["'s", 'x'], ['going to', 't'], ['rain', 'v', 'hi']],
-      note: 'Şu an gördüğün bir işaret varsa da **going to** kullanılır.' },
-    { title: 'Soru', blocks: [['You#I', 's'], ['are#am', 'x'], ['going to', 't'], ['do#V', 'v'], ['what?#W', 'q']],
-      note: '"Ne yapacaksın?" demek için...' },
-    { blocks: [['What#W', 'q', 'hi'], ['are#am', 'x', 'hi'], ['you#I', 's'], ['going to', 't'], ['do?#V', 'v']],
-      note: '...What + **are** + you + going to + do?' },
-  ],
   ex: [
     { t: 'mc', q: 'We ___ a new house next year.', o: ["'re going to buy", 'going to buy', "'re going to bought"], a: 0,
       w: { 1: `be fiili eksik: we're (we are) going to.`, 2: `going to'dan sonra fiil yalın: buy.` },

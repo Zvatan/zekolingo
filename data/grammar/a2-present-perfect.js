@@ -1,20 +1,4 @@
 export default {
-  anim: [
-    { title: 'have + 3. hal', tr: [['Ödevimi', 'n'], [' bitirdim', 'v']], blocks: [['I', 's'], ['have', 'x', 'hi', 'yardımcı'], ['finished', 'v', 'hi', '3. hal'], ['my homework', 'n']],
-      note: 'Ne zaman olduğu söylenmiyor, önemli olan **sonuç**: ödev bitti.' },
-    { blocks: [['She#I', 's'], ['has#have', 'x', 'hi'], ['finished', 'v'], ['her homework#my homework', 'n']],
-      note: 'he / she / it → **has**' },
-    { title: '3. hal (V3)', rows: [[['go', 'v'], ['went', 'v'], ['gone', 'v', 'hi']], [['see', 'v'], ['saw', 'v'], ['seen', 'v', 'hi']], [['eat', 'v'], ['ate', 'v'], ['eaten', 'v', 'hi']]],
-      note: 'Present Perfect\'te her zaman **3. hal** kullanılır.' },
-    { title: 'Hayat deneyimi', tr: [['Hiç', 't'], [' suşi', 'n'], [' yedin mi?', 'q']], blocks: [['Have', 'q', 'hi'], ['you', 's'], ['ever', 't', 'hi', 'hiç'], ['eaten', 'v'], ['sushi?', 'n']],
-      note: 'Hayatında hiç... → **Have you ever...?**' },
-    { title: 'Zaman belliyse: Past Simple', blocks: [['I', 's'], ['have#H', 'x', 'no'], ['seen#S', 'v'], ['him', 'n'], ['yesterday', 't', 'hi']],
-      note: '"yesterday" belirli bir geçmiş zaman! Present Perfect kullanılmaz...' },
-    { blocks: [['I', 's'], ['saw#S', 'v', 'ok'], ['him', 'n'], ['yesterday', 't']],
-      note: '...doğrusu: I **saw** him yesterday.' },
-    { title: 'just / already / yet', rows: [[["I've", 'x'], ['just', 't', 'hi', 'az önce'], ['eaten', 'v']], [["I haven't", 'neg'], ['eaten', 'v'], ['yet', 't', 'hi', 'henüz']]],
-      note: '**just / already** ortaya, **yet** cümle sonuna gelir.' },
-  ],
   ex: [
     { t: 'mc', q: '___ you ever been to Italy?', o: ['Have', 'Did', 'Has'], a: 0,
       w: { 1: `"ever been" Present Perfect'tir → Have you...?`, 2: `you → Have.` },

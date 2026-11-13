@@ -1,7 +1,10 @@
 import { $, $$, esc, md, pct, sample, shuffle, toast, ICON } from '../util.js';
 import * as store from '../store.js';
 import { LEVELS, level, topicMeta, loadTopic, PASS, EXAM_SIZE } from '../../data/catalog.js';
-import { runSession, showResults } from '../session.js';
+import { runSession, showResults, sheet } from '../session.js';
+import { TENSES, TENSE_COLS, TENSE_ROWS } from '../../data/tenses.js';
+import { timelineSVG } from '../timeline.js';
+import { inline, exampleHTML } from '../util.js';
 import { playLesson } from '../anim.js';
 import { lessonHTML, bindLesson } from '../lesson.js';
 
@@ -29,6 +32,37 @@ const topicRow = ([id, title, sub], n) => {
     ${best != null ? `<span class="pill${done ? ' ok' : ''}">%${best}</span>` : ''}${ICON.chev}</a>`;
 };
 
+/* ---------- Zamanlar haritası ---------- */
+const tenseMapHTML = () => `<section class="card tmap">
+  <div class="tmap-h"><span class="t">Zamanlar haritası</span><span class="s">Bir zamana dokun</span></div>
+  <div class="tgrid"><div></div>${TENSE_COLS.map(([c, l]) => `<div class="tg-col${c === 'present' ? ' now' : ''}">${l}</div>`).join('')}
+  ${TENSE_ROWS.map(([r, rl]) => `<div class="tg-row">${rl}</div>${TENSE_COLS.map(([c]) => {
+    const t = TENSES.find(t => t.col === c && t.row === r);
+    return `<button type="button" class="tcell${t.soon ? ' soon' : ''}" data-tense="${t.id}"><b>${esc(t.cell[0])}</b><span>${esc(t.cell[1])}</span></button>`;
+  }).join('')}`).join('')}</div></section>`;
+
+const formulaHTML = rows => rows.map(([sign, blocks]) => `<div class="frow"><span class="sg">${sign}</span>${blocks.map(([text, role = 'x', , label]) =>
+  `<span class="blk sm r-${role}">${esc(text)}${label ? `<small>${esc(label)}</small>` : ''}</span>`).join('')}</div>`).join('');
+
+function openTense(id) {
+  const t = TENSES.find(t => t.id === id);
+  const s = sheet(`<div class="td-h"><div><div class="td-name">${esc(t.name)}</div><div class="s">${esc(t.tr)}</div></div>
+      ${t.soon ? '<span class="pill">B2 · yakında</span>' : ''}</div>
+    ${timelineSVG(t.time)}
+    <div class="td-sec">Formül</div><div class="td-f">${formulaHTML(t.f)}</div>
+    <div class="td-sec">Ne zaman kullanılır?</div><ul class="td-ul">${t.use.map(u => `<li>${inline(u)}</li>`).join('')}</ul>
+    <div class="td-sec">İpucu kelimeler</div><p class="td-sig">${esc(t.signals)}</p>
+    <div class="td-sec">Örnekler</div><div class="ex-group">${t.ex.map(([en, tr]) => exampleHTML(en, tr)).join('')}</div>
+    ${t.topic
+      ? `<div class="btns"><button class="btn" data-go-anim>${ICON.play} Animasyonlu anlatım</button>
+         <button class="btn ghost" data-go-topic>Konuyu aç: ${esc(topicMeta(t.topic)?.title || '')}</button></div>`
+      : '<p class="small muted">Bu zamanın konusu B2 seviyesinde eklenecek.</p>'}`, '', 'Kapat');
+  if (t.topic) {
+    $('[data-go-anim]', s).onclick = () => (location.hash = `#/topic/${t.topic}/anim`);
+    $('[data-go-topic]', s).onclick = () => (location.hash = `#/topic/${t.topic}`);
+  }
+}
+
 export function learnScreen(root) {
   const S = store.state(), L = level(S.level);
   const mc = store.mistakeCount();
@@ -36,6 +70,7 @@ export function learnScreen(root) {
   const ex = S.exams[L.id];
   const passed = ex?.best >= PASS;
   root.innerHTML = `<header class="hd"><h1>Öğren</h1><p class="sub">Konuyu oku, alıştırmayı çöz, hatalarından öğren.</p></header>
+    ${tenseMapHTML()}
     ${levelChips(L.id, hasTopics)}
     <div class="card lvl"><div class="row"><div class="grow"><div class="t">${L.id} · ${L.name}</div>
       <div class="s">${done}/${L.topics.length} konu tamamlandı${passed ? ' · kur sınavı geçildi' : ''}</div></div>
@@ -49,9 +84,10 @@ export function learnScreen(root) {
       <div class="grow"><div class="t">${L.id} Kur Sınavı</div>
       <div class="s">${EXAM_SIZE} karışık soru · geçme notu %${PASS}${ex ? ` · en iyi %${ex.best}` : ''}</div></div>${ICON.chev}</a>`;
   bindChips(root, hasTopics, () => learnScreen(root));
+  $$('[data-tense]', root).forEach(b => (b.onclick = () => openTense(b.dataset.tense)));
 }
 
-export async function topicScreen(root, id) {
+export async function topicScreen(root, id, autoplay = false) {
   const meta = topicMeta(id);
   if (!meta) return void (location.hash = '#/learn');
   const route = location.hash;
@@ -81,6 +117,8 @@ export async function topicScreen(root, id) {
   root.insertAdjacentHTML('beforeend', `<div style="height:72px"></div>
     <div class="dock"><button class="btn" data-start>Alıştırmaya başla · ${topic.ex.length} soru${r ? ` · en iyi %${r.best}` : ''}</button></div>`);
   $('[data-start]', root).onclick = () => practice(root, meta, topic.ex.map(ex => ({ ex, topic: id })), true);
+  // Zamanlar haritasından "Animasyonlu anlatım" ile gelindiyse sayfa çizildikten sonra hemen başlat
+  if (autoplay && topic.anim?.length) { history.replaceState(null, '', `#/topic/${id}`); $('[data-anim]', root).click(); }
 }
 
 async function practice(root, meta, items, full) {

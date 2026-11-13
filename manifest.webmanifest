@@ -1,0 +1,17 @@
+{
+  "name": "Zekolingo",
+  "short_name": "Zekolingo",
+  "description": "Konu konu İngilizce: dersler, alıştırmalar, kur sınavları, kelime kartları ve okuma.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f6fb",
+  "theme_color": "#5b5bd6",
+  "lang": "tr",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,62 @@
+export default {
+  lesson: `
+## Gelecek için üç yol
+| Yapı | Ne zaman? | Örnek |
+| **will** | Anlık karar, söz, teklif, fikre dayalı tahmin | I'll help you. / I think it'll rain. |
+| **be going to** | Önceden verilmiş karar (niyet), kanıta dayalı tahmin | I'm going to study medicine. / Look, it's going to rain! |
+| **Present Continuous** | Kesinleşmiş, ayarlanmış planlar (saat, yer, kişi belli) | I'm meeting Ali at 6. / We're flying to Rome on Friday. |
+| **Present Simple** | Tarifeler, programlar | The train leaves at 7:15. / The film starts at 8. |
+
+## Niyet mi, ayarlanmış plan mı?
+> I**'m going to** visit Paris one day. | Bir gün Paris'e gideceğim. (niyet, ayarlanmış bir şey yok)
+> I**'m flying** to Paris on Monday. I've got my ticket. | Pazartesi Paris'e uçuyorum. Biletim alındı. (ayarlanmış plan)
+! Türkçede ikisi de "-ecek" olabilir. Ayarlanmış (randevu, bilet, rezervasyon) planlarda İngilizler en çok **Present Continuous** kullanır.
+
+## Tarifeler: Present Simple
+> What time **does** the bus **leave**? | Otobüs saat kaçta kalkıyor?
+> The shop **opens** at 9 tomorrow. | Dükkan yarın 9'da açılıyor.
+
+## will ile anlık karar
+> "We've run out of milk." "Oh, I**'ll** get some." | "Süt bitti." "Ben alırım."
+x I will meet my friend tomorrow at 5, we arranged it last week. => I**'m meeting** my friend tomorrow at 5.
+x The train will leave at 10:30 according to the timetable. => The train **leaves** at 10:30.
+`,
+  ex: [
+    { t: 'mc', q: "The phone's ringing. I ___ it.", o: ["'ll get", "'m getting", "'m going to get"], a: 0,
+      w: { 1: `Konuşma anında verilen karar → will.`, 2: `Önceden düşünülmüş bir karar değil, anlık → will.` },
+      e: `Anlık karar → **will**.` },
+    { t: 'mc', q: "I ___ my dentist at 4 tomorrow. I made the appointment last week.", o: ["'m seeing", "'ll see", 'see'], a: 0,
+      w: { 1: `Randevu alınmış, ayarlanmış bir plan → Present Continuous.`, 2: `Present Simple tarifeler içindir, kişisel randevular için değil.` },
+      e: `Ayarlanmış plan (randevu) → **Present Continuous**.` },
+    { t: 'mc', q: 'The concert ___ at 8 p.m., so we have time for dinner.', o: ['starts', "'ll start", 'is going to start'], a: 0,
+      w: { 1: `Program ve tarifelerde Present Simple kullanılır.`, 2: `Program ve tarifelerde Present Simple kullanılır.` },
+      e: `Program, tarife → **Present Simple**.` },
+    { t: 'mc', q: 'Look at that car! It ___ crash!', o: ["'s going to", "'ll", 'crashes'], a: 0,
+      w: { 1: `Gözle görülen bir kanıt var → going to.`, 2: `Kanıta dayalı tahmin → going to.` },
+      e: `Kanıta dayalı tahmin → **going to**.` },
+    { t: 'mc', q: 'I think robots ___ most of our jobs in the future.', o: ['will do', 'are doing', 'do'], a: 0,
+      w: { 1: `Bu bir plan değil, fikre dayalı tahmin → will.`, 2: `Fikre dayalı tahmin → will.` },
+      e: `I think + fikre dayalı tahmin → **will**.` },
+    { t: 'mc', q: "I've decided. I ___ for a new job.", o: ["'m going to look", "'ll look", 'look'], a: 0,
+      w: { 1: `Karar daha önce verilmiş (I've decided) → going to.`, 2: `Gelecek niyeti → going to.` },
+      e: `Önceden verilmiş karar (niyet) → **going to**.` },
+    { t: 'fill', q: 'What time ___ the train leave tomorrow?', a: ['does'],
+      w: { will: `Tarife sorusu Present Simple ile sorulur: does.`, is: `"leave" yalın → does.` },
+      e: `Tarife → **does** the train leave?` },
+    { t: 'fill', q: 'We ___ (have) a party on Saturday. Do you want to come?', h: 'Ayarlanmış bir plan', a: ["'re having", 'are having'],
+      w: { 'will have': `Parti zaten ayarlanmış (davet ediyorsun) → Present Continuous.`, have: `Ayarlanmış plan → are having.` },
+      e: `Ayarlanmış plan → **are having**.` },
+    { t: 'fill', q: '"It\'s cold in here." "I ___ close the window."', a: ["'ll", 'will'],
+      w: { "'m going to": `Konuşma anında verilen karar → will.`, am: `Kalıp: I'll close.` },
+      e: `Anlık karar → **I'll**.` },
+    { t: 'order', tr: 'Yarın saat 7\'de Ali ile buluşuyorum.', a: "I'm meeting Ali at 7 tomorrow.", x: ['will'],
+      w: { will: `Ayarlanmış plan → **Present Continuous** (I'm meeting).` }, e: `I**'m meeting** Ali at 7 tomorrow.` },
+    { t: 'order', tr: 'Film saat 9\'da başlıyor.', a: 'The film starts at 9.', x: ['will'],
+      w: { will: `Program → **Present Simple**: starts.` }, e: `The film **starts** at 9.` },
+    { t: 'mc', q: 'Bileti dün aldın. Hangisi en doğal?', o: ["I'm flying to Berlin on Monday.", 'I will fly to Berlin on Monday.', 'I fly to Berlin on Monday.'], a: 0,
+      w: { 1: `will anlık kararlar içindir. Bileti alınmış, ayarlanmış plan → Present Continuous.`, 2: `Present Simple tarifeler içindir. Kişisel ayarlanmış plan → Present Continuous.` },
+      e: `Ayarlanmış plan → I**'m flying** to Berlin on Monday.` },
+    { t: 'fix', s: 'Wait, I help you with those bags!', i: 2, c: 'will help',
+      e: `Konuşma anında yapılan teklif → I **will** (I'll) help you.` },
+  ],
+};

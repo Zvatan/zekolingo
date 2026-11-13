@@ -1,0 +1,92 @@
+export default {
+  lesson: `
+## "To be" ne demek?
+İngilizcede "olmak" fiili **am / is / are** şeklinde çekilir. Türkçede bu anlamı ekle veririz: öğrenci**yim**, mutlu**sun**, evde**dir**. İngilizcede ise ayrı bir kelime şarttır.
+
+> I **am** a student. | Ben öğrenciyim.
+> She **is** at home. | O evde.
+> We **are** happy. | Biz mutluyuz.
+
+! Türklerin en sık hatası bu fiili tamamen atlamaktır. "I happy" yanlış, "I **am** happy" doğru.
+
+## Çekim tablosu
+| Özne | to be | Kısa hali |
+| I | am | I'm |
+| you | are | you're |
+| he / she / it | is | he's / she's / it's |
+| we | are | we're |
+| they | are | they're |
+
+İsimler de zamir gibi davranır: **my brother** = he → is, **my parents** = they → are.
+
+## Olumsuz: not
+Fiilden sonra **not** gelir: am not, is not (**isn't**), are not (**aren't**).
+> I **am not** tired. | Yorgun değilim.
+> He **isn't** a doctor. | O doktor değil.
+> They **aren't** at school. | Onlar okulda değiller.
+! "amn't" diye bir kısaltma yoktur. Sadece **I'm not** denir.
+
+## Soru: fiil başa geçer
+Türkçede soru eki (-mı, -mi) kullanırız. İngilizcede ise **am / is / are** cümlenin başına geçer.
+> **Are** you a teacher? | Sen öğretmen misin?
+> **Is** she from Turkey? | O Türkiyeli mi?
+
+### Kısa cevaplar
+> Yes, I **am**. No, I'**m not**. | Evet, öyleyim. Hayır, değilim.
+> Yes, she **is**. No, she **isn't**. | Evet. Hayır.
+! Olumlu kısa cevapta kısaltma yapılmaz: "Yes, I'm." yanlış, "Yes, I **am**." doğru.
+
+## Yaş, hava, duygu: hep "be"
+> I **am** 25 years old. | 25 yaşındayım.
+> It **is** cold today. | Bugün hava soğuk.
+> I **am** hungry. | Açım.
+
+## Sık yapılan hatalar
+x I am agree. => I agree.
+x I have 20 years old. => I **am** 20 years old.
+x My parents is teachers. => My parents **are** teachers.
+x She hungry. => She **is** hungry.
+`,
+  ex: [
+    { t: 'mc', q: 'I ___ a student.', o: ['am', 'is', 'are'], a: 0,
+      w: { 1: `"is" sadece he / she / it ile kullanılır.`, 2: `"are" you / we / they ile kullanılır.` },
+      e: `**I** her zaman **am** ile kullanılır: I am (I'm) a student.` },
+    { t: 'mc', q: 'My brother ___ a doctor.', o: ['am', 'is', 'are'], a: 1,
+      w: { 0: `"am" sadece I ile kullanılır.`, 2: `"My brother" tek kişidir (= he). Tekil özne "are" almaz.` },
+      e: `**My brother = he** olduğu için **is** gelir.` },
+    { t: 'mc', q: 'Ali and Zeynep ___ at school.', o: ['is', 'are', 'am'], a: 1,
+      w: { 0: `İki kişi var (Ali **and** Zeynep = they). Çoğul özne "is" almaz.`, 2: `"am" sadece I ile kullanılır.` },
+      e: `**Ali and Zeynep = they** → **are**.` },
+    { t: 'mc', q: 'It ___ cold today.', o: ['is', 'are', 'am'], a: 0,
+      w: { 1: `"it" tekildir, "are" almaz.`, 2: `"am" sadece I ile kullanılır.` },
+      e: `Hava durumunu **it is** ile anlatırız: It's cold. (Hava soğuk.)` },
+    { t: 'fill', q: 'We ___ (be) from Izmir.', a: ['are', "'re"],
+      w: { is: `"we" (biz) çoğuldur, "is" almaz.`, am: `"am" sadece I ile kullanılır.` },
+      e: `**we → are**: We are (We're) from Izmir.` },
+    { t: 'fill', q: 'She ___ (not / be) tired.', a: ["isn't", 'is not', "'s not"],
+      w: { "aren't": `"she" tekildir, bu yüzden **is not / isn't** olmalı.`, is: `Cümle olumsuz. "not" eklemelisin: isn't.`, "don't": `Burada fiil yok, sıfat (tired) var. Olumsuzu to be ile yapılır: isn't.`, "doesn't": `Burada fiil yok, sıfat (tired) var. Olumsuzu to be ile yapılır: isn't.` },
+      e: `Olumsuz: **is + not = isn't**. She isn't tired. (O yorgun değil.)` },
+    { t: 'fill', q: '___ you hungry?', a: ['Are'],
+      w: { is: `"you" ile "is" kullanılmaz, soruda da **Are you...?** olur.`, do: `"hungry" bir sıfat. Sıfatlı sorular to be ile kurulur: Are you hungry?` },
+      e: `Soru kurarken to be başa geçer: **Are** you hungry? (Aç mısın?)` },
+    { t: 'fill', q: 'I ___ (not / be) a teacher.', a: ['am not', "'m not"],
+      w: { "amn't": `"amn't" diye bir kısaltma yok. **I'm not** veya **I am not** yazılır.`, "isn't": `I ile "is" kullanılmaz: I am not.`, "don't": `Burada fiil yok, isim (a teacher) var. Olumsuzu to be ile yapılır: I am not.`, "aren't": `I ile "are" kullanılmaz: I am not.` },
+      e: `I + **am not** (I'm not): I'm not a teacher.` },
+    { t: 'order', tr: 'O benim kız kardeşim.', a: 'She is my sister.', x: ['are'],
+      w: { are: `"she" tekil → **is**, "are" değil.` }, e: `She **is** my sister. Özne + to be + gerisi.` },
+    { t: 'order', tr: 'Onlar evde mi?', a: 'Are they at home?', x: ['is'],
+      w: { is: `"they" çoğul → **are**.` }, e: `Soru: **Are** + they + at home?` },
+    { t: 'fix', s: 'I am agree with you.', i: 1, c: '',
+      e: `"agree" zaten bir fiildir (katılmak), önüne "am" gelmez: **I agree with you.** Türkçedeki "katılıyorum" kelimesini "ben katılıyor**um**" diye düşünüp "am" eklemek çok yaygın bir hatadır.` },
+    { t: 'fix', s: 'I have 25 years old.', i: 1, c: 'am',
+      e: `Yaş söylerken **be** kullanılır, have değil: I **am** 25 (years old). "25 yaşındayım" diye düşün.` },
+    { t: 'fix', s: 'My parents is teachers.', i: 2, c: 'are',
+      e: `"My parents" çoğuldur (= they), bu yüzden **are** gelir.` },
+    { t: 'mc', q: '"Is he your friend?" sorusuna doğru kısa cevap hangisi?', o: ['Yes, he is.', "Yes, he's.", 'Yes, he does.', 'Yes, is he.'], a: 0,
+      w: { 1: `Olumlu kısa cevapta kısaltma yapılmaz: Yes, he **is**.`, 2: `Soru "Is" ile sorulmuş, cevap da "is" ile verilir. "does" geniş zaman sorularında kullanılır.`, 3: `Cevapta sıra normaldir: önce özne, sonra fiil (he is).` },
+      e: `Kısa cevap, sorudaki yardımcı fiille verilir: Is he...? → Yes, he **is**. / No, he **isn't**.` },
+    { t: 'mc', q: 'Hangisi "Biz öğrenci değiliz" demek?', o: ["We aren't students.", "We isn't students.", "We don't students.", 'We not students.'], a: 0,
+      w: { 1: `"we" ile "is" kullanılmaz: aren't.`, 2: `"don't" fiillerle kullanılır (We don't work). Burada fiil yok, to be gerekir.`, 3: `İngilizcede to be atlanamaz: We **are** not.` },
+      e: `we + **are not** = we **aren't** students.` },
+  ],
+};

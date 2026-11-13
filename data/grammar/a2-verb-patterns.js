@@ -1,0 +1,72 @@
+export default {
+  lesson: `
+## Fiilden sonra -ing mi, to mu?
+İngilizcede bazı fiillerden sonra ikinci fiil **-ing** alır, bazılarından sonra **to + yalın fiil** gelir. Bunun kesin bir mantığı yoktur, kalıp olarak öğrenilir.
+
+## -ing alanlar
+like, love, hate, enjoy, don't mind, finish, stop, go (+ aktivite)
+> I **enjoy reading**. | Okumaktan keyif alırım.
+> She **finished cleaning** the house. | Evi temizlemeyi bitirdi.
+> **Do** you **mind waiting**? | Beklemenin sakıncası var mı?
+> We **go swimming** every Sunday. | Her pazar yüzmeye gideriz.
+! like / love / hate ile **to** da kullanılabilir: I like **swimming** = I like **to swim**.
+
+## to + yalın fiil alanlar
+want, need, decide, hope, plan, learn, try, forget, promise, would like
+> I **want to learn** Spanish. | İspanyolca öğrenmek istiyorum.
+> She **decided to leave**. | Ayrılmaya karar verdi.
+> I**'d like to** order, please. | Sipariş vermek istiyorum.
+x I want learn English. => I want **to learn** English.
+x I enjoy to cook. => I enjoy **cooking**.
+
+## Edattan sonra her zaman -ing
+about, of, at, for, without, before, after gibi edatlardan sonra fiil -ing alır.
+> I'm good **at cooking**. | Yemek yapmakta iyiyim.
+> Thank you **for helping** me. | Yardım ettiğin için teşekkürler.
+> She left **without saying** goodbye. | Hoşça kal demeden gitti.
+
+## Amaç: to (için)
+"-mek için" anlamında **to** kullanılır, "for" değil:
+> I went to the shop **to buy** bread. | Ekmek almak için markete gittim.
+x I came here for learn English. => I came here **to learn** English.
+`,
+  ex: [
+    { t: 'mc', q: 'I enjoy ___ to music.', o: ['listening', 'to listen', 'listen'], a: 0,
+      w: { 1: `"enjoy" fiilinden sonra -ing gelir.`, 2: `"enjoy" fiilinden sonra -ing gelir.` },
+      e: `enjoy + **-ing**.` },
+    { t: 'mc', q: 'She wants ___ a doctor.', o: ['to become', 'becoming', 'become'], a: 0,
+      w: { 1: `"want" fiilinden sonra to + yalın fiil gelir.`, 2: `to eksik: want to become.` },
+      e: `want + **to** + yalın fiil.` },
+    { t: 'mc', q: 'We decided ___ a new car.', o: ['to buy', 'buying', 'buy'], a: 0,
+      w: { 1: `"decide" fiilinden sonra to gelir.`, 2: `to eksik.` },
+      e: `decide + **to** + yalın fiil.` },
+    { t: 'mc', q: 'He is very good at ___ .', o: ['drawing', 'to draw', 'draw'], a: 0,
+      w: { 1: `Edattan (at) sonra fiil -ing alır.`, 2: `Edattan sonra -ing gelir.` },
+      e: `Edat + **-ing**: good at drawing.` },
+    { t: 'mc', q: 'I went to the bank ___ some money.', o: ['to get', 'for get', 'for getting'], a: 0,
+      w: { 1: `Amaç bildirirken "for + fiil" kullanılmaz → to get.`, 2: `Amaç bildirmenin en doğal yolu to + fiil'dir.` },
+      e: `Amaç (için) → **to** + yalın fiil.` },
+    { t: 'fill', q: "Have you finished ___ (write) your essay?", a: ['writing'],
+      w: { 'to write': `"finish" fiilinden sonra -ing gelir.`, writeing: `write → writing (e düşer).` },
+      e: `finish + **-ing**: writing.` },
+    { t: 'fill', q: "Don't forget ___ (call) your mum.", a: ['to call'],
+      w: { calling: `"Unutma" = gelecekte yapılacak bir şey → forget to call.`, call: `to eksik: to call.` },
+      e: `forget + **to** + yalın fiil (yapmayı unutma).` },
+    { t: 'fill', q: 'Thank you for ___ (help) me.', a: ['helping'],
+      w: { 'to help': `Edattan (for) sonra -ing gelir.`, help: `Edattan sonra -ing gelir: helping.` },
+      e: `for + **-ing**.` },
+    { t: 'fill', q: "Would you like ___ (come) to dinner?", a: ['to come'],
+      w: { coming: `"would like" fiilinden sonra to gelir.`, come: `to eksik: to come.` },
+      e: `would like + **to** + yalın fiil.` },
+    { t: 'order', tr: 'İspanyolca öğrenmek istiyorum.', a: 'I want to learn Spanish.', x: ['learning'],
+      w: { learning: `want + **to** + yalın fiil: to learn.` }, e: `I want **to learn** Spanish.` },
+    { t: 'order', tr: 'Hafta sonları yüzmeye gideriz.', a: 'We go swimming at the weekend.', x: ['to'],
+      w: { to: `Aktivitelerde kalıp: **go + -ing** (go swimming, go shopping).` }, e: `**go swimming**.` },
+    { t: 'fix', s: 'I really enjoy cook for my friends.', i: 3, c: 'cooking',
+      e: `enjoy + -ing: I really enjoy **cooking** for my friends.` },
+    { t: 'fix', s: 'She left without say goodbye.', i: 3, c: 'saying',
+      e: `Edattan (without) sonra -ing: without **saying** goodbye.` },
+    { t: 'fix', s: 'I came to Istanbul for study at university.', i: 4, c: 'to',
+      e: `Amaç → **to** + yalın fiil: I came to Istanbul **to** study...` },
+  ],
+};

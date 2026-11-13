@@ -1,0 +1,76 @@
+export default {
+  lesson: `
+## have / has + fiilin 3. hali
+**Present Perfect** geçmişte olmuş ama **zamanı önemli olmayan** ya da **etkisi şimdi süren** olayları anlatır.
+Formül: **have / has + V3** (3. hal: worked, gone, seen, eaten...)
+> I**'ve been** to London. | Londra'da bulundum. (ne zaman olduğu önemli değil)
+> She **has lost** her keys. | Anahtarlarını kaybetmiş. (şu an anahtarı yok)
+> We**'ve finished** our homework. | Ödevimizi bitirdik.
+
+## 3. hal (V3)
+Düzenli fiillerde V2 ile aynıdır: worked → worked. Düzensizler ezberlenmeli:
+| V1 | V2 | V3 |
+| be | was/were | **been** |
+| go | went | **gone** |
+| see | saw | **seen** |
+| eat | ate | **eaten** |
+| do | did | **done** |
+| write | wrote | **written** |
+| buy | bought | **bought** |
+| meet | met | **met** |
+
+## ever / never: hayat deneyimi
+> **Have** you **ever been** to Paris? | Hiç Paris'e gittin mi?
+> I**'ve never eaten** sushi. | Hiç suşi yemedim.
+
+## just / already / yet
+- **just**: az önce → I**'ve just** finished. (have ile V3 arasında)
+- **already**: zaten, çoktan → She**'s already** left. (have ile V3 arasında)
+- **yet**: henüz (olumsuz) / -dı mı? (soru), cümle sonunda → I haven't finished **yet**. / Have you finished **yet**?
+
+## Past Simple ile farkı
+Belirli bir geçmiş zaman (yesterday, last year, in 2010, ago) varsa **Past Simple** kullanılır.
+x I have seen him yesterday. => I **saw** him yesterday.
+x Did you ever eat sushi? => **Have** you **ever eaten** sushi?
+! been / gone: She has **gone** to Paris (gitti, hâlâ orada). She has **been** to Paris (gitti ve döndü).
+`,
+  ex: [
+    { t: 'mc', q: '___ you ever been to Italy?', o: ['Have', 'Did', 'Has'], a: 0,
+      w: { 1: `"ever been" Present Perfect'tir → Have you...?`, 2: `you → Have.` },
+      e: `Hayat deneyimi: **Have** you ever been...?` },
+    { t: 'mc', q: 'I ___ that film. Let\'s watch something else.', o: ["'ve already seen", 'already saw', "'ve already saw"], a: 0,
+      w: { 1: `"already" ile Present Perfect kullanılır.`, 2: `have'den sonra 3. hal gelir: seen.` },
+      e: `**have already + V3**: I've already seen it.` },
+    { t: 'mc', q: 'She ___ her phone. She can\'t find it anywhere.', o: ['has lost', 'have lost', 'has losed'], a: 0,
+      w: { 1: `she → has.`, 2: `lose düzensizdir: lose → lost → lost.` },
+      e: `Etkisi şimdi sürüyor (telefonu yok) → **has lost**.` },
+    { t: 'mc', q: 'I ___ him last Saturday.', o: ['saw', 'have seen', 'have saw'], a: 0,
+      w: { 1: `"last Saturday" belirli bir geçmiş zaman → Past Simple.`, 2: `Belirli zaman var → Past Simple: saw.` },
+      e: `Belirli geçmiş zaman → **Past Simple**.` },
+    { t: 'mc', q: '"Where is Tom?" "He ___ to the shop. He\'ll be back soon."', o: ['has gone', 'has been', 'is gone'], a: 0,
+      w: { 1: `"has been" = gidip dönmüş. Tom henüz dönmedi → has gone.`, 2: `Present Perfect: has + gone.` },
+      e: `Gitti ve hâlâ orada → **has gone**.` },
+    { t: 'fill', q: "I've ___ finished my homework. I finished it two minutes ago.", h: 'az önce', a: ['just'],
+      w: { already: `"already" = zaten, çoktan. "az önce" = just.`, yet: `"yet" olumsuz ve soru cümlelerinde, sonda kullanılır.` },
+      e: `Az önce → **just** (have ile V3 arasında).` },
+    { t: 'fill', q: "Have you finished your lunch ___?", h: 'henüz / -dı mı?', a: ['yet'],
+      w: { already: `Soruda cümle sonunda yet kullanılır.`, just: `just cümle sonuna gelmez.` },
+      e: `Soru ve olumsuzda cümle sonunda **yet**.` },
+    { t: 'fill', q: 'We have ___ (eat) in that restaurant many times.', a: ['eaten'],
+      w: { ate: `have'den sonra 3. hal: eaten.`, eated: `eat → ate → eaten.` },
+      e: `eat → ate → **eaten**.` },
+    { t: 'fill', q: 'He has never ___ a plane.', h: 'fly (3. hali)', a: ['flown'],
+      w: { flew: `has + 3. hal: fly → flew → **flown**.`, flied: `fly düzensizdir: fly → flew → flown.`, fly: `has'ten sonra 3. hal gelir: flown.` },
+      e: `fly → flew → **flown**.` },
+    { t: 'order', tr: 'Hiç suşi yedin mi?', a: 'Have you ever eaten sushi?', x: ['did'],
+      w: { did: `"ever" ile hayat deneyimi → **Have** you ever eaten...?` }, e: `**Have** you **ever eaten** sushi?` },
+    { t: 'order', tr: 'Henüz cevap vermedi.', a: "She hasn't answered yet.", x: ['already'],
+      w: { already: `Olumsuz cümlede cümle sonunda **yet** kullanılır.` }, e: `She **hasn't** answered **yet**.` },
+    { t: 'fix', s: 'I have visited my aunt last week.', i: 1, c: '',
+      e: `"last week" belirli bir zaman → Past Simple: I **visited** my aunt last week.` },
+    { t: 'fix', s: 'She has wrote three books.', i: 2, c: 'written',
+      e: `has + 3. hal: write → wrote → **written**.` },
+    { t: 'fix', s: 'Have you ever went to Japan?', i: 3, c: 'been',
+      e: `have + 3. hal. "Hiç ...'a gittin mi?" için kalıp: Have you ever **been** to Japan?` },
+  ],
+};

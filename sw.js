@@ -1,0 +1,83 @@
+// Bu dosya tools/build.mjs tarafından sw.js olarak üretilir. sw.js'yi elle düzenleme.
+const CACHE = 'zekolingo-7b2ffcba17';
+const FILES = [
+ "./",
+ "index.html",
+ "manifest.webmanifest",
+ "css/style.css",
+ "js/app.js",
+ "js/screens/learn.js",
+ "js/screens/me.js",
+ "js/screens/mistakes.js",
+ "js/screens/read.js",
+ "js/screens/vocab.js",
+ "js/session.js",
+ "js/store.js",
+ "js/util.js",
+ "data/catalog.js",
+ "data/grammar/a1-articles.js",
+ "data/grammar/a1-can.js",
+ "data/grammar/a1-frequency.js",
+ "data/grammar/a1-have-got.js",
+ "data/grammar/a1-prepositions.js",
+ "data/grammar/a1-present-continuous.js",
+ "data/grammar/a1-present-simple-neg.js",
+ "data/grammar/a1-present-simple.js",
+ "data/grammar/a1-pronouns.js",
+ "data/grammar/a1-questions.js",
+ "data/grammar/a1-there-is.js",
+ "data/grammar/a1-this-that.js",
+ "data/grammar/a1-to-be.js",
+ "data/grammar/a2-comparatives.js",
+ "data/grammar/a2-going-to.js",
+ "data/grammar/a2-modals.js",
+ "data/grammar/a2-past-continuous.js",
+ "data/grammar/a2-past-simple-neg.js",
+ "data/grammar/a2-past-simple.js",
+ "data/grammar/a2-present-perfect.js",
+ "data/grammar/a2-quantifiers.js",
+ "data/grammar/a2-simple-vs-continuous.js",
+ "data/grammar/a2-superlatives.js",
+ "data/grammar/a2-verb-patterns.js",
+ "data/grammar/a2-was-were.js",
+ "data/grammar/a2-will.js",
+ "data/grammar/b1-first-conditional.js",
+ "data/grammar/b1-future-forms.js",
+ "data/grammar/b1-gerund-infinitive.js",
+ "data/grammar/b1-modals-deduction.js",
+ "data/grammar/b1-passive.js",
+ "data/grammar/b1-past-perfect.js",
+ "data/grammar/b1-perfect-continuous.js",
+ "data/grammar/b1-perfect-vs-past.js",
+ "data/grammar/b1-phrasal-verbs.js",
+ "data/grammar/b1-relative-clauses.js",
+ "data/grammar/b1-reported-speech.js",
+ "data/grammar/b1-second-conditional.js",
+ "data/grammar/b1-used-to.js",
+ "data/reading/a1.js",
+ "data/reading/a2.js",
+ "data/reading/b1.js",
+ "data/vocab/a1.js",
+ "data/vocab/a2.js",
+ "data/vocab/b1.js",
+ "icons/icon-180.png",
+ "icons/icon-192.png",
+ "icons/icon-512.png"
+];
+
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
+});
+
+self.addEventListener('activate', e => {
+  e.waitUntil(
+    caches.keys()
+      .then(keys => Promise.all(keys.filter(k => k.startsWith('zekolingo-') && k !== CACHE).map(k => caches.delete(k))))
+      .then(() => self.clients.claim()),
+  );
+});
+
+self.addEventListener('fetch', e => {
+  if (e.request.method !== 'GET' || new URL(e.request.url).origin !== location.origin) return;
+  e.respondWith(caches.match(e.request, { ignoreSearch: true }).then(r => r || fetch(e.request)));
+});

@@ -1,0 +1,62 @@
+export default {
+  lesson: `
+## Planlar ve niyetler
+**be going to + yalın fiil**, önceden karar verilmiş planları anlatır: -ecek, -acak (yapmayı planlıyorum).
+> I**'m going to visit** my grandparents this weekend. | Bu hafta sonu büyükannemleri ziyaret edeceğim.
+> She**'s going to study** medicine. | Tıp okuyacak.
+> We**'re going to buy** a new car. | Yeni bir araba alacağız.
+! Üç parça gerekir: **am/is/are** + **going to** + **yalın fiil**. "I going to" (be eksik) ve "I'm going to visited" yanlıştır.
+
+## Kanıta dayalı tahmin
+Şu an gördüğün bir işarete dayanarak "olacak" demek için de kullanılır.
+> Look at those clouds! It**'s going to rain**. | Şu bulutlara bak! Yağmur yağacak.
+> Be careful! You**'re going to fall**! | Dikkat et! Düşeceksin!
+
+## Olumsuz ve soru
+> I**'m not going to** watch that film. | O filmi izlemeyeceğim.
+> **Are** you **going to** come to the party? | Partiye gelecek misin?
+> What **are** you **going to do** after school? | Okuldan sonra ne yapacaksın?
+
+## Zaman ifadeleri
+tomorrow, tonight, next week / month / year, this weekend, soon, in two days
+! "go" fiiliyle: I'm going to go to Izmir. Bunun yerine çoğu zaman sadece şu söylenir: I'm going to Izmir.
+x I am going to visited Rome. => I am going to **visit** Rome.
+x She going to call you. => She**'s** going to call you.
+`,
+  ex: [
+    { t: 'mc', q: 'We ___ a new house next year.', o: ["'re going to buy", 'going to buy', "'re going to bought"], a: 0,
+      w: { 1: `be fiili eksik: we're (we are) going to.`, 2: `going to'dan sonra fiil yalın: buy.` },
+      e: `**are going to + yalın fiil**.` },
+    { t: 'mc', q: 'Look at the sky! It ___ rain.', o: ['is going to', 'goes to', 'is go to'], a: 0,
+      w: { 1: `Kalıp: be going to.`, 2: `"go" -ing almalı: going to.` },
+      e: `Kanıta dayalı tahmin (bulutlar) → **is going to** rain.` },
+    { t: 'mc', q: 'What ___ do this weekend?', o: ['are you going to', 'you are going to', 'do you going to'], a: 0,
+      w: { 1: `Soruda be başa geçer: are you going to.`, 2: `going to sorusu do ile değil, be ile kurulur.` },
+      e: `Soru: What **are you going to** do?` },
+    { t: 'mc', q: 'Hangisi "Onu yemeyeceğim" demek?', o: ["I'm not going to eat that.", "I don't going to eat that.", "I'm going not to eat that."], a: 0,
+      w: { 1: `going to'nun olumsuzu be + not ile yapılır: I'm not going to.`, 2: `not, be'den sonra gelir: I'm not going to.` },
+      e: `Olumsuz: **am not / isn't / aren't going to**.` },
+    { t: 'fill', q: 'She ___ (study) medicine at university.', h: 'going to ile yaz', a: ['is going to study', "'s going to study"],
+      w: { 'going to study': `be fiili eksik: is going to study.`, 'is going to studied': `going to'dan sonra fiil yalın: study.`, 'are going to study': `she → is.` },
+      e: `she + **is going to study**.` },
+    { t: 'fill', q: 'They ___ (not / come) to the wedding.', h: 'going to ile yaz', a: ["aren't going to come", 'are not going to come', "'re not going to come"],
+      w: { "don't going to come": `Olumsuz be ile yapılır: aren't going to come.`, "isn't going to come": `they → aren't.` },
+      e: `they + **aren't going to come**.` },
+    { t: 'fill', q: '___ you going to call him?', a: ['Are'],
+      w: { do: `going to sorusu be ile kurulur: Are you going to...?`, is: `you → Are.` },
+      e: `**Are** you going to...?` },
+    { t: 'fill', q: "Be careful! That glass ___ (fall).", h: 'going to ile yaz', a: ['is going to fall', "'s going to fall"],
+      w: { 'will fall': `Şu an görülen bir işarete dayanan tahminde going to daha doğaldır.`, 'going to fall': `be fiili eksik: is going to fall.` },
+      e: `Gözle görülen işaret → **is going to fall**.` },
+    { t: 'order', tr: 'Bu akşam ne yapacaksın?', a: 'What are you going to do tonight?', x: ['is'],
+      w: { is: `you → **are**: What are you going to do?` }, e: `What **are you going to** do tonight?` },
+    { t: 'order', tr: 'Yeni bir dil öğreneceğim.', a: "I'm going to learn a new language.", x: ['learning'],
+      w: { learning: `going to'dan sonra fiil yalın: **learn**.` }, e: `I'm going to **learn** a new language.` },
+    { t: 'fix', s: 'I am going to visited my uncle tomorrow.', i: 4, c: 'visit',
+      e: `going to + yalın fiil: I am going to **visit** my uncle.` },
+    { t: 'fix', s: 'He going to start a new job next week.', i: 0, c: "He's",
+      e: `be fiili eksik: **He's** (He is) going to start...` },
+    { t: 'fix', s: 'Do you going to watch the match?', i: 0, c: 'Are',
+      e: `going to sorusu be ile kurulur: **Are** you going to watch...?` },
+  ],
+};

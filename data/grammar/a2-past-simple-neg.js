@@ -1,0 +1,67 @@
+export default {
+  lesson: `
+## Olumsuz: didn't + yalın fiil
+Geçmiş zamanın olumsuzu bütün öznelerde **didn't (did not)** ile yapılır. Fiil **yalın** haline döner, çünkü geçmiş bilgisi artık did'in içindedir.
+> I **didn't go** to work yesterday. | Dün işe gitmedim.
+> She **didn't like** the film. | Filmi beğenmedi.
+x I didn't went. => I didn't **go**.
+
+## Soru: Did + özne + yalın fiil
+> **Did** you **see** the match? | Maçı izledin mi?
+> Where **did** you **go** last weekend? | Geçen hafta sonu nereye gittin?
+> What **did** she **say**? | Ne dedi?
+Kısa cevap: Yes, I **did**. / No, I **didn't**.
+x Did you saw him? => Did you **see** him?
+x Where you went? => Where **did** you **go**?
+
+## be ile karıştırma
+Sıfat, isim ya da yer varsa **was / were** kullanılır, did değil:
+- I **wasn't** tired. (did değil)
+- **Were** you at home? (Did you at home yanlış)
+- Fiil varsa did: **Did** you **sleep** well?
+
+## Soru kelimesiyle özne sorusu
+"Kim?" sorusu öznenin kendisini soruyorsa did kullanılmaz:
+> **Who called** you? | Seni kim aradı? (Who özne)
+> **Who did** you call? | Kimi aradın? (you özne)
+`,
+  ex: [
+    { t: 'mc', q: "I didn't ___ the answer.", o: ['know', 'knew', 'knows'], a: 0,
+      w: { 1: `didn't'tan sonra fiil yalın gelir: know.`, 2: `didn't'tan sonra fiil yalın gelir: know.` },
+      e: `**didn't + yalın fiil**: I didn't know.` },
+    { t: 'mc', q: '___ you enjoy the concert?', o: ['Did', 'Were', 'Do'], a: 0,
+      w: { 1: `"enjoy" bir fiil → Did.`, 2: `Konser geçmişte oldu → Did.` },
+      e: `Geçmiş zaman fiilli soru → **Did** you enjoy...?` },
+    { t: 'mc', q: 'Where ___ last summer?', o: ['did you go', 'you went', 'did you went'], a: 0,
+      w: { 1: `Soruda did gerekir: did you go.`, 2: `did varsa fiil yalın kalır: go.` },
+      e: `Soru kelimesi + **did** + özne + **yalın fiil**.` },
+    { t: 'mc', q: '___ you at the meeting yesterday?', o: ['Were', 'Did', 'Was'], a: 0,
+      w: { 1: `"at the meeting" bir yer bildirir, fiil yok → Were.`, 2: `you ile were kullanılır.` },
+      e: `Fiil yoksa be: **Were** you at the meeting?` },
+    { t: 'mc', q: 'Who ___ this cake? It\'s delicious!', o: ['made', 'did make', 'did made'], a: 0,
+      w: { 1: `"Who" burada özne (pastayı kim yaptı?), did kullanılmaz.`, 2: `Özne sorusunda did kullanılmaz.` },
+      e: `Özne sorusu: **Who made** this cake? (did yok)` },
+    { t: 'fill', q: 'We ___ (not / watch) TV last night.', a: ["didn't watch", 'did not watch'],
+      w: { "didn't watched": `didn't'tan sonra fiil yalın: watch.`, "don't watch": `"last night" geçmiş → didn't watch.`, "weren't watch": `Fiilin olumsuzu didn't ile yapılır.` },
+      e: `**didn't watch**.` },
+    { t: 'fill', q: 'What ___ he say?', a: ['did'],
+      w: { does: `Konuşma geçmişte oldu → did.`, was: `"say" bir fiil → did.` },
+      e: `What **did** he say? (Ne dedi?)` },
+    { t: 'fill', q: '"Did they call you?" "No, they ___."', a: ["didn't", 'did not'],
+      w: { "weren't": `Soru did ile sorulmuş → No, they didn't.`, "don't": `Geçmiş zaman → didn't.` },
+      e: `Did they...? → Yes, they **did**. / No, they **didn't**.` },
+    { t: 'fill', q: 'She ___ (not / be) happy with her exam results.', a: ["wasn't", 'was not'],
+      w: { "didn't": `"happy" sıfattır, olumsuzu be ile yapılır: wasn't.`, "weren't": `she → wasn't.` },
+      e: `Sıfat varsa be: She **wasn't** happy.` },
+    { t: 'order', tr: 'Dün gece iyi uyudun mu?', a: 'Did you sleep well last night?', x: ['slept'],
+      w: { slept: `Did ile soruda fiil yalın kalır: **sleep**.` }, e: `**Did** you **sleep** well last night?` },
+    { t: 'order', tr: 'Kahvaltı yapmadım.', a: "I didn't have breakfast.", x: ['had'],
+      w: { had: `didn't'tan sonra fiil yalın: **have**.` }, e: `I **didn't have** breakfast.` },
+    { t: 'fix', s: "I didn't saw your message.", i: 2, c: 'see',
+      e: `didn't + yalın fiil: I didn't **see** your message.` },
+    { t: 'fix', s: 'Did she bought a new car?', i: 2, c: 'buy',
+      e: `Did + özne + yalın fiil: Did she **buy** a new car?` },
+    { t: 'fix', s: "We didn't tired after the trip.", i: 1, c: "weren't",
+      e: `"tired" sıfattır → We **weren't** tired.` },
+  ],
+};

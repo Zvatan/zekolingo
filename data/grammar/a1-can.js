@@ -1,0 +1,67 @@
+export default {
+  lesson: `
+## can: -ebilmek
+**can** yetenek, izin ve rica bildirir. Bütün öznelerle aynı kalır (he / she ile -s almaz) ve arkasından **yalın fiil** gelir.
+> I **can** swim. | Yüzebilirim.
+> She **can** speak three languages. | O üç dil konuşabilir.
+> You **can** sit here. | Buraya oturabilirsin. (izin)
+! can'den sonra **to** gelmez ve fiil -s almaz. Doğrusu "She can **speak**". "She can speaks" ve "can to speak" yanlıştır.
+
+## Olumsuz: can't (cannot)
+> I **can't** drive. | Araba kullanamam.
+> We **cannot** park here. | Buraya park edemeyiz.
+! can'in olumsuzu do ile yapılmaz: "I don't can" yanlıştır.
+
+## Soru ve rica
+> **Can** you swim? | Yüzebilir misin?
+> **Can** I open the window? | Pencereyi açabilir miyim? (izin isteme)
+> **Can** you help me, please? | Bana yardım edebilir misin lütfen? (rica)
+Kısa cevaplar: Yes, I **can**. / No, I **can't**.
+! Daha kibar bir rica için **could** kullanılır: **Could** you help me, please?
+
+## Telaffuz
+"can" genelde zayıf okunur (kın), "can't" ise vurgulu ve uzundur (kaant). Anlam farkı bu vurgudan anlaşılır.
+`,
+  ex: [
+    { t: 'mc', q: 'She can ___ the piano.', o: ['play', 'plays', 'to play'], a: 0,
+      w: { 1: `can'den sonra fiil -s almaz.`, 2: `can'den sonra to gelmez.` },
+      e: `can + **yalın fiil**: She can play the piano.` },
+    { t: 'mc', q: "My grandfather ___ use a computer. He doesn't know how.", o: ["can't", 'can', "doesn't can"], a: 0,
+      w: { 1: `"Nasıl yapılacağını bilmiyor" diyor, yani kullanamıyor: can't.`, 2: `can'in olumsuzu do ile yapılmaz: can't.` },
+      e: `Olumsuz: **can't** (cannot).` },
+    { t: 'mc', q: '___ I use your phone, please?', o: ['Can', 'Do', 'Am'], a: 0,
+      w: { 1: `İzin isterken Can I...? kullanılır.`, 2: `İzin isterken Can I...? kullanılır.` },
+      e: `İzin isteme: **Can I**...?` },
+    { t: 'mc', q: '"Can you ride a bike?" "Yes, I ___."', o: ['can', 'do', 'am'], a: 0,
+      w: { 1: `Soru can ile sorulmuş → Yes, I can.`, 2: `Soru can ile sorulmuş → Yes, I can.` },
+      e: `Can you...? → Yes, I **can**. / No, I **can't**.` },
+    { t: 'mc', q: 'Hangisi en kibar rica?', o: ['Could you open the door, please?', 'Open the door.', 'You open the door.'], a: 0,
+      w: { 1: `Bu bir emir cümlesi, kibar değil.`, 2: `Bu bir tespit gibi duruyor, rica değil.` },
+      e: `Kibar rica: **Could you** ..., please?` },
+    { t: 'fill', q: 'He ___ (can / not) come to the party.', a: ["can't", 'cannot', 'can not'],
+      w: { "doesn't can": `can'in olumsuzu do ile yapılmaz: can't.`, "don't can": `can'in olumsuzu do ile yapılmaz: can't.`, 'not can': `Sıralama can + not şeklindedir: can't.` },
+      e: `**can't** / **cannot**.` },
+    { t: 'fill', q: '___ you swim?', h: 'Yetenek soruyorsun: "Yüzebilir misin?"', a: ['Can'],
+      w: { do: `"Do you swim?" = Yüzer misin? (alışkanlık sorusu). Yetenek için **Can** you swim?`, are: `Yetenek sorusu can ile kurulur: Can you swim?` },
+      e: `Yetenek sorusu: **Can** you...?` },
+    { t: 'fill', q: 'My sister can ___ very well.', h: 'cook (yemek yapmak)', a: ['cook'],
+      w: { cooks: `can'den sonra fiil -s almaz.`, 'to cook': `can'den sonra to gelmez.`, cooking: `can'den sonra yalın fiil gelir: cook.` },
+      e: `can + **cook**.` },
+    { t: 'fill', q: "Sorry, I ___ hear you. The music is too loud.", a: ["can't", 'cannot'],
+      w: { "don't": `"Duyamıyorum" demek istiyorsun, bu bir imkân meselesi → can't.`, can: `"Üzgünüm, müzik çok yüksek" diyor, yani duyamıyor → can't.` },
+      e: `**can't** = -emiyorum, -amıyorum.` },
+    { t: 'order', tr: 'Kardeşim yüzebilir.', a: 'My brother can swim.', x: ['swims'],
+      w: { swims: `can'den sonra fiil -s almaz: **swim**.` }, e: `My brother **can swim**.` },
+    { t: 'order', tr: 'Pencereyi açabilir miyim?', a: 'Can I open the window?', x: ['to'],
+      w: { to: `can'den sonra **to** gelmez.` }, e: `**Can I** open the window?` },
+    { t: 'fix', s: 'She can speaks French.', i: 2, c: 'speak',
+      e: `can + yalın fiil: She can **speak** French.` },
+    { t: 'fix', s: 'I can to drive a car.', i: 2, c: '',
+      e: `can'den sonra to gelmez: I can **drive** a car.` },
+    { t: 'fix', s: 'Can you helping me?', i: 2, c: 'help',
+      e: `can + yalın fiil: Can you **help** me?` },
+    { t: 'mc', q: 'Hangisi "Burada sigara içemezsiniz" demek?', o: ["You can't smoke here.", "You don't can smoke here.", 'You can smoke not here.'], a: 0,
+      w: { 1: `can'in olumsuzu do ile yapılmaz.`, 2: `not, can'in hemen arkasına gelir: can't / cannot.` },
+      e: `Yasak bildirirken de **can't** kullanılır.` },
+  ],
+};

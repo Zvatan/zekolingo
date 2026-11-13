@@ -1,0 +1,67 @@
+export default {
+  lesson: `
+## İsmi tanımlayan cümleler
+Türkçede "**benim yanımda oturan** adam" deriz ve tanımlayan kısım ismin önüne gelir. İngilizcede bu kısım ismin **arkasına** gelir ve bir ilgi zamiriyle bağlanır:
+> the man **who sits next to me** | yanımda oturan adam
+> the book **that I bought** | aldığım kitap
+
+## Hangi kelime?
+| Kelime | Ne için? | Örnek |
+| **who** | insanlar | The woman **who** lives next door is a doctor. |
+| **which** | eşya, hayvan | The phone **which** I bought is great. |
+| **that** | insan ve eşya (who/which yerine) | The film **that** we watched was long. |
+| **where** | yerler | This is the café **where** we met. |
+| **whose** | sahiplik (kimin) | That's the man **whose** car was stolen. |
+
+> I have a friend **who** speaks five languages. | Beş dil konuşan bir arkadaşım var.
+> This is the house **where** I grew up. | Bu, büyüdüğüm ev.
+> She's the girl **whose** father is a pilot. | Babası pilot olan kız o.
+
+## who / which / that bazen düşebilir
+İlgi zamiri cümlenin **nesnesiyse** atılabilir:
+> The book (that) I'm reading is great. | Okuduğum kitap harika.
+Ama **özneyse** atılamaz:
+> The man **who** called you is here. ("The man called you is here" yanlış.)
+
+## Zamiri tekrar etme
+x The book which I bought it is great. => The book which I bought is great.
+x This is the man which helped me. => This is the man **who** helped me.
+x This is the city which I was born. => This is the city **where** I was born.
+`,
+  ex: [
+    { t: 'mc', q: 'The woman ___ lives next door is a nurse.', o: ['who', 'which', 'where'], a: 0,
+      w: { 1: `"which" eşya ve hayvanlar içindir. İnsan → who.`, 2: `"where" yerler içindir.` },
+      e: `İnsan → **who** (ya da that).` },
+    { t: 'mc', q: "I've lost the keys ___ you gave me.", o: ['that', 'who', 'where'], a: 0,
+      w: { 1: `"keys" eşyadır, who kullanılmaz.`, 2: `"where" yerler içindir.` },
+      e: `Eşya → **that / which**.` },
+    { t: 'mc', q: 'This is the restaurant ___ we had our first date.', o: ['where', 'which', 'who'], a: 0,
+      w: { 1: `"which" kullanmak için edat gerekir (in which). Yer → where.`, 2: `"who" insanlar içindir.` },
+      e: `Yer → **where**.` },
+    { t: 'mc', q: "He's the boy ___ mother is my teacher.", o: ['whose', 'who', "who's"], a: 0,
+      w: { 1: `"annesi" sahiplik bildirir → whose.`, 2: `"who's" = who is. Sahiplik → whose.` },
+      e: `Sahiplik → **whose** (kimin).` },
+    { t: 'mc', q: 'Hangi cümlede "that" atılabilir?', o: ['The cake that you made was delicious.', 'The girl that won the race is my sister.', 'The bus that goes to the airport is late.'], a: 0,
+      w: { 1: `"that" burada özne (yarışı kazanan) → atılamaz.`, 2: `"that" burada özne (havalimanına giden) → atılamaz.` },
+      e: `İlgi zamiri nesneyse atılabilir: The cake (that) **you** made...` },
+    { t: 'fill', q: 'I need a computer ___ is fast and cheap.', a: ['that', 'which'],
+      w: { who: `"computer" eşya → that / which.`, what: `İlgi zamiri olarak what kullanılmaz → that / which.` },
+      e: `Eşya → **that / which**.` },
+    { t: 'fill', q: 'Do you know anyone ___ can fix my car?', a: ['who', 'that'],
+      w: { which: `"anyone" insan → who / that.`, what: `İlgi zamiri olarak what kullanılmaz.` },
+      e: `İnsan → **who / that**.` },
+    { t: 'fill', q: 'Antalya is the city ___ I spent my childhood.', a: ['where'],
+      w: { which: `which ile edat gerekir. Yer → where.`, that: `Yer bildirirken where kullanılır.` },
+      e: `Yer → **where**.` },
+    { t: 'order', tr: 'Bu, Paris\'te aldığım çanta.', a: 'This is the bag I bought in Paris.', x: ['it'],
+      w: { it: `İlgi cümlesinde nesne tekrar edilmez: the bag I bought (**it** yok).` }, e: `the bag (that) I bought in Paris.` },
+    { t: 'order', tr: 'Dün seni arayan adam benim amcam.', a: 'The man who called you yesterday is my uncle.', x: ['which'],
+      w: { which: `İnsan → **who**.` }, e: `The man **who** called you...` },
+    { t: 'fix', s: 'The film which we watched it was boring.', i: 5, c: '',
+      e: `Nesne tekrar edilmez: The film which we watched **was** boring.` },
+    { t: 'fix', s: 'She is the teacher which helped me a lot.', i: 4, c: 'who',
+      e: `İnsan → **who**: the teacher who helped me.` },
+    { t: 'fix', s: 'This is the hospital which I was born.', i: 4, c: 'where',
+      e: `Yer → **where**: the hospital where I was born.` },
+  ],
+};

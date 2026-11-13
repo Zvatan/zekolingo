@@ -255,7 +255,10 @@ body.session .pop { bottom: calc(100px + var(--sbm)); }
   position: absolute; left: 50%; top: 100%; transform: translateX(-50%); margin-top: 3px; font-size: 11px; font-weight: 600;
   color: var(--muted); width: max-content; max-width: 96px; white-space: normal; text-align: center; line-height: 1.2;
 }
-.an-rows { gap: 34px; }
+.an-rows { gap: 40px; }
+.an-row { gap: 30px 8px; }
+.an-note { margin-top: 14px; }
+@media (max-width: 420px) { .blk { font-size: 19px; padding: 8px 11px; } }
 .blk.hi { animation: pop 1s ease .7s 1 both; }
 @keyframes pop { 0%, 100% { box-shadow: 0 0 0 0 transparent; } 40% { box-shadow: 0 0 0 7px var(--primary-soft); } }
 .blk.no { --c: var(--bad); background: var(--bad-soft); }

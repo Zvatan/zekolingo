@@ -1,33 +1,4 @@
 export default {
-  lesson: `
-## Sayılabilen / sayılamayan isimler
-- **Sayılabilen**: tek tek sayılır, çoğul olur → an apple, two apples, a chair, three chairs
-- **Sayılamayan**: sayılmaz, çoğul olmaz, a/an almaz → water, milk, money, bread, rice, sugar, information, advice, furniture, luggage, homework, news
-! Türkçede "bilgiler, tavsiyeler, eşyalar" deriz ama İngilizcede **information, advice, furniture** sayılamaz: "informations" ya da "an advice" yanlıştır. Tek tek saymak için: a piece of advice, two pieces of information.
-
-## some / any
-| | Sayılabilen çoğul | Sayılamayan |
-| Olumlu: some | some eggs | some milk |
-| Olumsuz: any | any eggs | any milk |
-| Soru: any | Are there any eggs? | Is there any milk? |
-! Teklif ve ricalarda soru olsa da **some** kullanılır: Would you like **some** tea? Can I have **some** water?
-
-## much / many / a lot of
-| | Sayılabilen | Sayılamayan |
-| Çok (olumsuz / soru) | many | much |
-| Çok (olumlu) | a lot of / lots of | a lot of / lots of |
-| Kaç / ne kadar? | How many? | How much? |
-> I don't have **much** time. | Pek vaktim yok.
-> There are **a lot of** people here. | Burada çok insan var.
-> **How many** brothers have you got? | Kaç erkek kardeşin var?
-
-## a few / a little
-- **a few** + sayılabilen: a few friends (birkaç arkadaş)
-- **a little** + sayılamayan: a little sugar (biraz şeker)
-x I need some informations. => I need some **information**.
-x How much people? => How **many** people?
-x There isn't many milk. => There isn't **much** milk.
-`,
   anim: [
     { title: 'İki tür isim', rows: [[['an apple', 'n', '', 'sayılabilen'], ['two apples', 'n']], [['water', 'n', '', 'sayılamayan'], ['money', 'n'], ['bread', 'n']]],
       note: 'Sayılamayanlar **çoğul olmaz** ve **a/an almaz**.' },

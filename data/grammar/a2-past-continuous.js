@@ -1,29 +1,4 @@
 export default {
-  lesson: `
-## Geçmişte devam eden eylem
-**Past Continuous**, geçmişte belli bir anda devam etmekte olan eylemi anlatır: -yordu (okuyordum, uyuyordu).
-Formül: **was / were + fiil-ing**
-> At 8 o'clock last night, I **was watching** TV. | Dün gece saat 8'de televizyon izliyordum.
-> They **were playing** football at 5. | Saat 5'te futbol oynuyorlardı.
-
-## when ve while
-Uzun süren (arka plan) eylem → **Past Continuous**. Onu bölen kısa eylem → **Past Simple**.
-> I **was having** a shower **when** the phone **rang**. | Telefon çaldığında duş alıyordum.
-> **While** she **was cooking**, she **cut** her finger. | Yemek yaparken parmağını kesti.
-- **when** + genelde kısa eylem (Past Simple)
-- **while** + genelde uzun eylem (Past Continuous)
-! İki uzun eylem aynı anda sürüyorsa ikisi de continuous olur: **While** I **was reading**, my brother **was sleeping**.
-
-## Olumsuz ve soru
-> I **wasn't listening**. | Dinlemiyordum.
-> What **were** you **doing** at 10 last night? | Dün gece saat 10'da ne yapıyordun?
-
-## Past Simple ile farkı
-- I **read** a book yesterday. → Okudum (bitti).
-- I **was reading** a book at 9. → Saat 9'da okumaktaydım (devam ediyordu).
-x When I arrived, they were eat dinner. => They **were eating** dinner.
-x While I walked home, it started to rain. => While I **was walking** home, it started to rain.
-`,
   anim: [
     { title: 'Geçmişte devam eden', tr: [['Dün saat 8\'de', 't'], [' TV izliyordum', 'v']], blocks: [['I', 's'], ['was', 'x', 'hi', 'be (geçmiş)'], ['watching', 'v', 'hi', '-ing'], ['TV', 'n'], ['at 8', 't']],
       note: '**was / were + -ing** = "-yordu". O anda devam ediyordu.' },

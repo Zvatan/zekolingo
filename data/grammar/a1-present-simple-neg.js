@@ -1,31 +1,4 @@
 export default {
-  lesson: `
-## Olumsuz: don't / doesn't
-| Özne | Olumsuz |
-| I / you / we / they | **don't** (do not) + fiil |
-| he / she / it | **doesn't** (does not) + fiil |
-> I **don't** like coffee. | Kahveyi sevmem.
-> She **doesn't** eat meat. | O et yemez.
-! doesn't kullanınca fiildeki **-s düşer**, çünkü -s artık does'un içindedir. "She doesn't works" yanlış, "She doesn't **work**" doğru.
-
-## Soru: Do / Does başa gelir
-> **Do** you speak English? | İngilizce konuşur musun?
-> **Does** he live here? | O burada mı yaşıyor?
-> Where **do** you work? | Nerede çalışıyorsun?
-> What time **does** the film start? | Film saat kaçta başlıyor?
-! Soruda does varsa fiil yine yalın kalır: Does he **live**...? "Does he lives" yanlıştır.
-
-## Kısa cevaplar
-> Yes, I **do**. No, I **don't**. | Evet. Hayır.
-> Yes, she **does**. No, she **doesn't**. | Evet. Hayır.
-
-## be ile karıştırma!
-- Cümlede sıfat, isim ya da yer varsa **be** kullanılır: Are you tired? I'm not hungry.
-- Cümlede fiil varsa **do / does** kullanılır: Do you work? I don't smoke.
-x Are you like pizza? => **Do** you like pizza?
-x I don't hungry. => I'**m not** hungry.
-x Does she is a doctor? => **Is** she a doctor?
-`,
   anim: [
     { title: 'Olumlu cümle', tr: [['O', 's'], [' burada', 'n'], [' çalışır', 'v']], blocks: [['She', 's'], ['works#V', 'v'], ['here', 'n']],
       note: 'Fiilde he / she / it için **-s** var.' },

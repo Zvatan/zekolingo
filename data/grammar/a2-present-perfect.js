@@ -1,39 +1,4 @@
 export default {
-  lesson: `
-## have / has + fiilin 3. hali
-**Present Perfect** geçmişte olmuş ama **zamanı önemli olmayan** ya da **etkisi şimdi süren** olayları anlatır.
-Formül: **have / has + V3** (3. hal: worked, gone, seen, eaten...)
-> I**'ve been** to London. | Londra'da bulundum. (ne zaman olduğu önemli değil)
-> She **has lost** her keys. | Anahtarlarını kaybetmiş. (şu an anahtarı yok)
-> We**'ve finished** our homework. | Ödevimizi bitirdik.
-
-## 3. hal (V3)
-Düzenli fiillerde V2 ile aynıdır: worked → worked. Düzensizler ezberlenmeli:
-| V1 | V2 | V3 |
-| be | was/were | **been** |
-| go | went | **gone** |
-| see | saw | **seen** |
-| eat | ate | **eaten** |
-| do | did | **done** |
-| write | wrote | **written** |
-| buy | bought | **bought** |
-| meet | met | **met** |
-
-## ever / never: hayat deneyimi
-> **Have** you **ever been** to Paris? | Hiç Paris'e gittin mi?
-> I**'ve never eaten** sushi. | Hiç suşi yemedim.
-
-## just / already / yet
-- **just**: az önce → I**'ve just** finished. (have ile V3 arasında)
-- **already**: zaten, çoktan → She**'s already** left. (have ile V3 arasında)
-- **yet**: henüz (olumsuz) / -dı mı? (soru), cümle sonunda → I haven't finished **yet**. / Have you finished **yet**?
-
-## Past Simple ile farkı
-Belirli bir geçmiş zaman (yesterday, last year, in 2010, ago) varsa **Past Simple** kullanılır.
-x I have seen him yesterday. => I **saw** him yesterday.
-x Did you ever eat sushi? => **Have** you **ever eaten** sushi?
-! been / gone: She has **gone** to Paris (gitti, hâlâ orada). She has **been** to Paris (gitti ve döndü).
-`,
   anim: [
     { title: 'have + 3. hal', tr: [['Ödevimi', 'n'], [' bitirdim', 'v']], blocks: [['I', 's'], ['have', 'x', 'hi', 'yardımcı'], ['finished', 'v', 'hi', '3. hal'], ['my homework', 'n']],
       note: 'Ne zaman olduğu söylenmiyor, önemli olan **sonuç**: ödev bitti.' },

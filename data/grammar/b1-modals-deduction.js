@@ -1,29 +1,4 @@
 export default {
-  lesson: `
-## Ne kadar eminsin?
-Bir şey hakkında tahmin yürütürken ne kadar emin olduğuna göre farklı modal kullanılır.
-| Modal | Anlam | Eminlik |
-| **must** | -malı, kesin öyle (mantıklı sonuç) | %90+ evet |
-| **may / might / could** | belki, olabilir | %30–50 |
-| **can't** | olamaz, kesin öyle değil | %90+ hayır |
-
-> She's been working for 12 hours. She **must be** tired. | 12 saattir çalışıyor. Yorgun olmalı.
-> He isn't answering. He **might be** asleep. | Cevap vermiyor. Uyuyor olabilir.
-> That **can't be** Ali. Ali is in London. | O Ali olamaz. Ali Londra'da.
-
-## must'ın zıttı can't'tir
-! Tahminde must'ın olumsuzu **mustn't değil can't**'tir. mustn't "yasak" demektir.
-x He mustn't be at home, his car isn't there. => He **can't** be at home.
-
-## Şu an olan şeyler için: be + -ing
-> They **must be having** dinner. | Akşam yemeği yiyor olmalılar.
-> She **might be working** late. | Geç saate kadar çalışıyor olabilir.
-
-## may / might / could farkı
-Üçü de "olabilir" demektir ve çoğu zaman birbirinin yerine kullanılabilir. **might** biraz daha az emin bir tahmin bildirir.
-> It **may / might / could** rain later. | Sonra yağmur yağabilir.
-! Olumsuzda **couldn't** "olamaz" (can't gibi) anlamına gelir. "Belki değil" demek için **might not / may not** kullanılır: He **might not** come. (Gelmeyebilir.)
-`,
   anim: [
     { title: 'Ne kadar eminsin?', tr: [['12 saattir çalışıyor', 'x']],
       note: 'Görmediğin bir şey hakkında tahmin yürütüyorsun...' },

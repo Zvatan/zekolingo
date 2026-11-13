@@ -1,30 +1,4 @@
 export default {
-  lesson: `
-## Geçmişten daha önce: had + V3
-**Past Perfect**, geçmişteki bir olaydan **daha önce** olmuş şeyi anlatır: -mıştı (gitmişti, yemiştim).
-Formül: **had + fiilin 3. hali** (bütün öznelerde aynı)
-> When I arrived at the station, the train **had** already **left**. | İstasyona vardığımda tren çoktan kalkmıştı.
-> She was hungry because she **hadn't eaten** all day. | Aç idi çünkü bütün gün yemek yememişti.
-
-## Zaman çizgisi
-1. olay (daha eski) → **Past Perfect**: the train had left
-2. olay (daha yeni) → **Past Simple**: I arrived
-! Olaylar sırasıyla anlatılıyorsa Past Perfect'e gerek yoktur: I **got up**, **had** a shower and **left**.
-
-## Sık kullanılan bağlaçlar
-**when, before, after, by the time, because, already, never ... before**
-> **By the time** we got there, the film **had started**. | Biz oraya vardığımızda film başlamıştı.
-> I **had never seen** the sea **before** I moved to Izmir. | İzmir'e taşınmadan önce denizi hiç görmemiştim.
-
-## Anlam farkı
-- When I arrived, she **left**. → Ben varınca o çıktı (önce ben geldim, sonra o gitti).
-- When I arrived, she **had left**. → Ben vardığımda o çoktan gitmişti (ben gelmeden gitti).
-
-## Olumsuz ve soru
-> I **hadn't seen** him for years. | Onu yıllardır görmemiştim.
-> **Had** you **met** him before? | Onunla daha önce tanışmış mıydın?
-x When I got home, my sister has cooked dinner. => ... my sister **had cooked** dinner.
-`,
   anim: [
     { title: 'Geçmişte iki olay', rows: [[['1', 'x'], ['The train left', 'v', '', 'önce']], [['2', 'x'], ['I arrived', 'v', '', 'sonra']]],
       note: 'Önce tren kalktı, sonra ben vardım. Bunu tek cümlede nasıl söylerim?' },

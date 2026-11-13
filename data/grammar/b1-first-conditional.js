@@ -1,30 +1,4 @@
 export default {
-  lesson: `
-## Zero Conditional: genel gerçekler
-**If + Present Simple, Present Simple**: Her zaman doğru olan sonuçlar.
-> **If** you **heat** ice, it **melts**. | Buzu ısıtırsan erir.
-> **If** I **drink** coffee at night, I **can't** sleep. | Gece kahve içersem uyuyamam.
-Burada **if** yerine **when** de kullanılabilir.
-
-## First Conditional: gerçek, olası gelecek
-**If + Present Simple, will + yalın fiil**: Gelecekte olması muhtemel bir durum ve sonucu.
-> **If** it **rains** tomorrow, we**'ll stay** at home. | Yarın yağmur yağarsa evde kalacağız.
-> **If** you **study** hard, you**'ll pass** the exam. | Çok çalışırsan sınavı geçersin.
-! Türkçede "yağarsa" kelimesindeki gelecek anlamı, İngilizcede if'li bölümde **will ile verilmez**: "If it will rain" yanlıştır. Doğrusu: If it **rains**.
-
-## Sıralama
-if'li bölüm başta ya da sonda olabilir. Başta ise araya **virgül** konur.
-> If you hurry, you'll catch the bus. = You'll catch the bus if you hurry.
-
-## unless = if ... not
-> **Unless** you hurry, you'll miss the bus. = **If** you **don't** hurry, you'll miss the bus. | Acele etmezsen otobüsü kaçırırsın.
-! unless zaten olumsuz anlam taşır. Yanına not eklenmez: "Unless you don't hurry" yanlıştır.
-
-## when, as soon as, before, after, until
-Gelecekten bahsederken bu kelimelerden sonra da **Present Simple** gelir:
-> I'll call you **when** I **arrive**. | Varınca seni ararım. ("when I will arrive" yanlış)
-> **As soon as** I **get** home, I'll have a shower. | Eve varır varmaz duş alacağım.
-`,
   anim: [
     { title: 'Gerçek, olası gelecek', tr: [['Yağmur yağ', 'v'], ['arsa', 'q'], [' evde kalacağız', 'x']], blocks: [['If', 'q', 'hi', 'eğer'], ['it', 's'], ['rains,#R', 'v'], ["we'll stay", 'x', 'hi'], ['at home', 'n']],
       note: '**If + Present Simple, will + fiil**' },

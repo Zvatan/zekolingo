@@ -1,40 +1,4 @@
 export default {
-  lesson: `
-## Karşılaştırma: daha ...
-İki şeyi karşılaştırırken sıfat değişir ve **than** (-den, -dan) kullanılır.
-> Ankara is **bigger than** Eskişehir. | Ankara Eskişehir'den daha büyük.
-> This phone is **more expensive than** that one. | Bu telefon şundan daha pahalı.
-
-## Kurallar
-| Sıfat | Kural | Örnek |
-| Tek heceli | + er | cheap → cheaper, old → older |
-| -e ile biten | + r | nice → nicer, large → larger |
-| Sesli + sessiz ile biten tek heceli | son harf ikilenir | big → bigger, hot → hotter |
-| -y ile biten | y → ier | easy → easier, happy → happier |
-| İki ve daha fazla heceli | more + sıfat | more beautiful, more interesting |
-
-## Düzensizler
-| Sıfat | Karşılaştırma |
-| good | **better** |
-| bad | **worse** |
-| far | **further / farther** |
-| much / many | **more** |
-| little | **less** |
-
-! İki yapı birlikte kullanılmaz: "more bigger" ya da "more better" yanlıştır.
-! Türkçedeki "-den" eki İngilizcede **than** olur, "from" değil: bigger **than** me.
-
-## Eşitlik: as ... as
-> She is **as tall as** her brother. | Erkek kardeşi kadar uzun.
-> This film is**n't as good as** the book. | Bu film kitap kadar iyi değil.
-
-## Fark büyüklüğü
-much / a lot / a bit + karşılaştırma:
-> London is **much more expensive** than Istanbul. | Londra İstanbul'dan çok daha pahalı.
-> I feel **a bit better** today. | Bugün biraz daha iyiyim.
-x She is more taller than me. => She is **taller** than me.
-x My car is older from yours. => My car is older **than** yours.
-`,
   anim: [
     { title: 'Daha ...', tr: [['Ankara', 's'], [' İzmir', 'n'], ['\'den', 'x'], [' daha büyük', 'v']], blocks: [['Ankara', 's'], ['is', 'x'], ['big#A', 'v'], ['Izmir', 'n']],
       note: 'İki şeyi karşılaştıralım...' },

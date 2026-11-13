@@ -1,34 +1,4 @@
 export default {
-  lesson: `
-## Sahiplik: have / has
-"Benim ... var" demek için **have** kullanılır. He / she / it ile **has** olur.
-| Özne | Fiil |
-| I / you / we / they | have |
-| he / she / it | has |
-> I **have** a brother. | Bir erkek kardeşim var.
-> She **has** blue eyes. | Onun mavi gözleri var.
-> We **have** a big house. | Büyük bir evimiz var.
-
-## have got (İngiliz İngilizcesi)
-Özellikle İngiltere'de **have got / has got** da kullanılır. Anlamı aynıdır.
-> I**'ve got** a car. | Bir arabam var.
-> He**'s got** two children. | Onun iki çocuğu var.
-! Buradaki **He's got** = He **has** got demektir, is değil.
-
-## Olumsuz ve soru
-İki yol var ve bunlar **karıştırılmamalı**:
-| | have (do ile) | have got |
-| Olumsuz | I don't have / She doesn't have | I haven't got / She hasn't got |
-| Soru | Do you have...? / Does he have...? | Have you got...? / Has he got...? |
-| Kısa cevap | Yes, I do. / No, he doesn't. | Yes, I have. / No, he hasn't. |
-! does / doesn't'tan sonra **has değil have** gelir: Does she **have**...? She doesn't **have**...
-x She doesn't has a car. => She doesn't **have** a car.
-x Do you have got a pen? => **Have** you got a pen? ya da **Do** you **have** a pen?
-
-## have ile kalıplar
-have breakfast (kahvaltı yapmak), have a shower (duş almak), have a good time (iyi vakit geçirmek)
-! Bu kalıplarda have got kullanılmaz: I have breakfast at 8. "I've got breakfast" yanlıştır.
-`,
   anim: [
     { title: 'Sahiplik: have', tr: [['Bir kardeşim', 'n'], [' var', 'v']], blocks: [['I', 's'], ['have#H', 'v', 'hi', 'sahip olmak'], ['a brother', 'n']],
       note: '"Benim ... var" = **I have**' },

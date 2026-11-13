@@ -1,30 +1,4 @@
 export default {
-  lesson: `
-## must / have to: zorunluluk
-İkisi de "-meli, -mak zorunda" anlamına gelir. Arkalarından **yalın fiil** gelir.
-- **must**: Konuşanın kendi fikri, iç zorunluluk, kurallar ve yazılı talimatlar
-- **have to / has to**: Dışarıdan gelen zorunluluk (iş, okul, kanun)
-> I **must** call my mother. I miss her. | Annemi aramalıyım. Onu özledim.
-> I **have to** wear a uniform at work. | İşte üniforma giymek zorundayım.
-> She **has to** get up at 6. | Saat 6'da kalkmak zorunda.
-! must'tan sonra to gelmez ve -s almaz: He **must go**. ("He musts" ve "must to go" yanlış.)
-! must'ın geçmişi yoktur. Geçmiş için **had to** kullanılır: I **had to** work yesterday.
-
-## mustn't ile don't have to: büyük fark!
-- **mustn't** = yasak, yapmamalısın: You **mustn't** smoke here. (Burada sigara içmemelisin, yasak.)
-- **don't have to** = gerek yok, zorunda değilsin: You **don't have to** come. (Gelmek zorunda değilsin, istersen gel.)
-x You mustn't pay. It's free. => You **don't have to** pay. It's free.
-
-## should: tavsiye
-"-meli" anlamında öneri ve tavsiye verir. Daha yumuşaktır.
-> You **should** see a doctor. | Bir doktora görünmelisin.
-> You **shouldn't** eat so much sugar. | Bu kadar çok şeker yememelisin.
-> **Should** I take an umbrella? | Şemsiye alayım mı?
-
-## Soru
-> **Do** you **have to** work on Saturdays? | Cumartesi çalışmak zorunda mısın?
-> **Does** he **have to** wear a tie? | Kravat takmak zorunda mı?
-`,
   anim: [
     { title: 'Zorunluluk', tr: [['Üniforma giymek', 'v'], [' zorundayım', 'x']], blocks: [['I', 's'], ['have to', 'x', 'hi', 'zorunda'], ['wear', 'v'], ['a uniform', 'n']],
       note: 'Dışarıdan gelen kural (iş, okul) → **have to**' },

@@ -1,33 +1,4 @@
 export default {
-  lesson: `
-## İki zamanı karşılaştır
-| Present Simple | Present Continuous |
-| Alışkanlık, rutin, genel gerçek | Şu an ya da bu aralar olan |
-| I **work** in a bank. | I'**m working** at home today. |
-| She **drinks** tea every morning. | She'**s drinking** coffee now. |
-| always, usually, every day, often | now, at the moment, today, this week |
-
-> I usually **walk** to work, but today I**'m taking** the bus. | Genelde işe yürürüm ama bugün otobüse biniyorum.
-> He **plays** tennis every Sunday. | Her pazar tenis oynar.
-> Look! He**'s playing** tennis now. | Bak! Şu an tenis oynuyor.
-
-! Türkçede "çalışıyorum" hem "her gün çalışırım" hem de "şu an çalışıyorum" anlamına gelebilir. İngilizcede ise ikisi ayrıdır: I **work** here (kalıcı) / I'**m working** now (şu an).
-
-## Geçici durumlar
-Bu aralar devam eden, kalıcı olmayan durumlar için de continuous kullanılır.
-> I**'m reading** a great book these days. | Bu aralar harika bir kitap okuyorum.
-> She **lives** in Ankara, but she**'s staying** with her aunt this month. | Ankara'da yaşıyor ama bu ay teyzesinde kalıyor.
-
-## Durum fiilleri (stative verbs)
-Bu fiiller eylem değil, durum bildirir ve genelde **-ing almaz**:
-- Duygu: like, love, hate, want, need, prefer
-- Düşünce: know, think (fikir), believe, understand, remember, mean
-- Sahiplik ve duyular: have (sahiplik), own, seem, look like, sound
-> I **know** the answer. | Cevabı biliyorum.
-x I am knowing the answer. => I **know** the answer.
-! "think" fikir bildiriyorsa -ing almaz: I **think** it's a good idea. Ama "düşünüp taşınmak" anlamında alabilir: I**'m thinking** about my holiday.
-! "have" sahiplik ise -ing almaz (I **have** a car), ama eylemse alabilir (I**'m having** lunch, I'**m having** a shower).
-`,
   anim: [
     { title: 'Türkçede ikisi de "çalışıyorum"', tr: [['Bankada', 'n'], [' çalışıyorum', 'v']],
       note: 'Bu cümle "orada işim var" da olabilir, "şu an çalışıyorum" da. İngilizcede ikisi **ayrı** söylenir.' },

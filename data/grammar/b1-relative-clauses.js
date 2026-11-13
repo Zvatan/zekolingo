@@ -1,33 +1,4 @@
 export default {
-  lesson: `
-## İsmi tanımlayan cümleler
-Türkçede "**benim yanımda oturan** adam" deriz ve tanımlayan kısım ismin önüne gelir. İngilizcede bu kısım ismin **arkasına** gelir ve bir ilgi zamiriyle bağlanır:
-> the man **who sits next to me** | yanımda oturan adam
-> the book **that I bought** | aldığım kitap
-
-## Hangi kelime?
-| Kelime | Ne için? | Örnek |
-| **who** | insanlar | The woman **who** lives next door is a doctor. |
-| **which** | eşya, hayvan | The phone **which** I bought is great. |
-| **that** | insan ve eşya (who/which yerine) | The film **that** we watched was long. |
-| **where** | yerler | This is the café **where** we met. |
-| **whose** | sahiplik (kimin) | That's the man **whose** car was stolen. |
-
-> I have a friend **who** speaks five languages. | Beş dil konuşan bir arkadaşım var.
-> This is the house **where** I grew up. | Bu, büyüdüğüm ev.
-> She's the girl **whose** father is a pilot. | Babası pilot olan kız o.
-
-## who / which / that bazen düşebilir
-İlgi zamiri cümlenin **nesnesiyse** atılabilir:
-> The book (that) I'm reading is great. | Okuduğum kitap harika.
-Ama **özneyse** atılamaz:
-> The man **who** called you is here. ("The man called you is here" yanlış.)
-
-## Zamiri tekrar etme
-x The book which I bought it is great. => The book which I bought is great.
-x This is the man which helped me. => This is the man **who** helped me.
-x This is the city which I was born. => This is the city **where** I was born.
-`,
   anim: [
     { title: 'Türkçede tanım önde', tr: [['yanımda oturan', 'v'], [' adam', 'n']],
       note: 'Türkçede tanımlayan kısım ismin **önüne** gelir. İngilizcede ise...' },

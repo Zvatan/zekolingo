@@ -1,38 +1,4 @@
 export default {
-  lesson: `
-## Ne zaman kullanılır?
-**Present Simple** (geniş zaman) şunları anlatır:
-- Alışkanlıklar ve rutinler: I **drink** coffee every morning.
-- Genel gerçekler: Water **boils** at 100 degrees.
-- Kalıcı durumlar: She **lives** in Izmir.
-> I **work** in an office. | Bir ofiste çalışırım / çalışıyorum.
-> My father **reads** the newspaper every day. | Babam her gün gazete okur.
-> The sun **rises** in the east. | Güneş doğudan doğar.
-
-## Kural: he / she / it → fiile -s
-| Özne | Fiil |
-| I / you / we / they | work |
-| he / she / it | work**s** |
-! Türklerin en sık yaptığı hata bu -s'yi unutmaktır: "She work" yanlış, "She **works**" doğru. İsimler de geçerlidir: My brother = he → My brother **plays**.
-
-## -s eki nasıl eklenir?
-| Kural | Örnek |
-| Çoğu fiil: + s | work → works, play → plays |
-| -s, -sh, -ch, -x, -o: + es | watch → watches, go → goes, do → does |
-| sessiz harf + y → ies | study → studies, cry → cries |
-| Düzensiz | have → **has** |
-! play → plays (y'den önce sesli harf var), study → studies (y'den önce sessiz harf var).
-
-## Zaman ifadeleri
-every day / week / morning, on Mondays, at the weekend, in the evening, once a week, twice a month
-> We **visit** my grandparents **every Sunday**. | Her pazar büyükannemleri ziyaret ederiz.
-
-## Sık yapılan hatalar
-x She work in a bank. => She **works** in a bank.
-x He studys English. => He **studies** English.
-x I am work every day. => I **work** every day.
-x They goes to school. => They **go** to school.
-`,
   anim: [
     { title: 'Geniş zaman: alışkanlıklar', tr: [['Ben', 's'], [' her gün', 't'], [' çalışırım', 'v']],
       blocks: [['I', 's', '', 'ben'], ['work', 'v', '', 'çalışmak'], ['every day', 't', '', 'her gün']],

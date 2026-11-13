@@ -1,35 +1,4 @@
 export default {
-  lesson: `
-## Fiilden sonra -ing mi, to mu?
-İngilizcede bazı fiillerden sonra ikinci fiil **-ing** alır, bazılarından sonra **to + yalın fiil** gelir. Bunun kesin bir mantığı yoktur, kalıp olarak öğrenilir.
-
-## -ing alanlar
-like, love, hate, enjoy, don't mind, finish, stop, go (+ aktivite)
-> I **enjoy reading**. | Okumaktan keyif alırım.
-> She **finished cleaning** the house. | Evi temizlemeyi bitirdi.
-> **Do** you **mind waiting**? | Beklemenin sakıncası var mı?
-> We **go swimming** every Sunday. | Her pazar yüzmeye gideriz.
-! like / love / hate ile **to** da kullanılabilir: I like **swimming** = I like **to swim**.
-
-## to + yalın fiil alanlar
-want, need, decide, hope, plan, learn, try, forget, promise, would like
-> I **want to learn** Spanish. | İspanyolca öğrenmek istiyorum.
-> She **decided to leave**. | Ayrılmaya karar verdi.
-> I**'d like to** order, please. | Sipariş vermek istiyorum.
-x I want learn English. => I want **to learn** English.
-x I enjoy to cook. => I enjoy **cooking**.
-
-## Edattan sonra her zaman -ing
-about, of, at, for, without, before, after gibi edatlardan sonra fiil -ing alır.
-> I'm good **at cooking**. | Yemek yapmakta iyiyim.
-> Thank you **for helping** me. | Yardım ettiğin için teşekkürler.
-> She left **without saying** goodbye. | Hoşça kal demeden gitti.
-
-## Amaç: to (için)
-"-mek için" anlamında **to** kullanılır, "for" değil:
-> I went to the shop **to buy** bread. | Ekmek almak için markete gittim.
-x I came here for learn English. => I came here **to learn** English.
-`,
   anim: [
     { title: 'İki fiil yan yana', tr: [['Okumayı', 'v'], [' severim', 'v']], blocks: [['I', 's'], ['enjoy', 'v'], ['___#X', 'v', 'gap']],
       note: 'İkinci fiil hangi şekilde gelir?' },

@@ -1,31 +1,4 @@
 export default {
-  lesson: `
-## Fiil + -ing
-Şu fiillerden sonra ikinci fiil **-ing** alır:
-**avoid, suggest, consider, keep, mind, miss, practise, give up, imagine, can't stand, look forward to**
-> I **avoid eating** fast food. | Fast food yemekten kaçınırım.
-> He **suggested going** to the cinema. | Sinemaya gitmeyi önerdi.
-> I **gave up smoking** last year. | Geçen yıl sigarayı bıraktım.
-> I'm **looking forward to seeing** you. | Seni görmeyi dört gözle bekliyorum.
-! "look forward **to**" kalıbındaki to bir edattır, bu yüzden -ing gelir: looking forward to **seeing** ("to see" yanlış).
-
-## Fiil + to + yalın fiil
-**agree, refuse, manage, offer, afford, seem, pretend, expect, promise, plan, hope, would like**
-> She **refused to answer**. | Cevap vermeyi reddetti.
-> We **managed to finish** on time. | Zamanında bitirmeyi başardık.
-> I can't **afford to buy** a car. | Araba almaya gücüm yetmez.
-
-## Fiil + kişi + to
-**want, ask, tell, advise, invite, expect, allow** + kişi + to + fiil
-> I **want you to** come. | Gelmeni istiyorum.
-> She **asked me to** help her. | Ona yardım etmemi istedi.
-x I want that you come. => I want **you to come**.
-
-## make / let + kişi + yalın fiil (to yok!)
-> My boss **made me work** late. | Patronum bana geç saate kadar çalıştırdı.
-> My parents **let me go** to the party. | Ailem partiye gitmeme izin verdi.
-x She let me to use her car. => She let me **use** her car.
-`,
   anim: [
     { title: '-ing alanlar', rows: [[['avoid · suggest · consider · keep', 'v']], [['give up · mind · imagine', 'v'], ['+ -ing', 'x', 'hi']]],
       note: 'Bu fiillerden sonra ikinci fiil **-ing** olur.' },

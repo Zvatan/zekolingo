@@ -1,34 +1,4 @@
 export default {
-  lesson: `
-## Yakın mı uzak mı, tekil mi çoğul mu?
-| | Tekil | Çoğul |
-| Yakın (burada) | this (bu) | these (bunlar) |
-| Uzak (orada) | that (şu, o) | those (şunlar) |
-> **This** is my phone. | Bu benim telefonum.
-> **That** car is expensive. | Şu araba pahalı.
-> **These** apples are fresh. | Bu elmalar taze.
-> **Those** people are tourists. | Şu insanlar turist.
-
-! Türkçede "bu elmalar" deriz, "bu" kelimesi değişmez. İngilizcede ise isim çoğulsa this → **these**, that → **those** olur.
-x this books => **these** books
-x those car => **that** car
-! Telaffuz: **this** kısa okunur (dis), **these** uzun okunur (diiz).
-
-## Fiil uyumu
-this / that → **is** · these / those → **are**
-> This **is** my sister. | Bu benim kız kardeşim.
-> These **are** my friends. | Bunlar benim arkadaşlarım.
-
-## Soru ve kısa cevap
-> **Is this** your bag? | Bu senin çantan mı?
-> **What's that**? | Şu ne?
-> **Are those** your keys? | Şunlar senin anahtarların mı?
-! Kısa cevapta this/that yerine **it**, these/those yerine **they** kullanılır: Is this your bag? Yes, **it** is. / Are these your keys? Yes, **they** are.
-
-## Tanıştırma ve telefon
-> **This is** Ahmet. | Bu Ahmet. (Birini tanıştırırken)
-> Hello, **this is** Can. | Alo, ben Can. (Telefonda)
-`,
   anim: [
     { title: 'Yakın ve tekil', tr: [['Bu', 'x'], [' kitap', 'n']], blocks: [['this#D', 'x', 'hi', 'bu (yakın)'], ['book#N', 'n']],
       note: 'Elindeki, yakındaki tek bir şey → **this**' },

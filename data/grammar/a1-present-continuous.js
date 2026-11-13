@@ -1,36 +1,4 @@
 export default {
-  lesson: `
-## Şu an olan şeyler
-**Present Continuous** (şimdiki zaman) konuşma anında devam eden eylemleri anlatır.
-Formül: **am / is / are + fiil-ing**
-> I **am reading** a book now. | Şu an kitap okuyorum.
-> She **is talking** on the phone. | O telefonda konuşuyor.
-> They **are playing** football. | Onlar futbol oynuyor.
-! İki parça da şarttır. "I reading" (am eksik) ve "I am read" (-ing eksik) yanlıştır.
-
-## -ing nasıl eklenir?
-| Kural | Örnek |
-| Çoğu fiil: + ing | work → working, read → reading |
-| Sessiz -e ile biten: e düşer | write → writing, make → making |
-| Tek heceli, sesli + sessiz: son harf ikilenir | run → running, sit → sitting, swim → swimming |
-| -ie ile biten: ie → y | lie → lying, die → dying |
-
-## Olumsuz ve soru
-> I'**m not** working today. | Bugün çalışmıyorum.
-> He **isn't** sleeping. | O uyumuyor.
-> **Are** you listening? | Dinliyor musun?
-> What **are** you **doing**? | Ne yapıyorsun?
-Kısa cevaplar: Yes, I am. / No, she isn't.
-
-## İpucu kelimeler
-now (şimdi), right now (tam şu an), at the moment (şu anda), Look! (Bak!), Listen! (Dinle!)
-> **Look!** It**'s raining**. | Bak! Yağmur yağıyor.
-
-## Bazı fiiller -ing almaz
-Duygu, düşünce ve sahiplik bildiren fiiller (**stative verbs**) genelde -ing almaz: like, love, hate, want, need, know, understand, believe, have (sahiplik).
-x I am wanting a coffee. => I **want** a coffee.
-x Are you understanding? => **Do** you **understand**?
-`,
   anim: [
     { title: 'Şu an olan şeyler', tr: [['Şu an', 't'], [' kitap', 'n'], [' oku', 'v'], ['yorum', 'x']], blocks: [['I', 's'], ['read#V', 'v'], ['a book', 'n'], ['now', 't']],
       note: 'Bu haliyle "her gün okurum" anlamına gelir. Şu an olduğunu nasıl söyleriz?' },

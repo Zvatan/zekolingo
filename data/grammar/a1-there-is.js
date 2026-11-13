@@ -1,34 +1,4 @@
 export default {
-  lesson: `
-## "... var" demek
-Bir yerde bir şeyin bulunduğunu söylerken **there is / there are** kullanılır.
-- Tekil ya da sayılamayan isim → **there is** (there's)
-- Çoğul isim → **there are**
-> **There is** a bank near my house. | Evimin yakınında bir banka var.
-> **There are** two cats in the garden. | Bahçede iki kedi var.
-> **There is** some milk in the fridge. | Buzdolabında biraz süt var.
-! Türkçede "var" tek kelimedir ve Türkler bunu sık sık **have** ile çevirir. "In my room have a bed" yanlıştır. Doğrusu: **There is** a bed in my room.
-
-## Olumsuz
-> **There isn't** a hospital in this village. | Bu köyde hastane yok.
-> **There aren't any** chairs. | Hiç sandalye yok.
-! Olumsuz ve soru cümlelerinde çoğul isimlerle genellikle **any** (hiç) kullanılır.
-
-## Soru
-> **Is there** a supermarket near here? | Buralarda bir süpermarket var mı?
-> **Are there any** good restaurants? | Hiç iyi restoran var mı?
-> **How many** students **are there**? | Kaç öğrenci var?
-Kısa cevaplar: Yes, there is. / No, there isn't. / Yes, there are. / No, there aren't.
-
-## have ile farkı
-- **have**: birine ait olan → I **have** a car. (Bir arabam var.)
-- **there is**: bir yerde bulunan → **There is** a car in front of the house. (Evin önünde bir araba var.)
-
-## Sık yapılan hatalar
-x There is two books on the table. => There **are** two books on the table.
-x In the city have many parks. => **There are** many parks in the city.
-x Is there any eggs? => **Are** there any eggs?
-`,
   anim: [
     { title: '"Var" demek', tr: [['Masada', 'n'], [' bir kitap', 'x'], [' var', 'v']],
       note: 'Türkçede "var" tek kelimedir. İngilizcede bunun için kalıp bir yapı kullanılır.' },

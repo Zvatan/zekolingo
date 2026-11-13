@@ -1,32 +1,4 @@
 export default {
-  lesson: `
-## Temel fark: zaman belli mi?
-| Past Simple | Present Perfect |
-| Bitmiş bir zamanda oldu | Zaman belli değil ya da şimdiyle bağlantılı |
-| I **lost** my keys **yesterday**. | I**'ve lost** my keys. (Şu an anahtarım yok.) |
-| She **went** to Paris **in 2019**. | She**'s been** to Paris. (Hayatında bir kez) |
-| yesterday, last week, ago, in 2010, when I was a child | ever, never, just, already, yet, so far, recently |
-
-! Türkçede ikisi de "-dı" ile çevrilir (kaybettim, gittim). İngilizcede ise asıl soru şudur: **Belirli, bitmiş bir zaman söyleniyor mu?** Evet ise Past Simple, hayır ise çoğunlukla Present Perfect.
-
-## Bitmemiş zaman dilimleri
-**today, this week, this year** gibi henüz bitmemiş zaman dilimleriyle Present Perfect kullanılır.
-> I**'ve drunk** three coffees **today**. | Bugün üç kahve içtim. (gün bitmedi)
-> I **drank** three coffees **yesterday**. | Dün üç kahve içtim. (dün bitti)
-
-## Soru-cevap akışı
-Genelde konu Present Perfect ile açılır, ayrıntılar (ne zaman, nerede, nasıl) Past Simple ile verilir.
-> **Have** you **ever been** to Japan? Yes, I **went** there in 2018. | Hiç Japonya'ya gittin mi? Evet, 2018'de gittim.
-> I**'ve broken** my arm. How **did** it **happen**? I **fell** off my bike. | Kolumu kırdım. Nasıl oldu? Bisikletten düştüm.
-
-## for ve since
-Hâlâ süren durumlar için Present Perfect + **for** (süre) / **since** (başlangıç noktası):
-> I**'ve lived** here **for** ten years. | On yıldır burada yaşıyorum.
-> I**'ve known** her **since** 2015. | Onu 2015'ten beri tanıyorum.
-! Türkçede "yaşıyorum" (şimdiki zaman) deriz ama İngilizcede "I am living here for ten years" yanlıştır. Doğrusu: I**'ve lived** here **for** ten years.
-x When have you arrived? => When **did** you **arrive**?
-x I have finished it two hours ago. => I **finished** it two hours ago.
-`,
   anim: [
     { title: 'Türkçede ikisi de "-dı"', tr: [['Anahtarlarımı', 'n'], [' kaybettim', 'v']],
       note: 'İngilizcede iki farklı şekilde söylenebilir. Asıl soru şu: **zaman belli mi?**' },

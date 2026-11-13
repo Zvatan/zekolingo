@@ -1,31 +1,4 @@
 export default {
-  lesson: `
-## will + yalın fiil
-**will** bütün öznelerde aynıdır ve arkasından **yalın fiil** gelir. Kısa hali **'ll**, olumsuzu **won't (will not)**.
-> I**'ll** help you. | Sana yardım edeceğim.
-> It **won't** take long. | Uzun sürmeyecek.
-> **Will** you come with me? | Benimle gelir misin?
-
-## Ne zaman will?
-### 1) Anlık kararlar (konuşurken verilen)
-> The phone is ringing. I**'ll** answer it! | Telefon çalıyor. Ben bakarım!
-> I'm cold. I**'ll** close the window. | Üşüdüm. Pencereyi kapatayım.
-### 2) Söz, teklif, rica
-> I**'ll** call you tomorrow, I promise. | Yarın seni ararım, söz.
-> **Shall** I carry your bag? / I**'ll** carry it for you. | Çantanı taşıyayım mı?
-### 3) Fikre dayalı tahmin (think, probably, maybe ile)
-> I **think** Turkey **will** win. | Bence Türkiye kazanacak.
-> She **will probably** be late. | Muhtemelen geç kalacak.
-
-## will mi, going to mu?
-| will | going to |
-| Konuşma anında verilen karar | Önceden verilmiş karar, plan |
-| "Ben açarım!" | "Yarın İzmir'e gideceğim." (bilet alındı) |
-| Fikre dayalı tahmin: I think it will rain. | Kanıta dayalı tahmin: Look at the clouds! It's going to rain. |
-x I will to call you. => I will **call** you.
-x She wills come. => She **will** come.
-x I think she won't to come. => I think she **won't come**.
-`,
   anim: [
     { title: 'will + yalın fiil', tr: [['Sana', 'n'], [' yardım edeceğim', 'v']], blocks: [['I', 's'], ['will', 'x', 'hi', '-ecek'], ['help', 'v'], ['you', 'n']],
       note: '**will** bütün öznelerde aynıdır.' },

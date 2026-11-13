@@ -8,8 +8,7 @@ export default {
 Genellikle **ne zaman** olduğu söylenir ya da bellidir: yesterday, last week, in 2019, two days ago, when I was a child.
 
 ## Müjde: bütün öznelerde aynı
-Present Simple'daki he/she/it **-s** derdi geçmişte yoktur. Fiil herkes için aynıdır:
-| I / you / he / she / it / we / they | **worked** / **went** |
+Present Simple'daki he/she/it **-s** derdi geçmişte yoktur. Fiil herkes için aynıdır: I / you / he / she / it / we / they **worked** / **went**.
 
 ## Düzenli fiiller: + ed
 | Kural | Örnek |

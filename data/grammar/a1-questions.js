@@ -1,40 +1,4 @@
 export default {
-  lesson: `
-## Soru kelimeleri
-| Kelime | Anlam | Örnek |
-| What | ne | What is your name? |
-| Where | nerede, nereye | Where do you live? |
-| When | ne zaman | When is your birthday? |
-| Who | kim | Who is that girl? |
-| Why | neden | Why are you sad? |
-| How | nasıl | How are you? |
-| Which | hangisi | Which bag is yours? |
-| Whose | kimin | Whose phone is this? |
-| What time | saat kaçta | What time do you get up? |
-| How old | kaç yaşında | How old are you? |
-| How many | kaç tane | How many brothers do you have? |
-| How much | ne kadar | How much is this? |
-
-## Soru kurma formülü
-Soru kelimesi + **yardımcı fiil** + özne + ...
-- be varsa: **Where are** you from?
-- fiil varsa: **Where do** you work? / **What does** she do?
-- can varsa: **What can** you see?
-> **What do** you do? | Ne iş yapıyorsun?
-> **Where does** your brother live? | Erkek kardeşin nerede yaşıyor?
-> **Why are** you sad? | Neden üzgünsün?
-! Türkçede soru kelimesi cümlenin ortasında olabilir: "Sen nerede yaşıyorsun?" İngilizcede ise soru kelimesi **her zaman başa** gelir.
-x You live where? => **Where do you live?**
-x Where you live? => Where **do** you live?
-x What means this word? => What **does** this word **mean**?
-
-## How many / How much
-- **How many** + sayılabilen çoğul isim: How many **books**...?
-- **How much** + sayılamayan isim: How much **water**...? Fiyat sorarken de: How much **is it**?
-
-## Why sorusuna cevap: Because
-> **Why** are you happy? **Because** it's my birthday! | Neden mutlusun? Çünkü bugün doğum günüm!
-`,
   anim: [
     { title: 'Türkçede soru kelimesi ortada', tr: [['Sen', 's'], [' nerede', 'q'], [' yaşıyorsun?', 'v']], blocks: [['You', 's'], ['live', 'v'], ['where?#W', 'q', 'no']],
       note: '"You live where?" diye çevirmek yanlış.' },

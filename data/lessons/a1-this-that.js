@@ -26,6 +26,7 @@ x those car => **that** car
 > What are **those**? | Şunlar ne?
 
 ## 3) Fiil uyumu
+| Kelime | be | Örnek |
 | this / that | → **is** | This **is** my car. / That **is** expensive. |
 | these / those | → **are** | These **are** my keys. / Those **are** cheap. |
 ! **that is** kısaltılabilir: **that's**. Ama "this is" kısaltılmaz ("this's" yanlış).

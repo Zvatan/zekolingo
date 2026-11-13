@@ -1,44 +1,4 @@
 export default {
-  lesson: `
-## a / an: "bir"
-Tekil ve sayılabilen bir ismi ilk kez söylerken **a** ya da **an** kullanılır. Hangisinin geleceğini harf değil, kelimenin ilk **sesi** belirler.
-- **a**: sessiz bir sesle başlayan kelimeler: a book, a car, a **u**niversity (/yu/ diye okunur)
-- **an**: sesli bir sesle başlayan kelimeler: an apple, an egg, an **h**our (h okunmaz)
-> I have **a** car. | Bir arabam var.
-> She is **an** engineer. | O bir mühendis.
-! Meslek söylerken a/an zorunludur. Türkçede "Öğretmenim" deriz ama "I am teacher" yanlıştır. Doğrusu: I am **a** teacher.
-
-## the: belirli olan
-Konuşan da dinleyen de hangi şeyden bahsedildiğini biliyorsa **the** kullanılır. Tekil ve çoğul bütün isimlerle gelebilir.
-> I have a dog. **The** dog is black. | Bir köpeğim var. Köpek siyah.
-> Close **the** door, please. | Kapıyı kapat lütfen.
-> **The** sun is hot. | Güneş sıcak. (Zaten bir tane var.)
-
-## Artikel kullanılmayan durumlar
-- Genel anlamda çoğul isimler: I like **cats**. (Kedileri severim, genel olarak.)
-- Genel anlamda sayılamayan isimler: **Water** is important.
-- Kişi, şehir ve ülke isimleri: I live in Ankara.
-- Kalıplar: at home, go to school, go to work, go to bed, by bus
-x I like the cats. => I like **cats**. (genel anlamda)
-
-## Çoğul isimler
-| Kural | Örnek |
-| Çoğu isim: + s | book → books, car → cars |
-| -s, -sh, -ch, -x, -o: + es | bus → buses, watch → watches, box → boxes |
-| sessiz harf + y → ies | city → cities, baby → babies |
-| sesli harf + y: + s | day → days, boy → boys |
-| -f / -fe → ves | knife → knives, wife → wives |
-
-### Düzensiz çoğullar
-| Tekil | Çoğul |
-| man / woman | men / women |
-| child | children |
-| person | people |
-| foot / tooth | feet / teeth |
-| mouse | mice |
-! **people** çoğuldur: People **are** friendly. "People is" yanlıştır.
-! Sayıdan sonra isim çoğul olur. Türkçede "iki kitap" deriz ama İngilizcede "two book" yanlıştır: two book**s**.
-`,
   anim: [
     { title: 'Türkçede olmayan bir kelime: a / an', tr: [['Bir', 'x'], [' arabam', 'n'], [' var', 'v']], blocks: [['I', 's'], ['have', 'v'], ['a', 'x', 'hi', 'bir'], ['car', 'n']],
       note: 'Tekil ve sayılabilen bir şeyden ilk kez bahsederken **a** kullanılır.' },

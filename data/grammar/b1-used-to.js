@@ -1,28 +1,4 @@
 export default {
-  lesson: `
-## used to: eskiden ...-ırdı
-**used to + yalın fiil**, geçmişte düzenli olan ama **artık olmayan** alışkanlık ve durumları anlatır.
-> I **used to play** football every day. | Eskiden her gün futbol oynardım. (artık oynamıyorum)
-> She **used to have** long hair. | Eskiden uzun saçları vardı.
-> There **used to be** a cinema here. | Eskiden burada bir sinema vardı.
-! used to sadece **geçmişte** kullanılır. Şimdiki alışkanlık için **usually** kullanılır: I **usually** get up at 7. ("I use to get up" yanlış.)
-
-## Olumsuz ve soru: use to (d yok!)
-did / didn't varsa **use to** yazılır, çünkü geçmiş bilgisi did'in içindedir.
-> I **didn't use to** like vegetables. | Eskiden sebze sevmezdim.
-> **Did** you **use to** live in Ankara? | Eskiden Ankara'da mı yaşardın?
-x Did you used to smoke? => Did you **use to** smoke?
-
-## would: geçmişteki tekrarlanan eylemler
-Hikâye anlatırken tekrarlanan **eylemler** için would de kullanılır. **Durumlar** için kullanılmaz.
-> Every summer, we **would go** to my grandmother's village. | Her yaz büyükannemin köyüne giderdik.
-- Eylem: We **used to / would** swim in the river. ✓
-- Durum: I **used to** have a dog. ✓ / I would have a dog. ✗
-
-## used to ile karıştırılanlar
-- **be used to + -ing** = alışkın olmak: I'm used to getting up early. (B2 konusu)
-- **Past Simple**: Tek seferlik olaylar için used to kullanılmaz: I **went** to Paris in 2019. ("I used to go to Paris in 2019" yanlış.)
-`,
   anim: [
     { title: 'Eskiden ...ırdım', tr: [['Eskiden', 't'], [' futbol', 'n'], [' oynardım', 'v']], blocks: [['I', 's'], ['used to', 'x', 'hi', 'eskiden'], ['play', 'v'], ['football', 'n']],
       note: '**used to + yalın fiil**: eskiden vardı, **artık yok**.' },

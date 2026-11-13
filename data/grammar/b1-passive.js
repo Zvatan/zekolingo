@@ -1,35 +1,4 @@
 export default {
-  lesson: `
-## Edilgen çatı: be + V3
-Eylemi **kimin yaptığı önemli olmadığında** ya da bilinmediğinde edilgen yapı kullanılır: yapılır, yapıldı.
-Formül: **be (am/is/are/was/were) + fiilin 3. hali**
-> English **is spoken** all over the world. | İngilizce dünyanın her yerinde konuşulur.
-> This bridge **was built** in 1973. | Bu köprü 1973'te inşa edildi.
-> My phone **was stolen** yesterday. | Telefonum dün çalındı.
-
-## Etken → edilgen
-- Etken: They **make** cars in this factory.
-- Edilgen: Cars **are made** in this factory. | Bu fabrikada araba üretilir.
-- Etken: Someone **cleaned** the room.
-- Edilgen: The room **was cleaned**. | Oda temizlendi.
-
-## Zamanlar
-| Zaman | Edilgen | Örnek |
-| Present Simple | am / is / are + V3 | Coffee **is grown** in Brazil. |
-| Past Simple | was / were + V3 | The letters **were sent** yesterday. |
-! Özne tekil mi çoğul mu, ona göre is/are, was/were seçilir: The **car is** washed. / The **cars are** washed.
-
-## by: yapanı söylemek
-Yapan önemliyse **by** ile eklenir:
-> Romeo and Juliet **was written by** Shakespeare. | Romeo ve Juliet Shakespeare tarafından yazıldı.
-
-## Olumsuz ve soru
-> Breakfast **isn't included** in the price. | Kahvaltı fiyata dahil değil.
-> **Was** the window **broken**? | Pencere kırılmış mıydı?
-! Doğum: I **was born** in 2000. (her zaman edilgen)
-x This house built in 1990. => This house **was built** in 1990.
-x The cars is made in Germany. => The cars **are** made in Germany.
-`,
   anim: [
     { title: 'Etken cümle', tr: [['İşçiler', 's'], [' köprüyü', 'n'], [' inşa etti', 'v']], blocks: [['Workers#S', 's'], ['built#V', 'v'], ['the bridge#O', 'n']],
       note: 'Önemli olan işçiler mi, köprü mü? Çoğu zaman köprü.' },

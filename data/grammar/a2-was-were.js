@@ -1,33 +1,4 @@
 export default {
-  lesson: `
-## to be'nin geçmişi: was / were
-"-dım, -dın, -dı" (evdeydim, yorgundun, hastaydı) anlamı **was / were** ile verilir.
-| Özne | Geçmiş |
-| I / he / she / it | **was** |
-| you / we / they | **were** |
-> I **was** at home yesterday. | Dün evdeydim.
-> They **were** very tired. | Onlar çok yorgundu.
-> The film **was** boring. | Film sıkıcıydı.
-! Dikkat: I ile **was** kullanılır ("I were" yanlış). you ile her zaman **were** gelir, tekil olsa bile.
-
-## Olumsuz
-> I **wasn't** hungry. | Aç değildim.
-> We **weren't** at school last Friday. | Geçen cuma okulda değildik.
-
-## Soru ve kısa cevap
-> **Were** you at the party? Yes, I **was**. / No, I **wasn't**. | Partide miydin?
-> Where **was** she yesterday? | Dün neredeydi?
-> How **was** your weekend? | Hafta sonun nasıldı?
-
-## Geçmiş zaman ifadeleri
-yesterday, last night / week / year, two days ago, in 2010, when I was a child
-> **When I was a child**, I **was** afraid of dogs. | Çocukken köpeklerden korkardım.
-
-## was born
-"Doğmak" İngilizcede edilgen bir yapıdır: **I was born** in 1998. ("I born" ya da "I am born" yanlış.)
-x I born in Izmir. => I **was born** in Izmir.
-x Where you were yesterday? => Where **were you** yesterday?
-`,
   anim: [
     { title: 'Şimdi', tr: [['Ben', 's'], [' evde', 'n'], ['yim', 'v']], blocks: [['I', 's'], ['am#B', 'v'], ['at home', 'n']],
       note: 'Şimdiki zaman: I **am** at home.' },

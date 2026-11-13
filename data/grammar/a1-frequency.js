@@ -1,38 +1,4 @@
 export default {
-  lesson: `
-## Ne sıklıkla?
-| Zarf | Anlam | Sıklık |
-| always | her zaman | %100 |
-| usually | genellikle | %80 |
-| often | sık sık | %60 |
-| sometimes | bazen | %40 |
-| rarely | nadiren | %10 |
-| never | asla, hiç | %0 |
-
-## Cümledeki yeri
-### 1) Normal fiillerden ÖNCE
-> I **always** get up at 7. | Her zaman 7'de kalkarım.
-> She **never** drinks coffee. | O asla kahve içmez.
-### 2) be (am / is / are) fiilinden SONRA
-> He **is always** late. | O hep geç kalır.
-> We **are usually** at home on Sundays. | Pazarları genellikle evde oluruz.
-! Kısaca: **be'den sonra, diğer fiillerden önce.**
-x I go always to the gym. => I **always go** to the gym.
-x She always is happy. => She **is always** happy.
-
-## never zaten olumsuzdur
-never cümleyi kendi başına olumsuz yapar. Yanına not ya da don't eklenmez.
-x I don't never eat fish. => I **never** eat fish.
-
-## Olumsuz ve soru
-> I **don't usually** walk to work. | Genellikle işe yürümem.
-> **Do** you **often** go to the cinema? | Sık sık sinemaya gider misin?
-> **How often** do you exercise? | Ne sıklıkla spor yaparsın?
-
-## Sıklık ifadeleri (cümle sonunda)
-every day (her gün), once a week (haftada bir), twice a month (ayda iki kez), three times a year (yılda üç kez)
-> I go swimming **twice a week**. | Haftada iki kez yüzmeye giderim.
-`,
   anim: [
     { title: 'Ne sıklıkla?', rows: [[['always', 't', '', '%100'], ['usually', 't', '', '%80'], ['often', 't', '', '%60']], [['sometimes', 't', '', '%40'], ['rarely', 't', '', '%10'], ['never', 't', '', '%0']]],
       note: 'Bunlara **sıklık zarfı** denir.' },

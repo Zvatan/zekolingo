@@ -1,5 +1,5 @@
 // Bu dosya tools/build.mjs tarafından sw.js olarak üretilir. sw.js'yi elle düzenleme.
-const CACHE = 'zekolingo-b82b4c6304';
+const CACHE = 'zekolingo-9837c9017f';
 const FILES = [
  "./",
  "index.html",
@@ -81,6 +81,19 @@ const FILES = [
  "data/lessons/a2-verb-patterns.js",
  "data/lessons/a2-was-were.js",
  "data/lessons/a2-will.js",
+ "data/lessons/b1-first-conditional.js",
+ "data/lessons/b1-future-forms.js",
+ "data/lessons/b1-gerund-infinitive.js",
+ "data/lessons/b1-modals-deduction.js",
+ "data/lessons/b1-passive.js",
+ "data/lessons/b1-past-perfect.js",
+ "data/lessons/b1-perfect-continuous.js",
+ "data/lessons/b1-perfect-vs-past.js",
+ "data/lessons/b1-phrasal-verbs.js",
+ "data/lessons/b1-relative-clauses.js",
+ "data/lessons/b1-reported-speech.js",
+ "data/lessons/b1-second-conditional.js",
+ "data/lessons/b1-used-to.js",
  "data/reading/a1.js",
  "data/reading/a2.js",
  "data/reading/b1.js",

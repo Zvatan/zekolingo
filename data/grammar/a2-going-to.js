@@ -1,28 +1,4 @@
 export default {
-  lesson: `
-## Planlar ve niyetler
-**be going to + yalın fiil**, önceden karar verilmiş planları anlatır: -ecek, -acak (yapmayı planlıyorum).
-> I**'m going to visit** my grandparents this weekend. | Bu hafta sonu büyükannemleri ziyaret edeceğim.
-> She**'s going to study** medicine. | Tıp okuyacak.
-> We**'re going to buy** a new car. | Yeni bir araba alacağız.
-! Üç parça gerekir: **am/is/are** + **going to** + **yalın fiil**. "I going to" (be eksik) ve "I'm going to visited" yanlıştır.
-
-## Kanıta dayalı tahmin
-Şu an gördüğün bir işarete dayanarak "olacak" demek için de kullanılır.
-> Look at those clouds! It**'s going to rain**. | Şu bulutlara bak! Yağmur yağacak.
-> Be careful! You**'re going to fall**! | Dikkat et! Düşeceksin!
-
-## Olumsuz ve soru
-> I**'m not going to** watch that film. | O filmi izlemeyeceğim.
-> **Are** you **going to** come to the party? | Partiye gelecek misin?
-> What **are** you **going to do** after school? | Okuldan sonra ne yapacaksın?
-
-## Zaman ifadeleri
-tomorrow, tonight, next week / month / year, this weekend, soon, in two days
-! "go" fiiliyle: I'm going to go to Izmir. Bunun yerine çoğu zaman sadece şu söylenir: I'm going to Izmir.
-x I am going to visited Rome. => I am going to **visit** Rome.
-x She going to call you. => She**'s** going to call you.
-`,
   anim: [
     { title: 'Plan: -ecek', tr: [['Yeni bir araba', 'n'], [' alacağım', 'v']], blocks: [['I', 's'], ['buy#V', 'v'], ['a new car', 'n']],
       note: 'Önceden karar verdiğim bir plan var. Nasıl söylerim?' },

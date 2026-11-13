@@ -1,48 +1,4 @@
 export default {
-  lesson: `
-## Ne zaman kullanılır?
-**Past Simple** geçmişte başlayıp bitmiş eylemleri anlatır: -dı, -di (gittim, yaptın, aldı).
-Fiil bütün öznelerde **aynıdır**: I / you / he / she / we / they **worked**.
-> I **visited** my grandmother yesterday. | Dün büyükannemi ziyaret ettim.
-> She **went** to London last year. | Geçen yıl Londra'ya gitti.
-
-## Düzenli fiiller: + ed
-| Kural | Örnek |
-| Çoğu fiil: + ed | work → worked, play → played |
-| -e ile biten: + d | live → lived, like → liked |
-| sessiz harf + y → ied | study → studied, try → tried |
-| tek heceli, sesli + sessiz: son harf ikilenir | stop → stopped, plan → planned |
-
-## Düzensiz fiiller (ezberlenmeli)
-| Fiil | Geçmiş | Anlam |
-| go | went | gitmek |
-| have | had | sahip olmak, yemek |
-| do | did | yapmak |
-| make | made | yapmak, üretmek |
-| eat | ate | yemek |
-| drink | drank | içmek |
-| see | saw | görmek |
-| come | came | gelmek |
-| get | got | almak, olmak |
-| buy | bought | satın almak |
-| take | took | almak, götürmek |
-| give | gave | vermek |
-| write | wrote | yazmak |
-| read | read (/red/) | okumak |
-| say / tell | said / told | söylemek / anlatmak |
-| think | thought | düşünmek |
-| leave | left | ayrılmak |
-| meet | met | tanışmak, buluşmak |
-| sleep | slept | uyumak |
-| find / lose | found / lost | bulmak / kaybetmek |
-
-## Zaman ifadeleri
-yesterday, last night / week / summer, three days ago, in 2019, when I was young
-! "ago" sona gelir: two years **ago** (iki yıl önce). "before two years" yanlıştır.
-x I goed to the park. => I **went** to the park.
-x She buyed a dress. => She **bought** a dress.
-x He studyed hard. => He **studied** hard.
-`,
   anim: [
     { title: 'Geçmiş: -dı, -di', tr: [['Dün', 't'], [' çalış', 'v'], ['tım', 'x']], blocks: [['I', 's'], ['work#V', 'v'], ['yesterday', 't']],
       note: 'Fiili geçmişe nasıl çeviririz?' },

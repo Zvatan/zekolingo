@@ -1,32 +1,4 @@
 export default {
-  lesson: `
-## Zaman: at / on / in
-| Edat | Ne ile kullanılır? | Örnek |
-| **at** | saatler, belirli anlar | at 7 o'clock, at noon, at night, at the weekend |
-| **on** | günler ve tarihler | on Monday, on 5 May, on my birthday |
-| **in** | ay, yıl, mevsim, gün dilimi | in June, in 2024, in winter, in the morning |
-> The class starts **at** 9. | Ders 9'da başlıyor.
-> I was born **on** 15 March. | 15 Mart'ta doğdum.
-> We go on holiday **in** August. | Ağustosta tatile gideriz.
-! Dikkat: **in** the morning / afternoon / evening, ama **at** night. Gün ve dilim birlikteyse **on**: **on** Monday morning.
-! next, last, every, this ile edat kullanılmaz: **next** week, **every** day. "on next Monday" yanlıştır.
-
-## Yer: in / on / at
-| Edat | Anlam | Örnek |
-| **in** | içinde (kapalı alan, şehir, ülke) | in the box, in the kitchen, in Istanbul |
-| **on** | üstünde (yüzey) | on the table, on the wall, on the floor |
-| **at** | bir noktada, adreste, etkinlikte | at the door, at the bus stop, at work, at home |
-> The keys are **in** my bag. | Anahtarlar çantamda.
-> There is a picture **on** the wall. | Duvarda bir resim var.
-> I'm **at** home. | Evdeyim.
-! Türkçedeki **-de / -da** eki bu üç edatın hepsine karşılık gelebilir: Ankara'da → **in** Ankara, masada → **on** the table, evde → **at** home.
-
-## Sık yapılan hatalar
-x I live at Istanbul. => I live **in** Istanbul.
-x See you in Monday. => See you **on** Monday.
-x The meeting is on 3 o'clock. => The meeting is **at** 3 o'clock.
-x in the night => **at** night
-`,
   anim: [
     { title: 'Türkçede tek ek: -de / -da', tr: [['evde', 'n'], [' · masada', 'n'], [' · Ankara\'da', 'n']],
       note: 'Türkçede hepsi aynı ek. İngilizcede ise **üç farklı edat** var: in, on, at.' },

@@ -1,26 +1,4 @@
 export default {
-  lesson: `
-## Gelecek için üç yol
-| Yapı | Ne zaman? | Örnek |
-| **will** | Anlık karar, söz, teklif, fikre dayalı tahmin | I'll help you. / I think it'll rain. |
-| **be going to** | Önceden verilmiş karar (niyet), kanıta dayalı tahmin | I'm going to study medicine. / Look, it's going to rain! |
-| **Present Continuous** | Kesinleşmiş, ayarlanmış planlar (saat, yer, kişi belli) | I'm meeting Ali at 6. / We're flying to Rome on Friday. |
-| **Present Simple** | Tarifeler, programlar | The train leaves at 7:15. / The film starts at 8. |
-
-## Niyet mi, ayarlanmış plan mı?
-> I**'m going to** visit Paris one day. | Bir gün Paris'e gideceğim. (niyet, ayarlanmış bir şey yok)
-> I**'m flying** to Paris on Monday. I've got my ticket. | Pazartesi Paris'e uçuyorum. Biletim alındı. (ayarlanmış plan)
-! Türkçede ikisi de "-ecek" olabilir. Ayarlanmış (randevu, bilet, rezervasyon) planlarda İngilizler en çok **Present Continuous** kullanır.
-
-## Tarifeler: Present Simple
-> What time **does** the bus **leave**? | Otobüs saat kaçta kalkıyor?
-> The shop **opens** at 9 tomorrow. | Dükkan yarın 9'da açılıyor.
-
-## will ile anlık karar
-> "We've run out of milk." "Oh, I**'ll** get some." | "Süt bitti." "Ben alırım."
-x I will meet my friend tomorrow at 5, we arranged it last week. => I**'m meeting** my friend tomorrow at 5.
-x The train will leave at 10:30 according to the timetable. => The train **leaves** at 10:30.
-`,
   anim: [
     { title: 'Türkçede hepsi "-ecek"', tr: [['Ali ile', 'n'], [' buluşacağım', 'v']],
       note: 'İngilizcede ne tür bir gelecek olduğuna göre **dört yol** var.' },

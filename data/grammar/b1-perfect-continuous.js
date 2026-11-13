@@ -1,28 +1,4 @@
 export default {
-  lesson: `
-## have / has been + -ing
-**Present Perfect Continuous**, geçmişte başlayıp **hâlâ süren** ya da **yeni bitmiş ve izi kalan** eylemleri anlatır. Vurgu eylemin **süresi** üzerindedir.
-> I**'ve been waiting** for an hour! | Bir saattir bekliyorum!
-> She**'s been learning** Spanish **since** January. | Ocaktan beri İspanyolca öğreniyor.
-> **How long have** you **been working** here? | Ne zamandır burada çalışıyorsun?
-! Türkçede "bir saattir bekliyorum" deriz (şimdiki zaman). İngilizcede ise "I am waiting for an hour" yanlıştır. Doğrusu: I**'ve been waiting** for an hour.
-
-## Yeni bitmiş eylemin izi
-> Your eyes are red. **Have** you **been crying**? | Gözlerin kırmızı. Ağlıyor muydun?
-> I'm tired because I**'ve been running**. | Yorgunum çünkü koşuyordum.
-
-## Simple mı, continuous mu?
-| Present Perfect Simple | Present Perfect Continuous |
-| Sonuç, miktar, kaç tane | Süre, eylemin kendisi |
-| I**'ve written** three emails. | I**'ve been writing** emails all morning. |
-| I**'ve read** the book. (bitti) | I**'ve been reading** the book. (henüz bitmedi) |
-! Durum fiilleri (know, like, want, have-sahiplik) continuous olmaz: I**'ve known** him for years. ("I've been knowing" yanlış.)
-
-## for / since
-- **for** + süre: for two hours, for a long time, for ages
-- **since** + başlangıç noktası: since 9 o'clock, since Monday, since I was a child
-x I'm studying English since three years. => I**'ve been studying** English **for** three years.
-`,
   anim: [
     { title: '"Bir saattir bekliyorum"', tr: [['Bir saattir', 't'], [' bekliyorum', 'v']], blocks: [['I', 's'], ['am waiting#W', 'v', 'no'], ['for an hour', 't']],
       note: 'Türkçe gibi düşününce yanlış çıkıyor...' },

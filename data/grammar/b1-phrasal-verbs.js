@@ -1,34 +1,4 @@
 export default {
-  lesson: `
-## Phrasal verb nedir?
-Fiil + edat/zarf (up, down, on, off, out, away, back...) birleşip **yeni bir anlam** oluşturur. Anlam çoğu zaman parçalardan tahmin edilemez, bu yüzden kalıp olarak öğrenilir.
-> **give** (vermek) + **up** → **give up** (bırakmak, vazgeçmek)
-> **look** (bakmak) + **after** → **look after** (bakmak, ilgilenmek)
-
-## En sık kullanılanlar
-| Phrasal verb | Anlam | Örnek |
-| get up | kalkmak (yataktan) | I **get up** at 7. |
-| wake up | uyanmak | I **woke up** late. |
-| turn on / off | açmak / kapatmak (cihaz) | **Turn off** the TV. |
-| look for | aramak | I'm **looking for** my keys. |
-| look after | bakmak, ilgilenmek | She **looks after** her grandmother. |
-| look forward to | dört gözle beklemek | I'm **looking forward to** the holiday. |
-| give up | bırakmak, vazgeçmek | He **gave up** smoking. |
-| find out | öğrenmek, ortaya çıkarmak | I **found out** the truth. |
-| put on / take off | giymek / çıkarmak | **Put on** your coat. / **Take off** your shoes. |
-| fill in | doldurmak (form) | **Fill in** this form, please. |
-| run out of | -i bitmek, tükenmek | We've **run out of** milk. |
-| get on with | iyi geçinmek | I **get on** well **with** my sister. |
-| set up | kurmak (şirket) | She **set up** her own company. |
-| come back | geri gelmek | When are you **coming back**? |
-
-## Nesnenin yeri
-Ayrılabilen phrasal verb'lerde nesne ortaya da sona da gelebilir. Ama nesne **zamir** (it, them, him...) ise **mutlaka ortaya** gelir.
-> Turn **the TV** off. = Turn off **the TV**.
-> Turn **it** off. ("Turn off it" yanlış.)
-x I took off them. => I took **them** off.
-! Ayrılmayanlar (look for, look after, get on with) her zaman bitişik kalır: I'm looking **for it**.
-`,
   anim: [
     { title: 'Fiil + küçük kelime = yeni anlam', blocks: [['give', 'v', '', 'vermek']],
       note: '"give" tek başına "vermek" demek...' },

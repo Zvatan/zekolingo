@@ -1,35 +1,4 @@
 export default {
-  lesson: `
-## Birinin sözünü aktarmak
-Birinin söylediğini aktarırken fiil zamanı genelde **bir adım geriye** kayar ve zamirler değişir.
-> "I **am** tired." → She said (that) she **was** tired. | Yorgun olduğunu söyledi.
-> "I **like** pizza." → He said he **liked** pizza. | Pizzayı sevdiğini söyledi.
-
-## Zaman kayması
-| Doğrudan | Aktarılan |
-| Present Simple: "I work here." | Past Simple: he **worked** there |
-| Present Continuous: "I'm leaving." | Past Continuous: she **was leaving** |
-| Past Simple: "I saw it." | Past Perfect: he **had seen** it |
-| Present Perfect: "I've finished." | Past Perfect: she **had finished** |
-| will: "I'll call you." | would: he **would** call me |
-| can: "I can swim." | could: she **could** swim |
-
-## say mi, tell mi?
-- **say** + (that): She **said** (that) she was busy.
-- **tell** + kişi + (that): She **told me** (that) she was busy.
-! tell'den sonra **kime** söylendiği gelmelidir: "She told that..." yanlış. say'den sonra kişi gelmez: "She said me" yanlış. (Kişi varsa: said **to** me.)
-
-## Zaman ve yer ifadeleri
-| Doğrudan | Aktarılan |
-| now | then |
-| today | that day |
-| tomorrow | the next day |
-| yesterday | the day before |
-| here | there |
-| this | that |
-x He said me that he was hungry. => He **told** me that he was hungry.
-x She told she was late. => She **said** she was late.
-`,
   anim: [
     { title: 'Doğrudan söz', tr: [['"Yorgunum"', 'v'], [' dedi', 'x']], blocks: [['"I', 's'], ['am#V', 'v'], ['tired"', 'n']],
       note: 'Ayşe tam olarak bunu söyledi. Şimdi bunu başkasına aktaralım...' },

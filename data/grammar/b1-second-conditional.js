@@ -1,29 +1,4 @@
 export default {
-  lesson: `
-## Hayali, gerçek dışı durumlar
-**If + Past Simple, would + yalın fiil**: Şu an ya da gelecekte gerçek olmayan veya olma ihtimali çok düşük durumlar.
-> **If** I **had** a lot of money, I **would buy** a house by the sea. | Çok param olsaydı deniz kenarında bir ev alırdım.
-> **If** I **lived** in London, I**'d speak** better English. | Londra'da yaşasaydım daha iyi İngilizce konuşurdum.
-! Fiil geçmiş zamanda (had, lived) olsa da anlam **şimdi / gelecek** ile ilgilidir. Geçmişten bahsetmez.
-
-## First mü, second mı?
-| First Conditional | Second Conditional |
-| Gerçekçi, olası | Hayali, olası değil |
-| If I **win**, I'**ll** buy a car. (Kazanma şansım var.) | If I **won** the lottery, I'**d** travel the world. (Pek olası değil.) |
-
-## If I were you: tavsiye
-Second conditional'da **I / he / she / it** ile **were** kullanılır (günlük dilde was da duyulur).
-> **If I were you**, I**'d** talk to her. | Senin yerinde olsam onunla konuşurdum.
-> If he **were** taller, he could be a basketball player. | Daha uzun olsaydı basketbolcu olabilirdi.
-
-## would, could, might
-- **would**: -ırdı, -erdi (kesin sonuç)
-- **could**: -ebilirdi (yapabilme)
-- **might**: belki -ırdı (ihtimal)
-> If I had more time, I **could** learn the guitar. | Daha çok vaktim olsaydı gitar öğrenebilirdim.
-x If I would have money, I would buy it. => If I **had** money, I would buy it.
-x If I was you, I wouldn't go. => If I **were** you, I wouldn't go. (daha doğru)
-`,
   anim: [
     { title: 'Gerçek olabilir', blocks: [['If', 'q'], ['I', 's'], ['win,#W', 'v'], ["I'll#R", 'x'], ['buy a car', 'v']],
       note: 'Kazanma şansım var → First Conditional (will)' },

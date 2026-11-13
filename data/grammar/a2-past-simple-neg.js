@@ -1,30 +1,4 @@
 export default {
-  lesson: `
-## Olumsuz: didn't + yalın fiil
-Geçmiş zamanın olumsuzu bütün öznelerde **didn't (did not)** ile yapılır. Fiil **yalın** haline döner, çünkü geçmiş bilgisi artık did'in içindedir.
-> I **didn't go** to work yesterday. | Dün işe gitmedim.
-> She **didn't like** the film. | Filmi beğenmedi.
-x I didn't went. => I didn't **go**.
-
-## Soru: Did + özne + yalın fiil
-> **Did** you **see** the match? | Maçı izledin mi?
-> Where **did** you **go** last weekend? | Geçen hafta sonu nereye gittin?
-> What **did** she **say**? | Ne dedi?
-Kısa cevap: Yes, I **did**. / No, I **didn't**.
-x Did you saw him? => Did you **see** him?
-x Where you went? => Where **did** you **go**?
-
-## be ile karıştırma
-Sıfat, isim ya da yer varsa **was / were** kullanılır, did değil:
-- I **wasn't** tired. (did değil)
-- **Were** you at home? (Did you at home yanlış)
-- Fiil varsa did: **Did** you **sleep** well?
-
-## Soru kelimesiyle özne sorusu
-"Kim?" sorusu öznenin kendisini soruyorsa did kullanılmaz:
-> **Who called** you? | Seni kim aradı? (Who özne)
-> **Who did** you call? | Kimi aradın? (you özne)
-`,
   anim: [
     { title: 'Olumlu', tr: [['Filmi', 'n'], [' izledim', 'v']], blocks: [['I', 's'], ['watched#V', 'v'], ['the film', 'n']],
       note: 'Fiilde geçmiş bilgisi var: **-ed**' },

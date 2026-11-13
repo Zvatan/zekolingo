@@ -1,35 +1,4 @@
 export default {
-  lesson: `
-## En ...: the + -est / the most
-Bir grubun içindeki en üst dereceyi anlatır. Önüne **the** gelir.
-> Everest is **the highest** mountain in the world. | Everest dünyanın en yüksek dağıdır.
-> This is **the most beautiful** city I know. | Bu bildiğim en güzel şehir.
-
-## Kurallar
-| Sıfat | Karşılaştırma | En üstünlük |
-| cheap | cheaper | the cheapest |
-| nice | nicer | the nicest |
-| big | bigger | the biggest |
-| easy | easier | the easiest |
-| expensive | more expensive | the most expensive |
-| good | better | **the best** |
-| bad | worse | **the worst** |
-| far | further | **the furthest** |
-
-## in mi, of mu?
-- Yer ya da grup adı → **in**: the tallest **in** the class, the biggest city **in** Turkey
-- Sayı ya da "hepsi" → **of**: the best **of** all, the oldest **of** the three
-> She is the youngest **in** her family. | Ailesinin en küçüğü.
-
-## Present Perfect ile
-"Gördüğüm en ...", "yediğim en ..." kalıbı:
-> It's **the best** film I**'ve ever seen**. | İzlediğim en iyi film.
-
-! "the" unutulmamalı: "She is best student" yanlış, "She is **the** best student" doğru.
-x He is the most tallest. => He is **the tallest**.
-x It is the bigger city in Turkey. => It is **the biggest** city in Turkey.
-x the best of the world => the best **in** the world
-`,
   anim: [
     { title: 'Üç basamak', rows: [[['tall', 'v', '', 'uzun']], [['taller', 'v', 'hi', 'daha uzun']], [['the tallest', 'v', 'hi', 'en uzun']]],
       note: 'Kısa sıfat: **-er** → daha, **the -est** → en' },

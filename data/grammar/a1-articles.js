@@ -39,6 +39,26 @@ x I like the cats. => I like **cats**. (genel anlamda)
 ! **people** çoğuldur: People **are** friendly. "People is" yanlıştır.
 ! Sayıdan sonra isim çoğul olur. Türkçede "iki kitap" deriz ama İngilizcede "two book" yanlıştır: two book**s**.
 `,
+  anim: [
+    { title: 'Türkçede olmayan bir kelime: a / an', tr: [['Bir', 'x'], [' arabam', 'n'], [' var', 'v']], blocks: [['I', 's'], ['have', 'v'], ['a', 'x', 'hi', 'bir'], ['car', 'n']],
+      note: 'Tekil ve sayılabilen bir şeyden ilk kez bahsederken **a** kullanılır.' },
+    { blocks: [['I', 's'], ['have', 'v'], ['an#a', 'x', 'hi'], ['apple#car', 'n']],
+      note: 'Kelime sesli bir **sesle** başlıyorsa **an** olur: an apple, an egg.' },
+    { rows: [[['a', 'x', 'hi'], ['university', 'n', '', '/yu/ sesi']], [['an', 'x', 'hi'], ['hour', 'n', '', 'h okunmaz']]],
+      note: 'Önemli olan harf değil **ses**: a **u**niversity, an **h**our.' },
+    { title: 'Meslekte unutma!', tr: [['O', 's'], [' öğretmen', 'n'], ['dir', 'v']], blocks: [['She', 's'], ['is', 'v'], ['___#A', 'x', 'gap'], ['teacher', 'n']],
+      note: 'Türkçede "öğretmendir" deriz, "bir" demeyiz...' },
+    { blocks: [['She', 's'], ['is', 'v'], ['a#A', 'x', 'ok'], ['teacher', 'n']],
+      note: '...ama İngilizcede **a** şart: She is **a** teacher.' },
+    { title: 'the: hangisi olduğu belli', tr: [['Bir köpeğim var', 'x']], blocks: [['I', 's'], ['have', 'v'], ['a#D', 'x'], ['dog', 'n']],
+      note: 'İlk kez bahsediyoruz → **a** dog' },
+    { tr: [['Köpek', 'n'], [' siyah', 'x']], blocks: [['The#D', 'x', 'hi'], ['dog', 'n'], ['is', 'v'], ['black', 'x']],
+      note: 'Artık hangi köpek olduğu belli → **the** dog' },
+    { title: 'Çoğul: + s', tr: [['iki', 'x'], [' kitap', 'n']], blocks: [['two', 'x'], ['books#B', 'n', 'hi']],
+      note: 'Türkçede "iki kitap" deriz ama İngilizcede sayıdan sonra isim **çoğul** olur: two book**s**' },
+    { rows: [[['child', 'n'], ['children', 'n', 'hi']], [['man', 'n'], ['men', 'n', 'hi']], [['person', 'n'], ['people', 'n', 'hi']]],
+      note: 'Bazı çoğullar düzensizdir ve ezberlenir.' },
+  ],
   ex: [
     { t: 'mc', q: 'She is ___ engineer.', o: ['a', 'an', 'the'], a: 1,
       w: { 0: `"engineer" sesli bir sesle (/e/) başlıyor, bu yüzden **an**.`, 2: `Bir mesleği ilk kez söylerken a/an kullanılır, the değil.` },

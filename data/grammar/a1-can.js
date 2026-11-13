@@ -22,6 +22,22 @@ Kısa cevaplar: Yes, I **can**. / No, I **can't**.
 ## Telaffuz
 "can" genelde zayıf okunur (kın), "can't" ise vurgulu ve uzundur (kaant). Anlam farkı bu vurgudan anlaşılır.
 `,
+  anim: [
+    { title: 'can = -ebilmek', tr: [['Yüz', 'v'], ['ebilirim', 'x']], blocks: [['I', 's'], ['can', 'x', 'hi', '-ebilmek'], ['swim', 'v']],
+      note: 'Türkçedeki "-ebil" eki İngilizcede ayrı bir kelime: **can**' },
+    { blocks: [['She#I', 's'], ['can', 'x'], ['swim', 'v', 'hi']],
+      note: 'she ile bile **can değişmez**, fiil de **-s almaz**.' },
+    { title: 'Sık yapılan hatalar', rows: [[['She', 's'], ['can', 'x'], ['swims', 'v', 'no']], [['She', 's'], ['can', 'x'], ['to swim', 'v', 'no']]],
+      note: '"can swims" ve "can to swim" yanlış.' },
+    { blocks: [['She', 's'], ['can', 'x'], ['swim', 'v', 'ok']],
+      note: 'can + **yalın fiil**. Ne -s ne de to.' },
+    { title: 'Olumsuz', tr: [['Araba kullan', 'v'], ['amam', 'neg']], blocks: [['I', 's'], ["can't#C", 'neg', 'hi'], ['drive', 'v']],
+      note: '**can\'t** (cannot). "don\'t can" diye bir şey yok.' },
+    { title: 'Soru', tr: [['Yüz', 'v'], ['ebilir misin?', 'q']], blocks: [['You', 's'], ['can#C', 'x'], ['swim', 'v']],
+      note: 'Soru yapmak için...' },
+    { tr: [['Yüz', 'v'], ['ebilir misin?', 'q']], blocks: [['Can#C', 'q', 'hi'], ['you#You', 's'], ['swim?#swim', 'v']],
+      note: '...**can** başa geçer: Can you swim? Cevap: Yes, I **can**. / No, I **can\'t**.' },
+  ],
   ex: [
     { t: 'mc', q: 'She can ___ the piano.', o: ['play', 'plays', 'to play'], a: 0,
       w: { 1: `can'den sonra fiil -s almaz.`, 2: `can'den sonra to gelmez.` },

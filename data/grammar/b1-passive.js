@@ -30,6 +30,22 @@ Yapan önemliyse **by** ile eklenir:
 x This house built in 1990. => This house **was built** in 1990.
 x The cars is made in Germany. => The cars **are** made in Germany.
 `,
+  anim: [
+    { title: 'Etken cümle', tr: [['İşçiler', 's'], [' köprüyü', 'n'], [' inşa etti', 'v']], blocks: [['Workers#S', 's'], ['built#V', 'v'], ['the bridge#O', 'n']],
+      note: 'Önemli olan işçiler mi, köprü mü? Çoğu zaman köprü.' },
+    { title: 'Nesne başa geçer', tr: [['Köprü', 'n'], [' inşa edildi', 'v']], blocks: [['The bridge#O', 'n', 'hi'], ['was', 'x', 'hi', 'be'], ['built#V', 'v', 'hi', '3. hal'], ['by workers#S', 's']],
+      note: '**be + 3. hal**. Yapan önemliyse **by** ile sona eklenir, değilse hiç söylenmez.' },
+    { blocks: [['The bridge#O', 'n'], ['was', 'x'], ['built#V', 'v'], ['in 1973', 't']],
+      note: 'Genelde yapanı söylemeyiz: Köprü 1973\'te inşa edildi.' },
+    { title: 'Şimdiki zamanda', blocks: [['English', 'n'], ['is', 'x', 'hi'], ['spoken', 'v', 'hi'], ['all over the world', 't']],
+      note: 'Present Simple edilgen: **am / is / are + 3. hal**' },
+    { title: 'Tekil / çoğul uyumu', rows: [[['The car', 'n'], ['is', 'x', 'hi'], ['washed', 'v']], [['The cars', 'n'], ['are', 'x', 'hi'], ['washed', 'v']]],
+      note: 'be, öne geçen isme göre değişir.' },
+    { title: 'Sık hata', blocks: [['This house', 'n'], ['built#B', 'v', 'no'], ['in 1920', 't']],
+      note: 'Ev kendini inşa etmedi! be eksik...' },
+    { blocks: [['This house', 'n'], ['was built#B', 'v', 'ok'], ['in 1920', 't']],
+      note: '...doğrusu: This house **was built** in 1920.' },
+  ],
   ex: [
     { t: 'mc', q: 'Spanish ___ in Mexico.', o: ['is spoken', 'speaks', 'is speaking'], a: 0,
       w: { 1: `İspanyolca kendisi konuşmaz, konuşulur → edilgen: is spoken.`, 2: `Edilgen yapı be + V3: is spoken.` },

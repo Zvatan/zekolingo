@@ -29,6 +29,24 @@ x There is two books on the table. => There **are** two books on the table.
 x In the city have many parks. => **There are** many parks in the city.
 x Is there any eggs? => **Are** there any eggs?
 `,
+  anim: [
+    { title: '"Var" demek', tr: [['Masada', 'n'], [' bir kitap', 'x'], [' var', 'v']],
+      note: 'Türkçede "var" tek kelimedir. İngilizcede bunun için kalıp bir yapı kullanılır.' },
+    { tr: [['Masada', 'n'], [' bir kitap', 'x'], [' var', 'v']], blocks: [['There is#T', 'v', 'hi', 'var'], ['a book', 'x'], ['on the table', 'n']],
+      note: '**There is** + tekil isim. Yer bilgisi genelde sona gelir.' },
+    { tr: [['Masada', 'n'], [' iki kitap', 'x'], [' var', 'v']], blocks: [['There are#T', 'v', 'hi'], ['two books#a book', 'x'], ['on the table', 'n']],
+      note: 'İsim çoğulsa **There are**.' },
+    { title: 'En sık yapılan hata', tr: [['Odamda', 'n'], [' bir yatak', 'x'], [' var', 'v']], blocks: [['In my room', 'n'], ['have#T', 'v', 'no'], ['a bed', 'x']],
+      note: '"var" kelimesini **have** ile çevirmek yanlış!' },
+    { blocks: [['There is#T', 'v', 'ok'], ['a bed', 'x'], ['in my room', 'n']],
+      note: 'Doğrusu: **There is** a bed in my room. have sadece **sahiplik** için: I have a car.' },
+    { title: 'Olumsuz', tr: [['Hiç sandalye', 'x'], [' yok', 'neg']], blocks: [['There', 'v'], ["aren't", 'neg', 'hi'], ['any', 'x', 'hi'], ['chairs', 'x']],
+      note: 'Olumsuz: **isn\'t / aren\'t**. Çoğulda **any** (hiç) eklenir.' },
+    { title: 'Soru', tr: [['Yakında', 'n'], [' banka', 'x'], [' var mı?', 'q']], blocks: [['There#There', 'v'], ['is#I', 'v'], ['a bank', 'x'], ['near here', 'n']],
+      note: 'Soru yapmak için...' },
+    { tr: [['Yakında', 'n'], [' banka', 'x'], [' var mı?', 'q']], blocks: [['Is#I', 'q', 'hi'], ['there#There', 'v'], ['a bank', 'x'], ['near here?#near here', 'n']],
+      note: '...**is** başa geçer: **Is there** a bank near here?' },
+  ],
   ex: [
     { t: 'mc', q: '___ a book on the table.', o: ['There is', 'There are', 'It has'], a: 0,
       w: { 1: `"a book" tekil → There is.`, 2: `"Bir yerde var" anlamında "it has" kullanılmaz.` },

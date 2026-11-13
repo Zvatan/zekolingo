@@ -25,6 +25,22 @@ Gelecekten bahsederken bu kelimelerden sonra da **Present Simple** gelir:
 > I'll call you **when** I **arrive**. | Varınca seni ararım. ("when I will arrive" yanlış)
 > **As soon as** I **get** home, I'll have a shower. | Eve varır varmaz duş alacağım.
 `,
+  anim: [
+    { title: 'Gerçek, olası gelecek', tr: [['Yağmur yağ', 'v'], ['arsa', 'q'], [' evde kalacağız', 'x']], blocks: [['If', 'q', 'hi', 'eğer'], ['it', 's'], ['rains,#R', 'v'], ["we'll stay", 'x', 'hi'], ['at home', 'n']],
+      note: '**If + Present Simple, will + fiil**' },
+    { title: 'Türklerin tuzağı', blocks: [['If', 'q'], ['it', 's'], ['will rain,#R', 'v', 'no'], ["we'll stay", 'x'], ['at home', 'n']],
+      note: '"Yağarsa" gelecekten bahsediyor diye if\'li tarafa **will** koymak yanlış...' },
+    { blocks: [['If', 'q'], ['it', 's'], ['rains,#R', 'v', 'ok'], ["we'll stay", 'x'], ['at home', 'n']],
+      note: '...if\'li tarafta **Present Simple** kalır.' },
+    { title: 'Sıra değişebilir', blocks: [["We'll stay", 'x'], ['at home', 'n'], ['if', 'q'], ['it', 's'], ['rains#R', 'v']],
+      note: 'if sona da gelebilir. O zaman virgül gerekmez.' },
+    { title: 'unless = if ... not', rows: [[['If', 'q'], ['you', 's'], ["don't hurry,", 'neg', 'hi']], [['Unless', 'q', 'hi'], ['you', 's'], ['hurry,', 'v']]],
+      note: 'İkisi aynı anlamda: "acele etmezsen". unless zaten olumsuz, yanına not eklenmez.' },
+    { title: 'when / as soon as da aynı', blocks: [["I'll call you", 'x'], ['when', 'q', 'hi'], ['I', 's'], ['arrive', 'v', 'hi']],
+      note: 'Gelecekten bahsederken **when, as soon as, until** sonrası da Present Simple: "when I will arrive" yanlış.' },
+    { title: 'Zero conditional: her zaman doğru', blocks: [['If', 'q'], ['you heat', 'v', 'hi'], ['ice,', 'n'], ['it melts', 'v', 'hi']],
+      note: 'Genel gerçeklerde iki taraf da **Present Simple**.' },
+  ],
   ex: [
     { t: 'mc', q: 'If it ___ tomorrow, we will cancel the picnic.', o: ['rains', 'will rain', 'rained'], a: 0,
       w: { 1: `if'li bölümde will kullanılmaz → Present Simple: rains.`, 2: `Gelecekteki gerçek bir olasılık → First Conditional: rains.` },

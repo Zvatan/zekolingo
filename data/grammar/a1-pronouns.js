@@ -40,6 +40,27 @@ x My father is a doctor. She works at a hospital. => My father is a doctor. **He
 x Ayşe loves his father. => Ayşe loves **her** father.
 x Me am tired. => **I** am tired.
 `,
+  anim: [
+    { title: 'Türkçede ek, İngilizcede ayrı kelime', tr: [['ben', 's'], [' / beni', 'n'], [' / benim', 'v']],
+      blocks: [['I', 's', '', 'ben'], ['me', 'n', '', 'beni, bana'], ['my', 'v', '', 'benim']],
+      note: 'Türkçede "ben" kelimesi ek alarak değişir. İngilizcede her biri **ayrı bir kelime**dir.' },
+    { title: 'Özne: fiilden önce', tr: [['Ben', 's'], [' seni', 'n'], [' seviyorum', 'v']], blocks: [['I', 's', 'hi'], ['love', 'v'], ['you', 'n']],
+      note: 'Eylemi yapan **özne** formundadır: **I**' },
+    { title: 'Nesne: fiilden sonra', tr: [['O', 's'], [' beni', 'n'], [' seviyor', 'v']], blocks: [['She', 's'], ['loves', 'v'], ['me#I', 'n', 'hi']],
+      note: 'Fiilden sonra gelen **nesne** formundadır: I → **me**' },
+    { blocks: [['She', 's'], ['loves', 'v'], ['I#I', 'n', 'no']],
+      note: '"She loves I" yanlış! Nesne konumunda **me** olmalı.' },
+    { title: 'İyelik: isimden önce', tr: [['Benim', 'v'], [' adım', 'n'], [' Can', 'x']], blocks: [['My#I', 'v', 'hi'], ['name', 'n'], ['is', 'x'], ['Can', 'x']],
+      note: '"benim" → **my**. Arkasından mutlaka bir isim gelir.' },
+    { title: 'Türkçedeki "o" üçe ayrılır', rows: [[['he', 's', '', 'erkek']], [['she', 's', '', 'kadın']], [['it', 's', '', 'eşya / hayvan']]],
+      note: 'Türkçede tek kelime olan "o", İngilizcede cinsiyete göre değişir.' },
+    { title: 'his mi, her mi?', tr: [['Ali', 's'], [' ve', 'x'], [' annesi', 'n']], blocks: [['Ali', 's'], ['and', 'x'], ['his#P', 'v', 'hi'], ['mother', 'n']],
+      note: 'Sahip Ali (erkek) → **his**. Annenin kadın olması önemli değil!' },
+    { tr: [['Ayşe', 's'], [' ve', 'x'], [' babası', 'n']], blocks: [['Ayşe#Ali', 's'], ['and', 'x'], ['her#P', 'v', 'hi'], ['father#mother', 'n']],
+      note: 'Sahip Ayşe (kadın) → **her**. Kural: **sahibe** bak.' },
+    { title: 'İsimlerde sahiplik: \'s', tr: [['Tom', 's'], ['\'un', 'v'], [' arabası', 'n']], blocks: [['Tom\'s#Tom', 's', 'hi'], ['car', 'n']],
+      note: 'Türkçedeki "-un, -in" eki yerine isme **\'s** eklenir: **Tom\'s** car' },
+  ],
   ex: [
     { t: 'mc', q: 'Ayşe is my friend. ___ is from Bursa.', o: ['He', 'She', 'It'], a: 1,
       w: { 0: `Ayşe bir kadın, bu yüzden **she**. "he" erkekler için kullanılır.`, 2: `"it" eşya ve hayvanlar içindir, insanlar için kullanılmaz.` },

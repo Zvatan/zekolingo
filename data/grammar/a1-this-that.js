@@ -29,6 +29,24 @@ this / that → **is** · these / those → **are**
 > **This is** Ahmet. | Bu Ahmet. (Birini tanıştırırken)
 > Hello, **this is** Can. | Alo, ben Can. (Telefonda)
 `,
+  anim: [
+    { title: 'Yakın ve tekil', tr: [['Bu', 'x'], [' kitap', 'n']], blocks: [['this#D', 'x', 'hi', 'bu (yakın)'], ['book#N', 'n']],
+      note: 'Elindeki, yakındaki tek bir şey → **this**' },
+    { title: 'Yakın ve çoğul', tr: [['Bu', 'x'], [' kitaplar', 'n']], blocks: [['these#D', 'x', 'hi'], ['books#N', 'n']],
+      note: 'Türkçede "bu" değişmez. İngilizcede ise isim çoğulsa this → **these** olur.' },
+    { title: 'Uzak ve tekil', tr: [['Şu', 'x'], [' araba', 'n']], blocks: [['that#D', 'x', 'hi', 'şu (uzak)'], ['car#N', 'n']],
+      note: 'Uzaktaki tek bir şey → **that**' },
+    { title: 'Uzak ve çoğul', tr: [['Şu', 'x'], [' arabalar', 'n']], blocks: [['those#D', 'x', 'hi'], ['cars#N', 'n']],
+      note: 'Uzaktaki birden fazla şey → **those**' },
+    { title: 'Özet', rows: [[['this', 'x', '', 'yakın tekil'], ['these', 'x', '', 'yakın çoğul']], [['that', 'x', '', 'uzak tekil'], ['those', 'x', '', 'uzak çoğul']]],
+      note: 'İki soru sor: **Yakın mı uzak mı? Tekil mi çoğul mu?**' },
+    { title: 'Fiil de uyar', blocks: [['This#D', 'x'], ['is', 'v', 'hi'], ['my sister', 'n']],
+      note: 'this / that → **is**' },
+    { blocks: [['These#D', 'x'], ['are#is', 'v', 'hi'], ['my friends#my sister', 'n']],
+      note: 'these / those → **are**' },
+    { title: 'Soru', blocks: [['Is#is', 'q', 'hi'], ['that#D', 'x'], ['your bag?', 'n']],
+      note: 'Soruda **is** başa geçer. Kısa cevapta "that" yerine **it** denir: Yes, it is.' },
+  ],
   ex: [
     { t: 'mc', q: '___ is my phone.', i: 'Telefon elinde. Doğru seçeneği işaretle.', o: ['This', 'These', 'Those'], a: 0,
       w: { 1: `"phone" tekil. "these" çoğul isimler için kullanılır.`, 2: `"those" çoğul ve uzaktaki şeyler için kullanılır.` },

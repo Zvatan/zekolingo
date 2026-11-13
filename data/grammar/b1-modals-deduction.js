@@ -24,6 +24,22 @@ x He mustn't be at home, his car isn't there. => He **can't** be at home.
 > It **may / might / could** rain later. | Sonra yağmur yağabilir.
 ! Olumsuzda **couldn't** "olamaz" (can't gibi) anlamına gelir. "Belki değil" demek için **might not / may not** kullanılır: He **might not** come. (Gelmeyebilir.)
 `,
+  anim: [
+    { title: 'Ne kadar eminsin?', tr: [['12 saattir çalışıyor', 'x']],
+      note: 'Görmediğin bir şey hakkında tahmin yürütüyorsun...' },
+    { tr: [['Yorgun', 'n'], [' olmalı', 'v']], blocks: [['She', 's'], ['must#M', 'v', 'hi', '%90 evet'], ['be tired', 'n']],
+      note: 'Güçlü kanıt, mantıklı sonuç → **must**' },
+    { tr: [['Yorgun', 'n'], [' olabilir', 'v']], blocks: [['She', 's'], ['might#M', 'v', 'hi', '%50'], ['be tired', 'n']],
+      note: 'Emin değilim → **might / may / could**' },
+    { tr: [['Yorgun', 'n'], [' olamaz', 'neg']], blocks: [['She', 's'], ["can't#M", 'neg', 'hi', '%90 hayır'], ['be tired', 'n']],
+      note: 'Kesinlikle değil → **can\'t**' },
+    { title: 'Tuzak: mustn\'t', blocks: [['He', 's'], ["mustn't#M2", 'neg', 'no'], ['be at home', 'n']],
+      note: 'Tahminde must\'ın zıttı mustn\'t değildir. mustn\'t = **yasak**...' },
+    { blocks: [['He', 's'], ["can't#M2", 'neg', 'ok'], ['be at home', 'n']],
+      note: '...doğrusu **can\'t** be.' },
+    { title: 'Şu an olan şey için', blocks: [['They', 's'], ['must', 'v'], ['be having', 'v', 'hi'], ['dinner', 'n']],
+      note: '**must / might + be + -ing**: "Yemek yiyor olmalılar."' },
+  ],
   ex: [
     { t: 'mc', q: "You've been walking all day. You ___ be exhausted.", o: ['must', "can't", 'might not'], a: 0,
       w: { 1: `Bütün gün yürümüş birinin yorgun olması mantıklı → must.`, 2: `Kanıt güçlü, emin bir tahmin → must.` },

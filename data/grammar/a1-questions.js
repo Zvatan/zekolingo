@@ -35,6 +35,20 @@ x What means this word? => What **does** this word **mean**?
 ## Why sorusuna cevap: Because
 > **Why** are you happy? **Because** it's my birthday! | Neden mutlusun? Çünkü bugün doğum günüm!
 `,
+  anim: [
+    { title: 'Türkçede soru kelimesi ortada', tr: [['Sen', 's'], [' nerede', 'q'], [' yaşıyorsun?', 'v']], blocks: [['You', 's'], ['live', 'v'], ['where?#W', 'q', 'no']],
+      note: '"You live where?" diye çevirmek yanlış.' },
+    { title: 'Formül', blocks: [['Where#W', 'q', 'hi', 'soru kelimesi'], ['do', 'x', 'hi', 'yardımcı'], ['you#You', 's', '', 'özne'], ['live?#live', 'v', '', 'fiil']],
+      note: 'Soru kelimesi **her zaman başa** gelir, ardından yardımcı fiil gelir.' },
+    { blocks: [['Where#W', 'q'], ['does#do', 'x', 'hi'], ['she#You', 's'], ['live?#live', 'v']],
+      note: 'he / she / it → **does**. Fiil yalın kalır.' },
+    { title: 'be varsa do yok', tr: [['Nerelisin?', 'q']], blocks: [['Where#W', 'q'], ['are#do', 'x', 'hi'], ['you#You', 's'], ['from?#live', 'n']],
+      note: 'Cümlede fiil yoksa yardımcı olarak **be** kullanılır: Where **are** you from?' },
+    { title: 'Kelimeler', rows: [[['What', 'q', '', 'ne'], ['Where', 'q', '', 'nerede'], ['When', 'q', '', 'ne zaman']], [['Who', 'q', '', 'kim'], ['Why', 'q', '', 'neden'], ['How', 'q', '', 'nasıl']]],
+      note: 'En sık kullanılan altı soru kelimesi.' },
+    { title: 'many mi, much mi?', rows: [[['How many', 'q', 'hi'], ['books?', 'n', '', 'sayılabilen']], [['How much', 'q', 'hi'], ['water?', 'n', '', 'sayılamayan']]],
+      note: 'Sayılabilen → **How many**. Sayılamayan ya da fiyat → **How much**.' },
+  ],
   ex: [
     { t: 'mc', q: '___ do you live? In Konya.', o: ['Where', 'When', 'Who'], a: 0,
       w: { 1: `When = ne zaman. Cevap bir yer → Where.`, 2: `Who = kim. Cevap bir yer → Where.` },

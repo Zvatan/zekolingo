@@ -24,6 +24,22 @@ Uzun süren (arka plan) eylem → **Past Continuous**. Onu bölen kısa eylem �
 x When I arrived, they were eat dinner. => They **were eating** dinner.
 x While I walked home, it started to rain. => While I **was walking** home, it started to rain.
 `,
+  anim: [
+    { title: 'Geçmişte devam eden', tr: [['Dün saat 8\'de', 't'], [' TV izliyordum', 'v']], blocks: [['I', 's'], ['was', 'x', 'hi', 'be (geçmiş)'], ['watching', 'v', 'hi', '-ing'], ['TV', 'n'], ['at 8', 't']],
+      note: '**was / were + -ing** = "-yordu". O anda devam ediyordu.' },
+    { blocks: [['They#I', 's'], ['were#was', 'x', 'hi'], ['watching', 'v'], ['TV', 'n'], ['at 8', 't']],
+      note: 'Çoğulda **were**.' },
+    { title: 'Uzun eylem + kısa eylem', tr: [['Duş alıyordum', 'v']], blocks: [['I', 's'], ['was#was', 'x'], ['having a shower', 'v']],
+      note: 'Arka planda süren uzun bir eylem...' },
+    { tr: [['Duş alıyordum', 'v'], [' telefon çaldığında', 'q']], blocks: [['I', 's'], ['was#was', 'x'], ['having a shower', 'v'], ['when', 't', 'hi'], ['the phone', 'n'], ['rang', 'q', 'hi', 'kısa']],
+      note: '...ve onu **bölen** kısa bir olay: when + **Past Simple** (rang).' },
+    { title: 'while', blocks: [['While', 't', 'hi'], ['I', 's'], ['was cooking', 'v', '', 'uzun'], ['I', 's'], ['cut my finger', 'q', '', 'kısa']],
+      note: '**while** genelde uzun eylemin önüne gelir: "-ken".' },
+    { title: 'Sık hata', blocks: [['They', 's'], ['were', 'x'], ['eat#E', 'v', 'no'], ['dinner', 'n']],
+      note: '-ing unutulmuş...' },
+    { blocks: [['They', 's'], ['were', 'x'], ['eating#E', 'v', 'ok'], ['dinner', 'n']],
+      note: '...doğrusu: were **eating**.' },
+  ],
   ex: [
     { t: 'mc', q: 'At 7 a.m. yesterday, I ___ .', o: ['was sleeping', 'slept', 'am sleeping'], a: 0,
       w: { 1: `"Saat 7'de" o anda devam eden bir eylem → was sleeping.`, 2: `"yesterday" geçmişi gösterir.` },

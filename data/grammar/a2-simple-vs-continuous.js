@@ -28,6 +28,22 @@ x I am knowing the answer. => I **know** the answer.
 ! "think" fikir bildiriyorsa -ing almaz: I **think** it's a good idea. Ama "düşünüp taşınmak" anlamında alabilir: I**'m thinking** about my holiday.
 ! "have" sahiplik ise -ing almaz (I **have** a car), ama eylemse alabilir (I**'m having** lunch, I'**m having** a shower).
 `,
+  anim: [
+    { title: 'Türkçede ikisi de "çalışıyorum"', tr: [['Bankada', 'n'], [' çalışıyorum', 'v']],
+      note: 'Bu cümle "orada işim var" da olabilir, "şu an çalışıyorum" da. İngilizcede ikisi **ayrı** söylenir.' },
+    { title: 'Kalıcı / rutin', blocks: [['I', 's'], ['work#V', 'v', 'hi'], ['in a bank', 'n'], ['every day#T', 't']],
+      note: 'İşim, alışkanlığım → **Present Simple**' },
+    { title: 'Şu an / geçici', blocks: [['I', 's'], ['am', 'x', 'hi'], ['working#V', 'v', 'hi'], ['at home', 'n'], ['today#T', 't']],
+      note: 'Bugün, şu an, bu aralar → **Present Continuous**' },
+    { title: 'İpucu kelimeler', rows: [[['always · usually · every day', 't', '', 'Present Simple']], [['now · today · this week', 't', '', 'Present Continuous']]],
+      note: 'Cümledeki zaman ifadesi çoğu zaman cevabı verir.' },
+    { title: 'Bir cümlede ikisi', blocks: [['I', 's'], ['usually', 't'], ['walk', 'v', 'hi'], ['but today', 't'], ["I'm taking", 'v', 'hi'], ['the bus', 'n']],
+      note: 'Genelde yürürüm (rutin), ama bugün otobüse biniyorum (geçici).' },
+    { title: 'Durum fiilleri -ing almaz', blocks: [['I', 's'], ['am knowing#K', 'v', 'no'], ['the answer', 'n']],
+      note: 'know, like, want, need, understand **durum** bildirir...' },
+    { blocks: [['I', 's'], ['know#K', 'v', 'ok'], ['the answer', 'n']],
+      note: '...şu an bile olsa: I **know** the answer.' },
+  ],
   ex: [
     { t: 'mc', q: 'My father ___ in a bank. He has worked there for 20 years.', o: ['works', 'is working'], a: 0,
       w: { 1: `20 yıldır orada çalışıyor, yani kalıcı bir durum → Present Simple.` },

@@ -27,6 +27,24 @@ x See you in Monday. => See you **on** Monday.
 x The meeting is on 3 o'clock. => The meeting is **at** 3 o'clock.
 x in the night => **at** night
 `,
+  anim: [
+    { title: 'Türkçede tek ek: -de / -da', tr: [['evde', 'n'], [' · masada', 'n'], [' · Ankara\'da', 'n']],
+      note: 'Türkçede hepsi aynı ek. İngilizcede ise **üç farklı edat** var: in, on, at.' },
+    { title: 'in: içinde', tr: [['Ankara', 'n'], ['\'da', 't']], blocks: [['in', 't', 'hi', 'içinde'], ['Ankara', 'n']],
+      note: 'Şehir, ülke, kapalı alan → **in** (in the box, in the kitchen)' },
+    { title: 'on: üstünde', tr: [['masa', 'n'], ['da', 't']], blocks: [['on', 't', 'hi', 'üstünde'], ['the table', 'n']],
+      note: 'Bir yüzeyin üstü → **on** (on the wall, on the floor)' },
+    { title: 'at: bir noktada', tr: [['ev', 'n'], ['de', 't']], blocks: [['at', 't', 'hi', 'noktada'], ['home', 'n']],
+      note: 'Belirli bir nokta, adres → **at** (at home, at work, at the bus stop)' },
+    { title: 'Zaman: büyükten küçüğe', rows: [[['in', 't', 'hi'], ['June · 2024 · summer', 'n']], [['on', 't', 'hi'], ['Monday · 5 May', 'n']], [['at', 't', 'hi'], ['7 o\'clock · night', 'n']]],
+      note: '**in** ay, yıl, mevsim · **on** gün, tarih · **at** saat' },
+    { title: 'Dikkat', rows: [[['in', 't'], ['the morning', 'n']], [['at', 't', 'hi'], ['night', 'n']]],
+      note: 'in the morning / evening, ama **at night**.' },
+    { title: 'Edat yok!', blocks: [['See you', 'v'], ['on', 't', 'no'], ['next Monday', 'n']],
+      note: 'next, last, every, this ile edat kullanılmaz...' },
+    { blocks: [['See you', 'v'], ['next Monday', 'n', 'ok']],
+      note: '...doğrusu: See you **next Monday**.' },
+  ],
   ex: [
     { t: 'mc', q: "The film starts ___ 8 o'clock.", o: ['at', 'on', 'in'], a: 0,
       w: { 1: `on günler ve tarihler için kullanılır.`, 2: `in ay, yıl ve mevsimler için kullanılır.` },

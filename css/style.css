@@ -251,7 +251,11 @@ body.session .pop { bottom: calc(100px + var(--sbm)); }
   position: relative; display: inline-block; padding: 9px 14px; border-radius: 12px; font-size: 22px; font-weight: 700;
   background: var(--card); color: var(--c); border: 2px solid var(--c); box-shadow: var(--shadow); white-space: nowrap;
 }
-.blk small { position: absolute; left: 50%; top: 100%; transform: translateX(-50%); margin-top: 3px; font-size: 11px; font-weight: 600; color: var(--muted); }
+.blk small {
+  position: absolute; left: 50%; top: 100%; transform: translateX(-50%); margin-top: 3px; font-size: 11px; font-weight: 600;
+  color: var(--muted); width: max-content; max-width: 96px; white-space: normal; text-align: center; line-height: 1.2;
+}
+.an-rows { gap: 34px; }
 .blk.hi { animation: pop 1s ease .7s 1 both; }
 @keyframes pop { 0%, 100% { box-shadow: 0 0 0 0 transparent; } 40% { box-shadow: 0 0 0 7px var(--primary-soft); } }
 .blk.no { --c: var(--bad); background: var(--bad-soft); }

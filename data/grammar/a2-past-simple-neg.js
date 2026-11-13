@@ -25,6 +25,24 @@ Sıfat, isim ya da yer varsa **was / were** kullanılır, did değil:
 > **Who called** you? | Seni kim aradı? (Who özne)
 > **Who did** you call? | Kimi aradın? (you özne)
 `,
+  anim: [
+    { title: 'Olumlu', tr: [['Filmi', 'n'], [' izledim', 'v']], blocks: [['I', 's'], ['watched#V', 'v'], ['the film', 'n']],
+      note: 'Fiilde geçmiş bilgisi var: **-ed**' },
+    { title: 'Olumsuz', tr: [['Filmi', 'n'], [' izlemedim', 'neg']], blocks: [['I', 's'], ["didn't#D", 'neg', 'hi'], ['watch#V', 'v', 'hi'], ['the film', 'n']],
+      note: '**didn\'t** gelir, fiil **yalın** haline döner. Geçmiş bilgisi artık did\'in içinde.' },
+    { blocks: [['I', 's'], ["didn't#D", 'neg'], ['went#V', 'v', 'no'], ['home', 'n']],
+      note: '"didn\'t went" yanlış...' },
+    { blocks: [['I', 's'], ["didn't#D", 'neg'], ['go#V', 'v', 'ok'], ['home', 'n']],
+      note: '...didn\'t + **go**. Geçmiş iki kere gösterilmez.' },
+    { title: 'Soru', tr: [['Maçı', 'n'], [' izledin mi?', 'q']], blocks: [['you', 's'], ['saw#V', 'v'], ['the match', 'n']],
+      note: 'Soru yapalım...' },
+    { blocks: [['Did#D', 'q', 'hi'], ['you', 's'], ['see#V', 'v', 'hi'], ['the match?#the match', 'n']],
+      note: '**Did** başa gelir, saw → **see** (yalın).' },
+    { blocks: [['Where#W', 'q', 'hi'], ['did#D', 'q'], ['you', 's'], ['go?#V', 'v']],
+      note: 'Soru kelimesi varsa en başa: Where **did** you **go**?' },
+    { title: 'Fiil yoksa was / were', rows: [[['Were', 'q'], ['you', 's'], ['tired?', 'n', '', 'sıfat']], [['Did', 'q'], ['you', 's'], ['sleep?', 'v', '', 'fiil']]],
+      note: 'Sıfat / yer → **was / were**, fiil → **did**.' },
+  ],
   ex: [
     { t: 'mc', q: "I didn't ___ the answer.", o: ['know', 'knew', 'knows'], a: 0,
       w: { 1: `didn't'tan sonra fiil yalın gelir: know.`, 2: `didn't'tan sonra fiil yalın gelir: know.` },

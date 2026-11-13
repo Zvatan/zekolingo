@@ -28,6 +28,24 @@ x The book which I bought it is great. => The book which I bought is great.
 x This is the man which helped me. => This is the man **who** helped me.
 x This is the city which I was born. => This is the city **where** I was born.
 `,
+  anim: [
+    { title: 'Türkçede tanım önde', tr: [['yanımda oturan', 'v'], [' adam', 'n']],
+      note: 'Türkçede tanımlayan kısım ismin **önüne** gelir. İngilizcede ise...' },
+    { tr: [['yanımda oturan', 'v'], [' adam', 'n']], blocks: [['the man', 'n', 'hi'], ['who', 'q', 'hi', 'bağlaç'], ['sits next to me', 'v']],
+      note: '...isim önce gelir, tanım **arkasına**, bir bağlaçla eklenir: **who**' },
+    { title: 'Hangi bağlaç?', rows: [[['who', 'q', 'hi'], ['insan', 'n']], [['which', 'q', 'hi'], ['eşya, hayvan', 'n']], [['that', 'q', 'hi'], ['ikisi de', 'n']], [['where', 'q', 'hi'], ['yer', 'n']], [['whose', 'q', 'hi'], ['kimin', 'n']]],
+      note: 'İsme bak, ona göre seç.' },
+    { title: 'Yer', tr: [['büyüdüğüm', 'v'], [' ev', 'n']], blocks: [['the house', 'n'], ['where', 'q', 'hi'], ['I grew up', 'v']],
+      note: 'Yer → **where**' },
+    { title: 'Sahiplik', tr: [['babası pilot olan', 'v'], [' kız', 'n']], blocks: [['the girl', 'n'], ['whose', 'q', 'hi'], ['father is a pilot', 'v']],
+      note: '"onun babası" → **whose**' },
+    { title: 'Sık hata: zamiri tekrarlamak', blocks: [['the book', 'n'], ['which', 'q'], ['I bought', 'v'], ['it#IT', 'n', 'no']],
+      note: 'Türkçede olmayan bir hata ama sık yapılır...' },
+    { blocks: [['the book', 'n'], ['which', 'q'], ['I bought', 'v', 'ok']],
+      note: '..."the book" zaten nesne. **it** tekrar edilmez.' },
+    { title: 'Bağlaç düşebilir', blocks: [['the cake', 'n'], ['(that)', 'q', 'gap'], ['you made', 'v']],
+      note: 'Bağlaç cümlenin **nesnesi** ise atılabilir: the cake you made. Özneyse atılamaz: the man **who** called.' },
+  ],
   ex: [
     { t: 'mc', q: 'The woman ___ lives next door is a nurse.', o: ['who', 'which', 'where'], a: 0,
       w: { 1: `"which" eşya ve hayvanlar içindir. İnsan → who.`, 2: `"where" yerler içindir.` },

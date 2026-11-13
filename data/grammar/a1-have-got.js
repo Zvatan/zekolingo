@@ -29,6 +29,22 @@ x Do you have got a pen? => **Have** you got a pen? ya da **Do** you **have** a 
 have breakfast (kahvaltı yapmak), have a shower (duş almak), have a good time (iyi vakit geçirmek)
 ! Bu kalıplarda have got kullanılmaz: I have breakfast at 8. "I've got breakfast" yanlıştır.
 `,
+  anim: [
+    { title: 'Sahiplik: have', tr: [['Bir kardeşim', 'n'], [' var', 'v']], blocks: [['I', 's'], ['have#H', 'v', 'hi', 'sahip olmak'], ['a brother', 'n']],
+      note: '"Benim ... var" = **I have**' },
+    { tr: [['Onun', 's'], [' bir kardeşi', 'n'], [' var', 'v']], blocks: [['She#I', 's'], ['has#H', 'v', 'hi'], ['a brother', 'n']],
+      note: 'he / she / it ile **has**' },
+    { title: 'İngiliz usulü: have got', blocks: [['She#I', 's'], ['has#H', 'v'], ['got', 'v', 'hi'], ['a brother', 'n']],
+      note: 'Anlam aynı. "She\'s got" kısaltmasındaki \'s = **has**' },
+    { title: 'Olumsuz: iki yol', rows: [[['She#I', 's'], ["doesn't", 'neg', 'hi'], ['have#H', 'v'], ['a car', 'n']], [['She', 's'], ["hasn't", 'neg', 'hi'], ['got', 'v'], ['a car', 'n']]],
+      note: 'Ya **doesn\'t have** ya da **hasn\'t got**. İkisi karışmaz.' },
+    { title: 'Dikkat!', blocks: [['She#I', 's'], ["doesn't", 'neg'], ['has#H', 'v', 'no'], ['a car', 'n']],
+      note: '"doesn\'t has" yanlış...' },
+    { blocks: [['She#I', 's'], ["doesn't", 'neg'], ['have#H', 'v', 'ok'], ['a car', 'n']],
+      note: '...doesn\'t\'tan sonra fiil **yalın** gelir: doesn\'t **have**' },
+    { title: 'Soru', rows: [[['Do', 'q', 'hi'], ['you', 's'], ['have', 'v'], ['a pen?', 'n']], [['Have', 'q', 'hi'], ['you', 's'], ['got', 'v'], ['a pen?', 'n']]],
+      note: '**Do you have...?** ya da **Have you got...?** "Do you have got" yanlıştır.' },
+  ],
   ex: [
     { t: 'mc', q: 'My sister ___ long hair.', o: ['have', 'has', 'is'], a: 1,
       w: { 0: `"My sister" = she → has.`, 2: `"Saçı var" bir sahiplik bildirir → has.` },

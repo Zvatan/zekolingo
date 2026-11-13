@@ -30,6 +30,22 @@ Birinin söylediğini aktarırken fiil zamanı genelde **bir adım geriye** kaya
 x He said me that he was hungry. => He **told** me that he was hungry.
 x She told she was late. => She **said** she was late.
 `,
+  anim: [
+    { title: 'Doğrudan söz', tr: [['"Yorgunum"', 'v'], [' dedi', 'x']], blocks: [['"I', 's'], ['am#V', 'v'], ['tired"', 'n']],
+      note: 'Ayşe tam olarak bunu söyledi. Şimdi bunu başkasına aktaralım...' },
+    { blocks: [['She said', 'x', 'hi'], ['she#I', 's', 'hi'], ['was#V', 'v', 'hi'], ['tired', 'n']],
+      note: 'Zamir değişir (I → **she**) ve zaman **bir adım geri** kayar (am → **was**).' },
+    { title: 'Zaman kayması', rows: [[['am / is', 'v'], ['→ was', 'v', 'hi']], [['like', 'v'], ['→ liked', 'v', 'hi']], [['will', 'v'], ['→ would', 'v', 'hi']], [['can', 'v'], ['→ could', 'v', 'hi']]],
+      note: 'Geçmiş → had + 3. hal, have done → had done' },
+    { title: 'say mi, tell mi?', rows: [[['She', 's'], ['said', 'x', 'hi'], ['(that) she was busy', 'v']], [['She', 's'], ['told', 'x', 'hi'], ['me', 'n', 'hi', 'kime?'], ['she was busy', 'v']]],
+      note: '**tell** kişi ister (told **me**), **say** istemez.' },
+    { title: 'Sık hata', blocks: [['He', 's'], ['said#S', 'x', 'no'], ['me', 'n'], ['he was hungry', 'v']],
+      note: 'Kişi (me) varsa say kullanılmaz...' },
+    { blocks: [['He', 's'], ['told#S', 'x', 'ok'], ['me', 'n'], ['he was hungry', 'v']],
+      note: '...doğrusu: He **told** me.' },
+    { title: 'Zaman ifadeleri de kayar', rows: [[['tomorrow', 't'], ['→ the next day', 't', 'hi']], [['yesterday', 't'], ['→ the day before', 't', 'hi']], [['here', 't'], ['→ there', 't', 'hi']]],
+      note: 'Aktarıldığında zaman ve yer de değişir.' },
+  ],
   ex: [
     { t: 'mc', q: '"I am hungry." → He said that he ___ hungry.', o: ['was', 'is', 'has been'], a: 0,
       w: { 1: `Aktarırken zaman bir adım geriye kayar: am → was.`, 2: `am → was (Past Simple).` },

@@ -30,6 +30,22 @@ x He is the most tallest. => He is **the tallest**.
 x It is the bigger city in Turkey. => It is **the biggest** city in Turkey.
 x the best of the world => the best **in** the world
 `,
+  anim: [
+    { title: 'Üç basamak', rows: [[['tall', 'v', '', 'uzun']], [['taller', 'v', 'hi', 'daha uzun']], [['the tallest', 'v', 'hi', 'en uzun']]],
+      note: 'Kısa sıfat: **-er** → daha, **the -est** → en' },
+    { tr: [['Ali', 's'], [' sınıfın', 'n'], [' en uzunu', 'v']], blocks: [['Ali', 's'], ['is', 'x'], ['the', 'x', 'hi'], ['tallest', 'v', 'hi'], ['in the class', 'n']],
+      note: '**the** unutulmaz. Grup ya da yer adıyla **in**.' },
+    { title: 'Uzun sıfatlar', blocks: [['the', 'x'], ['most', 'v', 'hi'], ['beautiful', 'v'], ['city', 'n']],
+      note: 'Uzun sıfat → **the most** + sıfat' },
+    { title: 'Düzensizler', rows: [[['good', 'v'], ['better', 'v'], ['the best', 'v', 'hi']], [['bad', 'v'], ['worse', 'v'], ['the worst', 'v', 'hi']]],
+      note: 'En iyi → **the best**, en kötü → **the worst**' },
+    { title: 'Sık hata', blocks: [['He', 's'], ['is', 'x'], ['the', 'x'], ['most tallest#T', 'v', 'no']],
+      note: '"most" ve "-est" birlikte kullanılmaz...' },
+    { blocks: [['He', 's'], ['is', 'x'], ['the', 'x'], ['tallest#T', 'v', 'ok']],
+      note: '...doğrusu: **the tallest**.' },
+    { title: 'Güzel bir kalıp', blocks: [["It's", 'x'], ['the best film', 'v', 'hi'], ["I've ever seen", 'n']],
+      note: '"İzlediğim **en iyi** film" → the best ... **I\'ve ever seen**' },
+  ],
   ex: [
     { t: 'mc', q: 'Ali is ___ student in our class.', o: ['the tallest', 'taller', 'the most tall'], a: 0,
       w: { 1: `"in our class" bir grup → en üstünlük: the tallest.`, 2: `Tek heceli sıfat → -est: the tallest.` },

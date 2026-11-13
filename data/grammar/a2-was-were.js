@@ -28,6 +28,26 @@ yesterday, last night / week / year, two days ago, in 2010, when I was a child
 x I born in Izmir. => I **was born** in Izmir.
 x Where you were yesterday? => Where **were you** yesterday?
 `,
+  anim: [
+    { title: 'Şimdi', tr: [['Ben', 's'], [' evde', 'n'], ['yim', 'v']], blocks: [['I', 's'], ['am#B', 'v'], ['at home', 'n']],
+      note: 'Şimdiki zaman: I **am** at home.' },
+    { title: 'Geçmiş', tr: [['Ben', 's'], [' evde', 'n'], ['ydim', 'v']], blocks: [['I', 's'], ['was#B', 'v', 'hi'], ['at home', 'n'], ['yesterday', 't']],
+      note: 'am → **was**. Türkçedeki "-ydim" eki.' },
+    { tr: [['Onlar', 's'], [' evde', 'n'], ['ydi', 'v']], blocks: [['They#I', 's'], ['were#B', 'v', 'hi'], ['at home', 'n'], ['yesterday', 't']],
+      note: 'are → **were**' },
+    { title: 'Tablo', rows: [[['I · he · she · it', 's'], ['was', 'v']], [['you · we · they', 's'], ['were', 'v']]],
+      note: 'you tekil olsa bile **were** alır.' },
+    { title: 'Olumsuz ve soru', blocks: [['She', 's'], ['was#B', 'v'], ['tired', 'n']],
+      note: 'O yorgundu.' },
+    { blocks: [['She', 's'], ["wasn't#B", 'neg', 'hi'], ['tired', 'n']],
+      note: 'Olumsuz: **wasn\'t / weren\'t**' },
+    { blocks: [['Was#B', 'q', 'hi'], ['she#She', 's'], ['tired?#tired', 'n']],
+      note: 'Soru: **Was** başa geçer.' },
+    { title: 'Doğmak', blocks: [['I', 's'], ['born#X', 'v', 'no'], ['in 2000', 't']],
+      note: '"I born" yanlış...' },
+    { blocks: [['I', 's'], ['was born#X', 'v', 'ok'], ['in 2000', 't']],
+      note: '...İngilizcede doğmak edilgendir: I **was born** in 2000.' },
+  ],
   ex: [
     { t: 'mc', q: 'I ___ at the cinema last night.', o: ['was', 'were', 'am'], a: 0,
       w: { 1: `I ile were kullanılmaz → was.`, 2: `"last night" geçmişi gösterir → was.` },

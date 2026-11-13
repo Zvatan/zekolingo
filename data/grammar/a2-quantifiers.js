@@ -28,6 +28,22 @@ x I need some informations. => I need some **information**.
 x How much people? => How **many** people?
 x There isn't many milk. => There isn't **much** milk.
 `,
+  anim: [
+    { title: 'İki tür isim', rows: [[['an apple', 'n', '', 'sayılabilen'], ['two apples', 'n']], [['water', 'n', '', 'sayılamayan'], ['money', 'n'], ['bread', 'n']]],
+      note: 'Sayılamayanlar **çoğul olmaz** ve **a/an almaz**.' },
+    { title: 'Dikkat: Türkçede sayılır, İngilizcede sayılmaz', blocks: [['some', 'x'], ['informations#I', 'n', 'no']],
+      note: 'Türkçede "bilgiler" deriz ama...' },
+    { blocks: [['some', 'x'], ['information#I', 'n', 'ok']],
+      note: '...**information, advice, furniture** sayılamaz: hiç -s almaz.' },
+    { title: 'some / any', rows: [[['There are', 'v'], ['some', 'x', 'hi', 'olumlu'], ['eggs', 'n']], [["There aren't", 'neg'], ['any', 'x', 'hi', 'olumsuz'], ['eggs', 'n']]],
+      note: 'Olumlu → **some**, olumsuz ve soru → **any**.' },
+    { title: 'many / much', rows: [[['How many', 'q', 'hi'], ['books?', 'n', '', 'sayılabilen']], [['How much', 'q', 'hi'], ['money?', 'n', '', 'sayılamayan']]],
+      note: 'Sayılabilen → **many**, sayılamayan → **much**.' },
+    { title: 'Olumluda: a lot of', blocks: [['There are', 'v'], ['a lot of', 'x', 'hi'], ['people', 'n']],
+      note: 'Olumlu cümlede "çok" için en doğal yol **a lot of**. Her iki isim türüyle de kullanılır.' },
+    { title: 'Biraz / birkaç', rows: [[['a few', 'x', 'hi'], ['friends', 'n', '', 'sayılabilen']], [['a little', 'x', 'hi'], ['sugar', 'n', '', 'sayılamayan']]],
+      note: '**a few** birkaç, **a little** biraz.' },
+  ],
   ex: [
     { t: 'mc', q: 'There are ___ apples in the bag.', o: ['some', 'any', 'much'], a: 0,
       w: { 1: `Olumlu cümlede some kullanılır.`, 2: `"apples" sayılabilir ve cümle olumlu → some ya da a lot of.` },

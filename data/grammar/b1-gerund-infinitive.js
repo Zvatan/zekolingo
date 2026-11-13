@@ -26,6 +26,24 @@ x I want that you come. => I want **you to come**.
 > My parents **let me go** to the party. | Ailem partiye gitmeme izin verdi.
 x She let me to use her car. => She let me **use** her car.
 `,
+  anim: [
+    { title: '-ing alanlar', rows: [[['avoid · suggest · consider · keep', 'v']], [['give up · mind · imagine', 'v'], ['+ -ing', 'x', 'hi']]],
+      note: 'Bu fiillerden sonra ikinci fiil **-ing** olur.' },
+    { blocks: [['He', 's'], ['gave up', 'v'], ['smoking', 'v', 'hi']],
+      note: 'Sigarayı **bıraktı**: gave up **smoking**' },
+    { title: 'to alanlar', rows: [[['agree · refuse · manage · offer', 'v']], [['afford · pretend · expect', 'v'], ['+ to', 'x', 'hi']]],
+      note: 'Bunlardan sonra **to + yalın fiil**.' },
+    { title: 'Kişi + to', tr: [['Gelmeni', 'v'], [' istiyorum', 'x']], blocks: [['I', 's'], ['want', 'v'], ['that you come#X', 'v', 'no']],
+      note: 'Türkçe gibi "that" ile kurmak yanlış...' },
+    { blocks: [['I', 's'], ['want', 'v'], ['you', 'n', 'hi'], ['to come#X', 'v', 'ok']],
+      note: '...**want + kişi + to**: I want **you to come**.' },
+    { title: 'make / let: to yok', blocks: [['She', 's'], ['let', 'v'], ['me', 'n'], ['to use#U', 'v', 'no'], ['her car', 'n']],
+      note: 'make ve let istisnadır...' },
+    { blocks: [['She', 's'], ['let', 'v'], ['me', 'n'], ['use#U', 'v', 'ok'], ['her car', 'n']],
+      note: '...**make / let + kişi + yalın fiil**.' },
+    { title: 'Tuzak: look forward to', blocks: [["I'm looking forward", 'v'], ['to', 'x', 'hi', 'edat!'], ['seeing', 'v', 'hi'], ['you', 'n']],
+      note: 'Buradaki **to** bir edat, bu yüzden **-ing** gelir: "to see" değil.' },
+  ],
   ex: [
     { t: 'mc', q: 'Would you mind ___ the window?', o: ['opening', 'to open', 'open'], a: 0,
       w: { 1: `"mind" fiilinden sonra -ing gelir.`, 2: `"mind" fiilinden sonra -ing gelir.` },

@@ -29,6 +29,22 @@ Ayrılabilen phrasal verb'lerde nesne ortaya da sona da gelebilir. Ama nesne **z
 x I took off them. => I took **them** off.
 ! Ayrılmayanlar (look for, look after, get on with) her zaman bitişik kalır: I'm looking **for it**.
 `,
+  anim: [
+    { title: 'Fiil + küçük kelime = yeni anlam', blocks: [['give', 'v', '', 'vermek']],
+      note: '"give" tek başına "vermek" demek...' },
+    { blocks: [['give', 'v'], ['up', 'x', 'hi']],
+      note: '...**up** eklenince anlam tamamen değişir: **give up** = vazgeçmek, bırakmak.' },
+    { rows: [[['look', 'v'], ['for', 'x', 'hi', 'aramak']], [['look', 'v'], ['after', 'x', 'hi', 'bakmak, ilgilenmek']], [['look', 'v'], ['forward to', 'x', 'hi', 'dört gözle beklemek']]],
+      note: 'Aynı fiil, farklı küçük kelimeler, bambaşka anlamlar. Kalıp olarak öğrenilir.' },
+    { title: 'Nesnenin yeri', blocks: [['Turn', 'v'], ['off', 'x'], ['the TV', 'n', 'hi']],
+      note: 'Nesne isimse sona gelebilir...' },
+    { blocks: [['Turn', 'v'], ['the TV', 'n', 'hi'], ['off', 'x']],
+      note: '...ya da ortaya.' },
+    { title: 'Zamir ise mutlaka ortada', blocks: [['Turn', 'v'], ['off', 'x'], ['it', 'n', 'no']],
+      note: '"Turn off it" yanlış...' },
+    { blocks: [['Turn', 'v'], ['it', 'n', 'ok'], ['off', 'x']],
+      note: '...it, them, him gibi zamirler **ortaya** girer: Turn **it** off.' },
+  ],
   ex: [
     { t: 'mc', q: "It's dark in here. Can you ___ the light?", o: ['turn on', 'turn off', 'turn up'], a: 0,
       w: { 1: `Karanlıkta ışık açılır, kapatılmaz.`, 2: `"turn up" = sesi açmak, ortaya çıkmak.` },

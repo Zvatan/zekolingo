@@ -25,6 +25,22 @@ x You mustn't pay. It's free. => You **don't have to** pay. It's free.
 > **Do** you **have to** work on Saturdays? | Cumartesi çalışmak zorunda mısın?
 > **Does** he **have to** wear a tie? | Kravat takmak zorunda mı?
 `,
+  anim: [
+    { title: 'Zorunluluk', tr: [['Üniforma giymek', 'v'], [' zorundayım', 'x']], blocks: [['I', 's'], ['have to', 'x', 'hi', 'zorunda'], ['wear', 'v'], ['a uniform', 'n']],
+      note: 'Dışarıdan gelen kural (iş, okul) → **have to**' },
+    { blocks: [['She#I', 's'], ['has to#have to', 'x', 'hi'], ['wear', 'v'], ['a uniform', 'n']],
+      note: 'she → **has to**' },
+    { blocks: [['I', 's'], ['must', 'x', 'hi', '-malıyım'], ['call', 'v'], ['my mum', 'n']],
+      note: 'Kendi içinden gelen zorunluluk → **must**. Arkasından **yalın fiil** gelir, to gelmez.' },
+    { title: 'En önemli fark', rows: [[['You', 's'], ["mustn't", 'neg', 'hi', 'YASAK'], ['smoke', 'v']], [['You', 's'], ["don't have to", 'neg', 'hi', 'GEREK YOK'], ['come', 'v']]],
+      note: '**mustn\'t** = yapma, yasak! **don\'t have to** = zorunda değilsin, istersen yap.' },
+    { title: 'Tavsiye: should', tr: [['Doktora', 'n'], [' gitmelisin', 'v']], blocks: [['You', 's'], ['should', 'x', 'hi', 'tavsiye'], ['see', 'v'], ['a doctor', 'n']],
+      note: 'Yumuşak tavsiye → **should**' },
+    { title: 'Geçmişte', blocks: [['I', 's'], ['must#M', 'x', 'no'], ['work', 'v'], ['yesterday', 't']],
+      note: 'must\'ın geçmiş hali yoktur...' },
+    { blocks: [['I', 's'], ['had to#M', 'x', 'ok'], ['work', 'v'], ['yesterday', 't']],
+      note: '...geçmişte zorunluluk için: **had to**' },
+  ],
   ex: [
     { t: 'mc', q: "You ___ smoke in the hospital. It's forbidden.", o: ["mustn't", "don't have to", "shouldn't to"], a: 0,
       w: { 1: `"don't have to" = gerek yok. Burada yasak var → mustn't.`, 2: `should'dan sonra to gelmez.` },

@@ -30,6 +30,22 @@ about, of, at, for, without, before, after gibi edatlardan sonra fiil -ing alır
 > I went to the shop **to buy** bread. | Ekmek almak için markete gittim.
 x I came here for learn English. => I came here **to learn** English.
 `,
+  anim: [
+    { title: 'İki fiil yan yana', tr: [['Okumayı', 'v'], [' severim', 'v']], blocks: [['I', 's'], ['enjoy', 'v'], ['___#X', 'v', 'gap']],
+      note: 'İkinci fiil hangi şekilde gelir?' },
+    { blocks: [['I', 's'], ['enjoy', 'v'], ['reading#X', 'v', 'hi', '-ing']],
+      note: '**enjoy** fiilinden sonra **-ing** gelir.' },
+    { tr: [['Öğrenmek', 'v'], [' istiyorum', 'v']], blocks: [['I', 's'], ['want#enjoy', 'v'], ['to learn#X', 'v', 'hi', 'to + fiil']],
+      note: '**want** fiilinden sonra **to + yalın fiil** gelir.' },
+    { title: 'Ezberlenecek iki grup', rows: [[['enjoy · finish · stop · mind', 'v'], ['+ -ing', 'x', 'hi']], [['want · decide · hope · need', 'v'], ['+ to', 'x', 'hi']]],
+      note: 'Bunun bir mantığı yok, kalıp olarak öğrenilir.' },
+    { title: 'Edattan sonra her zaman -ing', blocks: [['Thank you', 'x'], ['for', 'x', 'hi', 'edat'], ['helping', 'v', 'hi'], ['me', 'n']],
+      note: 'for, at, about, without... → **-ing**' },
+    { title: 'Amaç: "için"', blocks: [['I', 's'], ['came here', 'v'], ['for learn#L', 'v', 'no'], ['English', 'n']],
+      note: '"-mek için" Türkçe düşünülünce "for" geliyor ama...' },
+    { blocks: [['I', 's'], ['came here', 'v'], ['to learn#L', 'v', 'ok'], ['English', 'n']],
+      note: '...amaç bildirirken **to** kullanılır: I came here **to learn** English.' },
+  ],
   ex: [
     { t: 'mc', q: 'I enjoy ___ to music.', o: ['listening', 'to listen', 'listen'], a: 0,
       w: { 1: `"enjoy" fiilinden sonra -ing gelir.`, 2: `"enjoy" fiilinden sonra -ing gelir.` },

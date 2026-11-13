@@ -24,6 +24,22 @@ Second conditional'da **I / he / she / it** ile **were** kullanılır (günlük 
 x If I would have money, I would buy it. => If I **had** money, I would buy it.
 x If I was you, I wouldn't go. => If I **were** you, I wouldn't go. (daha doğru)
 `,
+  anim: [
+    { title: 'Gerçek olabilir', blocks: [['If', 'q'], ['I', 's'], ['win,#W', 'v'], ["I'll#R", 'x'], ['buy a car', 'v']],
+      note: 'Kazanma şansım var → First Conditional (will)' },
+    { title: 'Hayal: pek olası değil', tr: [['Piyango çıksa', 'v'], [' dünyayı gezerdim', 'x']], blocks: [['If', 'q'], ['I', 's'], ['won#W', 'v', 'hi', 'geçmiş biçim'], ["I'd#R", 'x', 'hi', 'would'], ['travel the world', 'v']],
+      note: '**If + Past Simple, would + fiil**. Fiil geçmiş biçimde ama anlam **şimdi / gelecek**!' },
+    { title: 'Bugünkü gerçek dışı durum', tr: [['Param', 'n'], [' olsaydı', 'v']], blocks: [['If', 'q'], ['I', 's'], ['had', 'v', 'hi'], ['money,', 'n'], ['I would buy it', 'x']],
+      note: 'Şu an param **yok**, hayal ediyorum.' },
+    { title: 'Tavsiye kalıbı', blocks: [['If', 'q'], ['I', 's'], ['were#B', 'v', 'hi'], ['you,', 'n'], ["I'd talk to her", 'x']],
+      note: '"Senin yerinde olsam" → **If I were you**. I ile bile **were**.' },
+    { title: 'Sık hata', blocks: [['If', 'q'], ['I', 's'], ['would have#H', 'v', 'no'], ['time,', 'n'], ['I would help', 'x']],
+      note: 'if\'li tarafa would koyulmaz...' },
+    { blocks: [['If', 'q'], ['I', 's'], ['had#H', 'v', 'ok'], ['time,', 'n'], ['I would help', 'x']],
+      note: '...if tarafı **Past Simple**, sonuç tarafı **would**.' },
+    { title: 'would · could · might', rows: [[['I would', 'x', 'hi'], ['-ırdım', 'n']], [['I could', 'x', 'hi'], ['-ebilirdim', 'n']], [['I might', 'x', 'hi'], ['belki -ırdım', 'n']]],
+      note: 'Sonuç tarafında anlama göre seçilir.' },
+  ],
   ex: [
     { t: 'mc', q: 'If I ___ rich, I would travel all over the world.', o: ['were', 'am', 'will be'], a: 0,
       w: { 1: `Hayali bir durum (zengin değilim) → Past Simple: were.`, 2: `if'li bölümde will kullanılmaz.` },

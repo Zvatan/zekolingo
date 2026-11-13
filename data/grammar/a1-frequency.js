@@ -33,6 +33,22 @@ x I don't never eat fish. => I **never** eat fish.
 every day (her gün), once a week (haftada bir), twice a month (ayda iki kez), three times a year (yılda üç kez)
 > I go swimming **twice a week**. | Haftada iki kez yüzmeye giderim.
 `,
+  anim: [
+    { title: 'Ne sıklıkla?', rows: [[['always', 't', '', '%100'], ['usually', 't', '', '%80'], ['often', 't', '', '%60']], [['sometimes', 't', '', '%40'], ['rarely', 't', '', '%10'], ['never', 't', '', '%0']]],
+      note: 'Bunlara **sıklık zarfı** denir.' },
+    { title: 'Kural 1: normal fiilden ÖNCE', tr: [['Her zaman', 't'], [' 7\'de kalkarım', 'v']], blocks: [['I', 's'], ['get up', 'v'], ['at 7', 'n']],
+      note: '"always" nereye girecek?' },
+    { tr: [['Her zaman', 't'], [' 7\'de kalkarım', 'v']], blocks: [['I', 's'], ['always', 't', 'hi'], ['get up', 'v'], ['at 7', 'n']],
+      note: 'Özne ile fiilin **arasına**: I **always** get up at 7.' },
+    { title: 'Kural 2: be\'den SONRA', tr: [['O', 's'], [' hep', 't'], [' geç kalır', 'v']], blocks: [['He', 's'], ['always#A', 't'], ['is#B', 'v'], ['late', 'n']],
+      note: 'be fiilinde (am / is / are) sıra değişir...' },
+    { tr: [['O', 's'], [' hep', 't'], [' geç kalır', 'v']], blocks: [['He', 's'], ['is#B', 'v', 'hi'], ['always#A', 't', 'hi'], ['late', 'n']],
+      note: '...zarf be\'den **sonra** gelir: He **is always** late.' },
+    { title: 'never zaten olumsuz', blocks: [['I', 's'], ["don't", 'neg', 'no'], ['never', 't'], ['eat fish', 'v']],
+      note: '"I don\'t never" yanlış...' },
+    { blocks: [['I', 's'], ['never', 't', 'ok'], ['eat fish', 'v']],
+      note: '...**never** tek başına yeter: I never eat fish.' },
+  ],
   ex: [
     { t: 'mc', q: 'Hangisi doğru?', o: ['I always get up early.', 'I get always up early.', 'Always I get up early.'], a: 0,
       w: { 1: `Sıklık zarfı normal fiilden ÖNCE gelir: always get up.`, 2: `Sıklık zarfı cümle başına değil, fiilden önceye gelir.` },

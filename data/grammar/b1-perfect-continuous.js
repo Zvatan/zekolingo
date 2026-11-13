@@ -23,6 +23,22 @@ export default {
 - **since** + başlangıç noktası: since 9 o'clock, since Monday, since I was a child
 x I'm studying English since three years. => I**'ve been studying** English **for** three years.
 `,
+  anim: [
+    { title: '"Bir saattir bekliyorum"', tr: [['Bir saattir', 't'], [' bekliyorum', 'v']], blocks: [['I', 's'], ['am waiting#W', 'v', 'no'], ['for an hour', 't']],
+      note: 'Türkçe gibi düşününce yanlış çıkıyor...' },
+    { blocks: [['I', 's'], ['have been', 'x', 'hi'], ['waiting#W', 'v', 'hi'], ['for an hour', 't']],
+      note: '**have / has been + -ing**: geçmişte başladı ve **hâlâ sürüyor**.' },
+    { blocks: [['She#I', 's'], ['has been#have been', 'x', 'hi'], ['waiting#W', 'v'], ['since 9 o\'clock#for an hour', 't', 'hi']],
+      note: 'she → **has been**. **for** süre bildirir, **since** başlangıç noktası.' },
+    { title: 'for mu since mi?', rows: [[['for', 't', 'hi'], ['two hours · ten years', 'n', '', 'süre']], [['since', 't', 'hi'], ['Monday · 2015 · 9 a.m.', 'n', '', 'başlangıç']]],
+      note: 'Ne kadar süredir → **for**, ne zamandan beri → **since**' },
+    { title: 'Soru', blocks: [['How long', 'q', 'hi'], ['have', 'x'], ['you', 's'], ['been learning', 'v'], ['English?', 'n']],
+      note: 'Süre sorusu: **How long have you been...?**' },
+    { title: 'Sonuç mu, süre mi?', rows: [[["I've", 'x'], ['written', 'v', 'hi'], ['three emails', 'n', '', 'kaç tane → simple']], [["I've been", 'x'], ['writing', 'v', 'hi'], ['all morning', 't', '', 'ne kadar süre → continuous']]],
+      note: 'Miktar söylüyorsan **simple**, süreyi vurguluyorsan **continuous**.' },
+    { title: 'Durum fiilleri yine -ing almaz', blocks: [["I've", 'x'], ['known', 'v', 'ok'], ['her', 'n'], ['for years', 't']],
+      note: 'know, like, want → "I\'ve been knowing" değil, **I\'ve known**.' },
+  ],
   ex: [
     { t: 'mc', q: "I'm so tired. I ___ all day.", o: ["'ve been working", "'m working", 'work'], a: 0,
       w: { 1: `Gün boyunca süren ve etkisi şimdi görülen eylem → Present Perfect Continuous.`, 2: `Süre vurgusu var → have been working.` },

@@ -35,6 +35,24 @@ much / a lot / a bit + karşılaştırma:
 x She is more taller than me. => She is **taller** than me.
 x My car is older from yours. => My car is older **than** yours.
 `,
+  anim: [
+    { title: 'Daha ...', tr: [['Ankara', 's'], [' İzmir', 'n'], ['\'den', 'x'], [' daha büyük', 'v']], blocks: [['Ankara', 's'], ['is', 'x'], ['big#A', 'v'], ['Izmir', 'n']],
+      note: 'İki şeyi karşılaştıralım...' },
+    { blocks: [['Ankara', 's'], ['is', 'x'], ['bigger#A', 'v', 'hi'], ['than', 'x', 'hi', '-den'], ['Izmir', 'n']],
+      note: 'Kısa sıfat + **-er**, ve Türkçedeki "-den" yerine **than**.' },
+    { title: 'Uzun sıfatlar', tr: [['Bu telefon', 's'], [' daha pahalı', 'v']], blocks: [['This phone', 's'], ['is', 'x'], ['more', 'v', 'hi'], ['expensive', 'v'], ['than that one', 'n']],
+      note: 'Uzun sıfatlar -er almaz, önüne **more** gelir.' },
+    { title: 'Kurallar', rows: [[['cheap', 'v'], ['cheaper', 'v', 'hi']], [['big', 'v'], ['bigger', 'v', 'hi']], [['easy', 'v'], ['easier', 'v', 'hi']]],
+      note: 'Kısa sıfat **-er** alır, sesli+sessiz ile bitende harf ikilenir, -y → **-ier**.' },
+    { title: 'Düzensizler', rows: [[['good', 'v'], ['better', 'v', 'hi']], [['bad', 'v'], ['worse', 'v', 'hi']]],
+      note: 'Bunlar ezberlenir.' },
+    { title: 'Sık hatalar', blocks: [['She', 's'], ['is', 'x'], ['more taller#T', 'v', 'no'], ['from#F', 'x', 'no'], ['me', 'n']],
+      note: '"more taller" ve "from" yanlış...' },
+    { blocks: [['She', 's'], ['is', 'x'], ['taller#T', 'v', 'ok'], ['than#F', 'x', 'ok'], ['me', 'n']],
+      note: '...doğrusu: She is **taller than** me.' },
+    { title: 'Eşitlik: as ... as', blocks: [['She', 's'], ['is', 'x'], ['as', 'x', 'hi'], ['tall', 'v'], ['as', 'x', 'hi'], ['me', 'n']],
+      note: '"Benim kadar uzun" → **as tall as** me.' },
+  ],
   ex: [
     { t: 'mc', q: 'A car is ___ than a bike.', o: ['faster', 'more fast', 'fastest'], a: 0,
       w: { 1: `"fast" tek hecelidir → -er alır: faster.`, 2: `fastest "en hızlı" demektir. İki şey karşılaştırılırken -er kullanılır.` },

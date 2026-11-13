@@ -1,4 +1,4 @@
-import { $, $$, esc, pct, toast, setVoicePrefs, speak } from '../util.js';
+import { $, $$, esc, pct, toast, setVoicePrefs, speak, englishVoices, currentVoice, voicesReady } from '../util.js';
 import * as store from '../store.js';
 import { LEVELS, PASS } from '../../data/catalog.js';
 
@@ -29,6 +29,8 @@ export function meScreen(root) {
     <div class="card">
       <div class="set-row"><span>Aksan</span>${seg('accent', S.settings.accent, [['en-US', 'Amerikan'], ['en-GB', 'İngiliz']])}</div>
       <div class="set-row"><span>Konuşma hızı</span>${seg('rate', S.settings.rate, [[0.75, 'Yavaş'], [0.9, 'Normal'], [1, 'Hızlı']])}</div>
+      <div class="set-row"><span>Ses</span><select class="inp" id="voice" style="width:auto;max-width:65%;font-size:15px;padding:8px 10px"></select></div>
+      <p class="small muted" id="voicehelp" style="margin:0"></p>
       <div class="set-row"><span>Oturumda yeni kelime</span>${seg('newWords', S.settings.newWords, [[5, '5'], [8, '8'], [12, '12']])}</div>
     </div>
 
@@ -46,11 +48,34 @@ export function meScreen(root) {
     <div class="btns"><button class="btn line" data-reset>Tüm ilerlemeyi sıfırla</button></div>
     <p class="small muted" style="text-align:center;margin-top:20px">Zekolingo · İngilizce öğrenme uygulaman</p>`;
 
+  const applyVoice = () => { const s = store.state().settings; setVoicePrefs(s.accent, s.rate, s.voiceURI); };
+  const fillVoices = () => {
+    const sel = $('#voice', root);
+    if (!sel) return;
+    const vs = englishVoices(), chosen = store.state().settings.voiceURI, cur = currentVoice();
+    sel.innerHTML = `<option value="">Otomatik${cur && !chosen ? ` (${esc(cur.name)})` : ''}</option>` +
+      vs.map(v => `<option value="${esc(v.voiceURI)}"${v.voiceURI === chosen ? ' selected' : ''}>${esc(v.name)} · ${esc(v.lang)}</option>`).join('');
+    $('#voicehelp', root).textContent = vs.length ? '' :
+      'Cihazında İngilizce ses bulunamadı. iPhone: Ayarlar > Erişilebilirlik > Seslendirilen İçerik > Sesler > İngilizce bölümünden bir ses indir (ör. Samantha). Windows: Ayarlar > Saat ve dil > Konuşma > Ses ekle.';
+  };
+  fillVoices();
+  voicesReady().then(fillVoices);
+  $('#voice', root).onchange = e => {
+    store.set(s => (s.settings.voiceURI = e.target.value));
+    applyVoice();
+    speak('Hello! This is how I sound.');
+    fillVoices();
+  };
+
   $$('[data-seg]', root).forEach(g => g.querySelectorAll('button').forEach(b => (b.onclick = () => {
     const name = g.dataset.seg, v = name === 'accent' ? b.dataset.v : +b.dataset.v;
-    store.set(s => (s.settings[name] = v));
-    setVoicePrefs(store.state().settings.accent, store.state().settings.rate);
+    store.set(s => {
+      s.settings[name] = v;
+      if (name === 'accent') s.settings.voiceURI = ''; // aksan değişince sesi otomatik seç
+    });
+    applyVoice();
     g.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+    if (name === 'accent') fillVoices();
     if (name !== 'newWords') speak('Hello! This is how I sound.');
   })));
 
@@ -70,7 +95,7 @@ export function meScreen(root) {
     if (!txt) return toast('Önce yedek metnini yapıştır');
     try {
       store.importData(txt);
-      setVoicePrefs(store.state().settings.accent, store.state().settings.rate);
+      applyVoice();
       toast('Yedek geri yüklendi ✓');
       meScreen(root);
     } catch (e) { toast(e.message || 'Yedek okunamadı'); }

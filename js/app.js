@@ -64,7 +64,8 @@ window.addEventListener('hashchange', route);
 window.addEventListener('pageshow', () => renderTabs(location.hash || '#/learn'));
 document.addEventListener('visibilitychange', () => { if (!document.hidden && !document.body.classList.contains('session')) renderTabs(location.hash); });
 
-setVoicePrefs(store.state().settings.accent, store.state().settings.rate);
+const { accent, rate, voiceURI } = store.state().settings;
+setVoicePrefs(accent, rate, voiceURI);
 route();
 
 // Çevrimdışı çalışma (yalnızca https üzerinde, yerelde geliştirirken kapalı)

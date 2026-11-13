@@ -1,5 +1,5 @@
 // Bu dosya tools/build.mjs tarafından sw.js olarak üretilir. sw.js'yi elle düzenleme.
-const CACHE = 'zekolingo-7b2ffcba17';
+const CACHE = 'zekolingo-7b9bcbff32';
 const FILES = [
  "./",
  "index.html",

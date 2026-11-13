@@ -98,25 +98,86 @@ export function toast(msg, ms = 2200) {
   clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('show'), ms);
 }
 
-/* Sesli okuma (iOS'ta internetsiz çalışır) */
-let voice = null, accent = 'en-US', rate = 0.9;
-export function setVoicePrefs(a, r) { accent = a || accent; rate = r || rate; voice = null; }
+/*
+ * Sesli okuma. Her zaman açıkça bir İngilizce ses seçilir. Sadece lang = 'en-US' demek yetmez,
+ * çünkü bazı cihazlar (özellikle ana ekrana eklenmiş iPhone uygulaması) o zaman telefonun
+ * varsayılan Türkçe sesiyle okuyor.
+ */
+const HAS_TTS = typeof window !== 'undefined' && 'speechSynthesis' in window;
+// iOS / macOS'taki eğlence amaçlı ve robotik sesler
+const NOVELTY = /albert|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|fred|junior|kathy|ralph|grandma|grandpa|rocko|shelley|sandy|flo\b|eddy|reed|eloquence/i;
+const GOOD = /natural|neural|premium|enhanced|siri|samantha|ava|allison|susan|evan|zoe|nathan|alex|daniel|kate|serena|arthur|martha|aria|jenny|guy|sonia|ryan|libby|google/i;
+const prefs = { accent: 'en-US', rate: 0.9, voiceURI: '' };
+let cached = null;
+
+export function setVoicePrefs(accent, rate, voiceURI) {
+  if (accent) prefs.accent = accent;
+  if (rate) prefs.rate = rate;
+  if (voiceURI !== undefined) prefs.voiceURI = voiceURI;
+  cached = null;
+}
+const isEnglish = v => /^en([-_]|$)/i.test(v.lang);
+export const englishVoices = () => (HAS_TTS ? speechSynthesis.getVoices().filter(v => isEnglish(v) && !NOVELTY.test(v.name)) : []);
+
+function score(v) {
+  const lang = v.lang.replace('_', '-').toLowerCase();
+  let s = 0;
+  if (lang === prefs.accent.toLowerCase()) s += 100;
+  else if (/^en-(us|gb)$/.test(lang)) s += 40;
+  if (GOOD.test(v.name)) s += 20;
+  if (/premium|enhanced|natural|neural/i.test(v.name + ' ' + v.voiceURI)) s += 15;
+  if (v.localService) s += 5; // internetsiz de çalışır
+  return s;
+}
 function pickVoice() {
-  const vs = speechSynthesis.getVoices().filter(v => /^en[-_]/i.test(v.lang));
-  const ln = v => v.lang.replace('_', '-');
-  voice = vs.find(v => ln(v) === accent && /enhanced|premium|samantha|daniel|karen|google/i.test(v.name))
-    || vs.find(v => ln(v) === accent) || vs.find(v => /^en-(US|GB)$/.test(ln(v))) || vs[0] || null;
+  const vs = englishVoices();
+  if (!vs.length) return null;
+  return (prefs.voiceURI && vs.find(v => v.voiceURI === prefs.voiceURI)) || [...vs].sort((a, b) => score(b) - score(a))[0];
 }
-export function speak(text) {
-  if (!('speechSynthesis' in window)) return toast('Bu cihazda sesli okuma desteklenmiyor');
-  speechSynthesis.cancel();
-  if (!voice) pickVoice();
+export const currentVoice = () => cached || (cached = pickVoice());
+
+/** Listede bir İngilizce ses görünene kadar bekler (en fazla ~3 sn). İnternet üzerinden gelen sesler geç yüklenir. */
+export function voicesReady() {
+  return new Promise(res => {
+    if (!HAS_TTS) return res([]);
+    let n = 0;
+    const check = () => { if (englishVoices().length || n++ >= 30) res(speechSynthesis.getVoices()); else setTimeout(check, 100); };
+    check();
+  });
+}
+
+/** Seçili İngilizce sesle bir konuşma nesnesi. Ses yoksa null döner. */
+export function utterance(text, rate = prefs.rate) {
+  const v = currentVoice();
+  if (!v) return null;
   const u = new SpeechSynthesisUtterance(plain(text));
-  if (voice) u.voice = voice;
-  u.lang = voice?.lang || accent; u.rate = rate;
-  speechSynthesis.speak(u);
+  u.voice = v; u.lang = v.lang; u.rate = rate;
+  return u;
 }
-if (typeof window !== 'undefined' && 'speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => { voice = null; };
+
+const NO_VOICE = 'Cihazında İngilizce ses bulunamadı, bu yüzden okunmadı. Nasıl ekleneceği İlerleme > Ayarlar > Ses bölümünde yazıyor.';
+/** Metni seçili İngilizce sesle okur. onend: okuma bitince (ya da okunamazsa) çağrılır. */
+export function speak(text, rate, onend) {
+  if (!HAS_TTS) return toast('Bu cihazda sesli okuma desteklenmiyor');
+  if (speechSynthesis.speaking || speechSynthesis.pending) speechSynthesis.cancel();
+  const go = () => {
+    const u = utterance(text, rate);
+    if (onend) u.onend = u.onerror = onend;
+    speechSynthesis.speak(u);
+  };
+  if (currentVoice()) return go();
+  // Sesler henüz yüklenmedi. iOS sesi sadece dokunuşla başlattığı için şimdi boş bir konuşmayla "aç", sonra bekle.
+  speechSynthesis.speak(new SpeechSynthesisUtterance(''));
+  voicesReady().then(() => {
+    cached = null;
+    if (!currentVoice()) { onend?.(); return toast(NO_VOICE, 6000); }
+    go();
+  });
+}
+if (HAS_TTS) {
+  speechSynthesis.getVoices(); // listeyi önceden yüklemeye başla
+  speechSynthesis.onvoiceschanged = () => { cached = null; };
+}
 
 export const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
 export const daysAgo = t => { const d = Math.floor((Date.now() - t) / 864e5); return d <= 0 ? 'bugün' : d === 1 ? 'dün' : `${d} gün önce`; };

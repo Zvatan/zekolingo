@@ -8,7 +8,7 @@ const fresh = () => ({
   mistakes: {},  // qid -> { id, topic, given, n, streak, t }
   vocab: {},     // "A1:apple" -> { b: kutu (1-6), due }
   reading: {},   // id -> { best, t }
-  settings: { accent: 'en-US', rate: 0.9, newWords: 8 },
+  settings: { accent: 'en-US', rate: 0.9, newWords: 8, voiceURI: '' },
   created: Date.now(),
 });
 

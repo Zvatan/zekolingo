@@ -1,4 +1,4 @@
-import { $, $$, esc, inline, ICON } from '../util.js';
+import { $, $$, esc, inline, speak, ICON } from '../util.js';
 import * as store from '../store.js';
 import { level, loadReading } from '../../data/catalog.js';
 import { levelChips, bindChips } from './learn.js';
@@ -70,14 +70,9 @@ export async function readScreen(root, lv, id) {
   const label = () => (lbtn.innerHTML = `${ICON.speaker} ${speaking ? 'Durdur' : 'Metni dinle'}`);
   lbtn.onclick = () => {
     if (!('speechSynthesis' in window)) return;
-    speechSynthesis.cancel();
     speaking = !speaking;
-    if (speaking) {
-      const u = new SpeechSynthesisUtterance(r.text.replace(/\s+/g, ' '));
-      u.lang = store.state().settings.accent; u.rate = 0.85;
-      u.onend = () => { speaking = false; label(); };
-      speechSynthesis.speak(u);
-    }
+    if (speaking) speak(r.text.replace(/\s+/g, ' '), 0.85, () => { speaking = false; label(); });
+    else speechSynthesis.cancel();
     label();
   };
   $('[data-q]', root).onclick = async () => {

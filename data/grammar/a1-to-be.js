@@ -47,6 +47,28 @@ x I have 20 years old. => I **am** 20 years old.
 x My parents is teachers. => My parents **are** teachers.
 x She hungry. => She **is** hungry.
 `,
+  anim: [
+    { title: 'Türkçede "olmak" bir ektir', tr: [['Ben', 's'], [' öğrenci', 'n'], ['-yim', 'v']],
+      note: 'Türkçede **-yim** eki kelimenin sonuna yapışır. Bakalım İngilizcede ne oluyor.' },
+    { tr: [['Ben', 's'], [' öğrenci', 'n'], ['-yim', 'v']], blocks: [['I', 's', '', 'ben'], ['___#be', 'v', 'gap'], ['a', 'x'], ['student', 'n', '', 'öğrenci']],
+      note: 'Özne ve isim yerine oturdu. Ama ortada bir **boşluk** var.' },
+    { tr: [['Ben', 's'], [' öğrenci', 'n'], ['-yim', 'v']], blocks: [['I', 's'], ['am#be', 'v', 'hi', 'to be'], ['a', 'x'], ['student', 'n']],
+      note: 'Türkçedeki **-yim** eki İngilizcede ayrı bir kelime olur: **am**. İkisinin de mor olduğuna dikkat et.' },
+    { tr: [['O', 's'], [' öğrenci', 'n'], ['-dir', 'v']], blocks: [['She#I', 's'], ['is#be', 'v', 'hi'], ['a', 'x'], ['student', 'n']],
+      note: 'Özne değişince "olmak" da değişir: she → **is**' },
+    { tr: [['Onlar', 's'], [' öğrenci', 'n'], ['-ler', 'x'], ['-dir', 'v']], blocks: [['They#I', 's'], ['are#be', 'v', 'hi'], ['students#student', 'n']],
+      note: 'Çoğulda **are** gelir. "a" düşer, isim çoğul olur.' },
+    { title: 'Ezberlenecek tek tablo', rows: [[['I', 's'], ['am', 'v']], [['he · she · it', 's'], ['is', 'v']], [['you · we · they', 's'], ['are', 'v']]],
+      note: 'Bu üç satırı bilmek yeter.' },
+    { tr: [['O', 's'], [' doktor', 'n'], [' değil', 'neg']], blocks: [['She', 's'], ['is', 'v'], ['not', 'neg', 'hi'], ['a', 'x'], ['doctor', 'n']],
+      note: 'Olumsuz: "olmak"tan sonra **not** gelir. is not = **isn\'t**' },
+    { tr: [['O', 's'], [' doktor', 'n'], [' mu?', 'q']], blocks: [['Is#is', 'q', 'hi'], ['she#She', 's'], ['a', 'x'], ['doctor?#doctor', 'n']],
+      note: 'Soru: **is** cümlenin en başına geçer. Türkçedeki "mu?" ekinin işini sıralama yapar.' },
+    { title: 'En sık yapılan hata', tr: [['Ben', 's'], [' mutlu', 'n'], ['-yum', 'v']], blocks: [['I', 's'], ['___#be2', 'v', 'gap'], ['happy', 'n']],
+      note: '"I happy" diyemeyiz. Boşluk kalamaz!' },
+    { tr: [['Ben', 's'], [' mutlu', 'n'], ['-yum', 'v']], blocks: [['I', 's'], ['am#be2', 'v', 'ok'], ['happy', 'n']],
+      note: 'Doğrusu: I **am** happy. Kural: Türkçede ek varsa, İngilizcede ayrı bir kelime vardır.' },
+  ],
   ex: [
     { t: 'mc', q: 'I ___ a student.', o: ['am', 'is', 'are'], a: 0,
       w: { 1: `"is" sadece he / she / it ile kullanılır.`, 2: `"are" you / we / they ile kullanılır.` },

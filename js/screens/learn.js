@@ -2,6 +2,7 @@ import { $, $$, esc, md, pct, sample, shuffle, toast, ICON } from '../util.js';
 import * as store from '../store.js';
 import { LEVELS, level, topicMeta, loadTopic, PASS, EXAM_SIZE } from '../../data/catalog.js';
 import { runSession, showResults } from '../session.js';
+import { playLesson } from '../anim.js';
 
 /* Kur seçici (her sekmede ortak). has(L): o kurda içerik var mı? */
 export const levelChips = (cur, has) =>
@@ -64,6 +65,16 @@ export async function topicScreen(root, id) {
   if (location.hash !== route) return;
   const r = store.state().topics[id];
   $('#lesson', root).innerHTML = md(topic.lesson);
+  if (topic.anim?.length) {
+    $('#lesson', root).insertAdjacentHTML('beforebegin', `<button class="card hero anim-start" data-anim>
+      <span class="play">▶</span><span class="grow"><span class="t">Anlatımı başlat</span><br>
+      <span class="s">${topic.anim.length} adımda, kelimeler yerine otururken izle</span></span></button>`);
+    $('[data-anim]', root).onclick = () => playLesson(root, topic.anim, {
+      title: meta.title,
+      onClose: () => topicScreen(root, id),
+      onPractice: () => practice(root, meta, topic.ex.map(ex => ({ ex, topic: id })), true),
+    });
+  }
   root.insertAdjacentHTML('beforeend', `<div style="height:72px"></div>
     <div class="dock"><button class="btn" data-start>Alıştırmaya başla · ${topic.ex.length} soru${r ? ` · en iyi %${r.best}` : ''}</button></div>`);
   $('[data-start]', root).onclick = () => practice(root, meta, topic.ex.map(ex => ({ ex, topic: id })), true);
